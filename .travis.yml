@@ -11,7 +11,7 @@ before_install:
 # troque a linha abaixo pelo resultado do comando:
 # travis encrypt-file publish-key
 # porém mantenha o final:
-i# -out ~/.ssh/publish-key -d
+# -out ~/.ssh/publish-key -d
 - openssl aes-256-cbc -K $encrypted_7937d42399ea_key -iv $encrypted_7937d42399ea_iv -in publish-key.enc -out ~/.ssh/publish-key -d
 - chmod u=rw,og= ~/.ssh/publish-key
 - echo "Host github.com" >> ~/.ssh/config
