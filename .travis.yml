@@ -11,9 +11,9 @@ before_install:
 # porém mantenha o final:
 # -out ~/.ssh/publish-key -d
 - openssl aes-256-cbc -K $encrypted_7937d42399ea_key -iv $encrypted_7937d42399ea_iv -in .travisdeploykey.enc -out ~/.ssh/.travisdeploykey -d
-- chmod u=rw,og= ~/.ssh/publish-key
+- chmod u=rw,og= ~/.ssh/.travisdeploykey
 - echo "Host github.com" >> ~/.ssh/config
-- echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
+- echo "  IdentityFile ~/.ssh/.travisdeploykey" >> ~/.ssh/config
 # substitua git@github.com:humrochagf/humrochagf.github.io.git
 # pelo endereço de acesso ssh do seu repositório
 - git remote set-url origin git@github.com:andreztz/andreztz.github.io.git
