@@ -2,7 +2,7 @@ sudo: false
 branches:
   only:
   - pelican
-language: python
+language: python-3.5.2
 before_install:
 # troque a linha abaixo pelo resultado do comando:
 # travis encrypt-file publish-key
