@@ -10,11 +10,6 @@ AUTHOR = 'andreztz@gmail.com'
 SITENAME = 'Andre ZTZ - Blog'
 SITEURL = 'https://andreztz.github.io'
 TIMEZONE = 'America/Sao_Paulo'
-SITELOGO = 'http://i.imgbox.com/71jbSiuD.jpg'
-AVATAR = '4d420075a242b2c9b470b23ec2a914a0.png'
-# PROFILE_IMAGE_URL = 'http://i.imgbox.com/71jbSiuD.jpg'
-PROFILE_IMAGE_URL = 'http://www.gravatar.com/avatar/' + AVATAR
-
 
 PATH = 'content'
 STATIC_PATHS = ['images']
@@ -26,6 +21,13 @@ DEFAULT_LANG = 'pt'
 
 THEME = "themes/pure"
 USE_PAGER = 'True'
+
+SITELOGO = 'http://i.imgbox.com/71jbSiuD.jpg'
+COVER_IMG_URL='http://i.imgbox.com/LXH5WQux.jpeg'
+AVATAR = '4d420075a242b2c9b470b23ec2a914a0.png'
+# PROFILE_IMAGE_URL = 'http://i.imgbox.com/71jbSiuD.jpg'
+PROFILE_IMAGE_URL = 'http://www.gravatar.com/avatar/' + AVATAR
+
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
