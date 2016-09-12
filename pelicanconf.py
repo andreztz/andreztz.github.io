@@ -70,7 +70,7 @@ EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'}
 }
 
-PLUGIN_PATHS = ['plugins']
+PLUGIN_PATHS = ['pelican-plugins']
 
 PLUGINS = [
     'optimize_images',
