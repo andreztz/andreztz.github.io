@@ -21,6 +21,7 @@ before_install:
 # por gh-pages:gh-pages
 - git fetch origin -f master:master
 install:
+- apt-get install optipng -y
 - pip install --upgrade pip
 - pip install -r requirements.txt
 - git clone https://github.com/getpelican/pelican-plugins
