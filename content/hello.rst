@@ -21,5 +21,7 @@ E claro, um código Python!!
 
         print "Hello World!"
 
-
-Fim.
+.. youtube:: XRjnh8C2Y4c
+        :width: 800
+        :height: 500
+        :align: center
