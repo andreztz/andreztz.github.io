@@ -21,7 +21,7 @@ STATIC_PATHS = ['images']
 
 
 TIMEZONE = 'America/Sao_Paulo'
-LOCALE = 'pt_BR'
+LOCALE = ('pt_BR.utf8',)
 DEFAULT_LANG = 'pt'
 
 THEME = "themes/pure"
