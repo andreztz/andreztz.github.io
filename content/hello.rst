@@ -15,6 +15,7 @@ voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 sint occaecat cupidatat non proident, sunt in culpa qui officia
 deserunt mollit anim id est laborum.
 
+
 E claro, um código Python!!
 
 .. code-block:: python
@@ -22,6 +23,12 @@ E claro, um código Python!!
         print "Hello World!"
 
 .. youtube:: XRjnh8C2Y4c
-        :width: 800
-        :height: 500
-        :align: center
+
+
+
+
+
+
+
+
+

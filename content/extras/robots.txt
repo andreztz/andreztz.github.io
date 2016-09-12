@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: http://andreztz.pythonanywhere.com/sitemap.xml
+Sitemap: http://andreztz.github.io/sitemap.xml

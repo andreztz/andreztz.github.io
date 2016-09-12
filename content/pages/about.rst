@@ -7,8 +7,6 @@ O objetivo deste blog é de compartilhar minhas experiêcias relacionadas com li
 programação e internet. Entre em `contato <https://www.facebook.com/ztzandre>`_.
 
 
-
 .. youtube:: b27ElnCR5og
-		:width: 800
-		:height: 500
-		:align: center
+
+

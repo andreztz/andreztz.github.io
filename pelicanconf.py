@@ -76,12 +76,11 @@ PLUGIN_PATHS = ['pelican-plugins']
 
 PLUGINS = [
     'optimize_images',
-    'pelican_youtube',
-    'pelican_vimeo',
     'googleplus_comments',
     'representative_image',
     'gravatar',
-    'sitemap'
+    'sitemap',
+    'pelican_youtube',
 ]
 # , 'share_post', , ,'better_figures_and_images',
 

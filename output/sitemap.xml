@@ -5,30 +5,37 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2016-09-11T21:29:52-00:00</lastmod>
+<lastmod>2016-09-11T23:09:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2016-09-11T21:29:52-00:00</lastmod>
+<lastmod>2016-09-11T23:09:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2016-09-11T21:29:52-00:00</lastmod>
+<lastmod>2016-09-11T23:09:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2016-09-11T21:29:52-00:00</lastmod>
+<lastmod>2016-09-11T23:09:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/pages/about.html</loc>
+<lastmod>2016-09-11T23:09:53-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.3</priority>
 </url>
 
 <url>
@@ -53,14 +60,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://andreztz.github.io/tag/post-1.html</loc>
+<loc>https://andreztz.github.io/tag/primeiro_pos.html</loc>
 <lastmod>2015-02-27T15:17:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://andreztz.github.io/tag/primeiro_pos.html</loc>
+<loc>https://andreztz.github.io/tag/post-1.html</loc>
 <lastmod>2015-02-27T15:17:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
