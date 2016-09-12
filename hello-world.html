@@ -77,7 +77,19 @@ deserunt mollit anim id est laborum.</p>
             <!-- 'googleplus_comments' -->
 
             <div id="commentswrap" style="padding-top: 5%;">
-                <div id="comments"></div>
+                <div id="comments">
+    <script src="https://apis.google.com/js/plusone.js"></script>
+    <script>
+        $(document).ready(function () {
+            gapi.comments.render('comments', {
+                href: window.location,
+                width: '600',
+                first_party_property: 'BLOGGER',
+                view_type: 'FILTERED_POSTMOD'
+            });
+    });
+    </script>
+</div>
             </div> <!-- end 'googleplus_comments'  -->
 
 
