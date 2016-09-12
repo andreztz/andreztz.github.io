@@ -23,5 +23,6 @@ before_install:
 install:
 - pip install --upgrade pip
 - pip install -r requirements.txt
+- git clone https://github.com/getpelican/pelican-plugins
 script:
 - make github
