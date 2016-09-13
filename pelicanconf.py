@@ -79,10 +79,9 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = [
     'optimize_images',
     'pelican_youtube',
-    'pelican_vimeo',
+    # 'pelican_vimeo',
     'representative_image',
     'sitemap',
-    'twitter_bootstrap_rst_directives'
 ]
 # , 'share_post', , ,'better_figures_and_images',
 
