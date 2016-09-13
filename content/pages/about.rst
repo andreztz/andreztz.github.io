@@ -8,8 +8,5 @@ programação e internet. Entre em `contato <https://www.facebook.com/ztzandre>`
 
 
 .. youtube:: b27ElnCR5og
-        :width: 800
-        :height: 500
-        :align: center
 
 
