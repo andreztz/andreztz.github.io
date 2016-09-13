@@ -6,8 +6,9 @@ import os
 
 BASE = os.path.dirname(__file__)
 
-AUTHOR = 'andreztz@gmail.com'
-SITENAME = 'Andre ZTZ - Blog'
+AUTHOR = 'André Santos'
+AUTHOR_EMAIL = 'andreztz@gmail.com'
+SITENAME = 'André Santos - Blog'
 SITEURL = 'https://andreztz.github.io'
 TIMEZONE = 'America/Sao_Paulo'
 
@@ -19,7 +20,7 @@ TIMEZONE = 'America/Sao_Paulo'
 LOCALE = ('pt_BR.utf8',)
 DEFAULT_LANG = 'pt'
 
-THEME = "themes/pure"
+THEME = "themes/puro"
 USE_PAGER = 'True'
 
 SITELOGO = 'http://i.imgbox.com/71jbSiuD.jpg'
@@ -37,6 +38,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 MENUITEMS = (
+    ('Home', '/'),
     ('Arquivo', 'archives.html'),
     ('Sobre', 'pages/about.html'),
     # ('Videos', 'pages/videos.html')
@@ -76,11 +78,11 @@ PLUGIN_PATHS = ['pelican-plugins']
 
 PLUGINS = [
     'optimize_images',
-    'googleplus_comments',
-    'representative_image',
-    'gravatar',
-    'sitemap',
     'pelican_youtube',
+    'pelican_vimeo',
+    'representative_image',
+    'sitemap',
+    'twitter_bootstrap_rst_directives'
 ]
 # , 'share_post', , ,'better_figures_and_images',
 

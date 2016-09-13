@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title|striptags }} // {{ super() }}{% endblock title %}
+
+{% block head_css %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
+
+{% endblock %}
+{% block head_js %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+{% endblock %}
+
+
+{% block sidebar %}
+    <header class="column-left-menu">
+        <br><br>
+        <hgroup class="text-center">
+            <a href="{{ SITEURL }}/{{ article.author.url }}" title="See posts by {{ article.author }}">
+                {% if article.author_gravatar %}
+                    <img class="avatar" alt="{{ article.author }}" src="{{ article.author_gravatar }}">
+                {% endif %}
+            </a>
+            <h2 class="article-info">{{ article.author }}</h2>
+            <small class="about-author">{{ article.about_author }}</small>
+            <h5>Publicado</h5>
+            <p>{{ article.locale_date }}</p>
+            <a href="/">&larr;Home</a>
+        </hgroup>
+    </header>
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div id="layout">
+        <div class="">
+            <div class="content">
+                <section class="">
+                    <header class="content-subhead">
+                        <p class="">&rarr;
+                            {% for tag in article.tags %}   
+                                <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                            {% endfor %}
+                        </p>
+                    </header>
+                    <br>
+                    <article class="well text-justify">
+                        <div class="page-header">
+                            <h1>{{ article.title }}</h1>
+                        </div>
+                        {{ article.content }}
+                    </article>
+                </section>
+                <!-- share_post
+                {% if article.share_post and article.status != 'draft' %}
+                <section style="padding-top: 5%;">
+                    <p id="post-share-links">
+                        <a href="{{article.share_post['twitter']}}" target="_blank" title="Compartilhe no Twitter"><img src="http://i.imgbox.com/sCwsMVpo.png"></a>
+
+                        <a href="{{article.share_post['facebook']}}" target="_blank" title="Compartilhe no Facebook"><img src="http://i.imgbox.com/biAKDPdQ.png"></a>
+
+                        <a href="{{article.share_post['google-plus']}}" target="_blank" title="Compartilhe no Google Plus"><img src="http://i.imgbox.com/Ncriqy4P.png"></a>
+
+                        <a href="{{article.share_post['email']}}" target="_blank" title="Compartilhe via Email"><img src="http://i.imgbox.com/X6rd1oYd.png"></a>
+                    </p>
+                </section>
+                {% endif %}
+                 -->
+                <!-- 'googleplus_comments' -->
+
+                <div id="commentswrap" style="padding-top: 5%;">
+                    <div id="comments">{{ article.metadata.googleplus_comments }}</div>
+                </div> <!-- end 'googleplus_comments'  -->
+
+
+                <a href="#" class="go-top">Go Top</a>
+                {% if DISQUS_SITENAME %}
+                    {% include 'disqus.html' %}
+                {% endif %}
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock  %}
