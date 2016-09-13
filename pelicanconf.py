@@ -79,7 +79,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = [
     'optimize_images',
     'pelican_youtube',
-    # 'pelican_vimeo',
+    'pelican_vimeo',
     'representative_image',
     'sitemap',
 ]
