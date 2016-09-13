@@ -22,7 +22,7 @@ before_install:
 # por gh-pages:gh-pages
 - git fetch origin -f master:master
 - sudo apt-get install optipng -y
-- sudo apt-get install libjpeg-progs -y
+# - sudo apt-get install libjpeg-progs -y
 install:
 - pip install --upgrade pip
 - pip install -r requirements.txt
