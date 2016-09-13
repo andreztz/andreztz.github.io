@@ -10,3 +10,21 @@ programação e internet. Entre em `contato <https://www.facebook.com/ztzandre>`
 .. youtube:: b27ElnCR5og
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
