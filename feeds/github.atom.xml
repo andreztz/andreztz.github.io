@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>André Santos - Blog</title><link href="https://andreztz.github.io/" rel="alternate"></link><link href="https://andreztz.github.io/feeds/github.atom.xml" rel="self"></link><id>https://andreztz.github.io/</id><updated>2016-09-19T00:37:00-03:00</updated><entry><title>Remover arquivos e diretorios do github</title><link href="https://andreztz.github.io/remover-arquivos-e-diretorios-do-github.html" rel="alternate"></link><published>2016-09-19T00:37:00-03:00</published><updated>2016-09-19T00:37:00-03:00</updated><author><name>André Santos</name></author><id>tag:andreztz.github.io,2016-09-19:remover-arquivos-e-diretorios-do-github.html</id><summary type="html">&lt;p&gt;Os comandos a seguir remove um arquivo ou um diretório do sistema de arquivo do repositório remoto do git,
+mas não no sistema de arquivo local.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git rm --cached ARQUIVO
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ou&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ $ git rm --cached -R DIRETORIO/
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="github"></category></entry></feed>

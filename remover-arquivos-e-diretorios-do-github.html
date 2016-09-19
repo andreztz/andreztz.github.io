@@ -7,7 +7,7 @@
 
             <link rel="alternate"  href="https://andreztz.github.io/feeds/all.atom.xml" type="application/atom+xml" title="André Santos - Blog Full Atom Feed"/>
 
-            <title>André Santos - Blog </title>
+            <title>Remover arquivos e diretorios do github // André Santos - Blog </title>
 
 
         <!-- SEO -->
@@ -34,14 +34,34 @@
           ga('send', 'pageview');
 
         </script>
+    <link rel="stylesheet" href="https://andreztz.github.io/theme/css/pygments.css">
+
         
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     </head>
     <body class="container-fluid">
         <main class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="row">
                     <header class="col-xs-12 col-md-3 column-left">
-                            <hgroup class="column-left-social">
+    <header class="column-left-menu">
+        <br><br>
+        <hgroup class="text-center">
+            <a href="https://andreztz.github.io/author/andre-santos.html" title="See posts by André Santos">
+            </a>
+            <h2 class="">André Santos</h2>
+            <small class=""></small>
+            <h5>Publicado</h5>
+            <p>Seg 19 setembro 2016</p>
+            <a href="/">&larr;Home</a>
+        </hgroup>
+    </header>
+                                <hgroup class="column-left-social">
                                 <div class="social social-icons">
                                     <a href="https://www.facebook.com/ztzandre" target="_blank">
                                         <i id="social-btn" class="fa fa-facebook fa-3x"></i>
@@ -60,15 +80,51 @@
                                     </a>
                                 </div>
                             </hgroup>
+
                     </header>
                 </div>            
                 <section class="col-xs-12 col-md-9 column-right">
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-<ul>
-    <li><a href="https://andreztz.github.io/category/github.html">github</a></li>
-    <li><a href="https://andreztz.github.io/category/hello-word.html">hello word</a></li>
-</ul>
+    <div id="layout">
+        <div class="">
+            <div class="content">
+                <section class="">
+                    <header class="content-subhead">
+                        <p class="">&rarr;
+   
+                                <a class="post-category" href="https://andreztz.github.io/tag/github.html">github</a>
+                        </p>
+                    </header>
+                    <br>
+                    <article class="well text-justify">
+                        <div class="page-header">
+                            <h1>Remover arquivos e diretorios do github</h1>
+                        </div>
+                        <p>Os comandos a seguir remove um arquivo ou um diretório do sistema de arquivo do repositório remoto do git,
+mas não no sistema de arquivo local.</p>
+<div class="highlight"><pre><span></span>$ git rm --cached ARQUIVO
+</pre></div>
+<p>ou</p>
+<div class="highlight"><pre><span></span>$ $ git rm --cached -R DIRETORIO/
+</pre></div>
+
+                    </article>
+                </section>
+                <!-- share_post
+                 -->
+                <!-- 'googleplus_comments' -->
+
+                <div id="commentswrap" style="padding-top: 5%;">
+                    <div id="comments"></div>
+                </div> <!-- end 'googleplus_comments'  -->
+
+
+                <a href="#" class="go-top">Go Top</a>
+               
+            </div>
+        </div>
+    </div>
 <footer>
     <div class="col-xs-12 col-md-6 col-md-offset-0 column-right">
         <small><p class="text-center">© André Santos - Blog - Boa Sorte!</p><small>
