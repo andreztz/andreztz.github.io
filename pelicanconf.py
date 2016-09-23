@@ -30,6 +30,7 @@ AVATAR = '4d420075a242b2c9b470b23ec2a914a0.png'
 PROFILE_IMAGE_URL = 'http://www.gravatar.com/avatar/' + AVATAR
 
 
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -67,12 +68,16 @@ SOCIAL = (
 )
 
 
-STATIC_PATHS = ['images', 'extras/CNAME', 'extras/robots.txt']
+STATIC_PATHS = ['images', 'extras/CNAME', 'extras/robots.txt']# , 'extra/favicon.ico']
 
 EXTRA_PATH_METADATA = {
     # 'extras/CNAME': {'path': 'CNAME'},
-    'extras/robots.txt': {'path': 'robots.txt'}
+    'extras/robots.txt': {'path': 'robots.txt'},
+    # 'extras/favicon.ico': {'path': 'favicon.ico'}
 }
+
+
+FAVICON = 'extras/favicon.ico'
 
 PLUGIN_PATHS = ['pelican-plugins']
 
