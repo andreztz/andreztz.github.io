@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>André Santos - Blog</title><link href="https://andreztz.github.io/" rel="alternate"></link><link href="https://andreztz.github.io/feeds/all.atom.xml" rel="self"></link><id>https://andreztz.github.io/</id><updated>2015-02-27T15:17:00-03:00</updated><entry><title>Hello World</title><link href="https://andreztz.github.io/hello-world.html" rel="alternate"></link><published>2015-02-27T15:17:00-03:00</published><updated>2015-02-27T15:17:00-03:00</updated><author><name>André Santos</name></author><id>tag:andreztz.github.io,2015-02-27:hello-world.html</id><summary type="html">&lt;p&gt;Olá! Este é o primeiro artigo do blog, então vamos de lorem ipsum!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>André Santos - Blog</title><link href="https://andreztz.github.io/" rel="alternate"></link><link href="https://andreztz.github.io/feeds/all.atom.xml" rel="self"></link><id>https://andreztz.github.io/</id><updated>2017-01-30T00:25:00-02:00</updated><entry><title>How to build and install Wxpython Phoenix.</title><link href="https://andreztz.github.io/how-to-build-and-install-wxpython-phoenix.html" rel="alternate"></link><published>2017-01-30T00:25:00-02:00</published><updated>2017-01-30T00:25:00-02:00</updated><author><name>André Santos</name></author><id>tag:andreztz.github.io,2017-01-30:how-to-build-and-install-wxpython-phoenix.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ wget -c wget -c https://wxpython.org/Phoenix/snapshot-builds/wxPython_Phoenix-3.0.3.dev2755+968784d.tar.gz
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tar -vzxf wxPython_Phoenix-3.0.3.dev2759+07a7440.tar.gz
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; wxPython_Phoenix-3.0.3.dev2759+07a7440
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pip install -r requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo python3.6 build.py build install --python&lt;span class="o"&gt;=&lt;/span&gt;/usr/bin/python3.6
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo chmod o+r /usr/lib/python3.6/site-packages/wxPython_Phoenix-3.0.3.dev2759+07a7440-py3.6.egg-info/PKG-INFO
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://wxpython.org/Phoenix/snapshot-builds/"&gt;snapshot-builds&lt;/a&gt;&lt;/p&gt;
+</summary><category term="python3"></category><category term="wxpython"></category></entry><entry><title>Hello World</title><link href="https://andreztz.github.io/hello-world.html" rel="alternate"></link><published>2015-02-27T15:17:00-03:00</published><updated>2015-02-27T15:17:00-03:00</updated><author><name>André Santos</name></author><id>tag:andreztz.github.io,2015-02-27:hello-world.html</id><summary type="html">&lt;p&gt;Olá! Este é o primeiro artigo do blog, então vamos de lorem ipsum!&lt;/p&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

@@ -7,7 +7,7 @@
 
             <link rel="alternate"  href="https://andreztz.github.io/feeds/all.atom.xml" type="application/atom+xml" title="André Santos - Blog Full Atom Feed"/>
 
-            <title>André Santos author // André Santos - Blog </title>
+            <title>How to build and install Wxpython Phoenix. // André Santos - Blog </title>
 
         <link href="https://andreztz.github.io/extras/favicon.ico" rel="icon" sizes="32x32" type="image/png">
 
@@ -35,13 +35,33 @@
           ga('send', 'pageview');
 
         </script>
+    <link rel="stylesheet" href="https://andreztz.github.io/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     </head>
     <body class="container-fluid">
         <main class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="row">
                     <header class="col-xs-12 col-md-3 column-left">
-                            <hgroup class="column-left-social">
+    <header class="column-left-menu">
+        <br><br>
+        <hgroup class="text-center">
+            <a href="https://andreztz.github.io/author/andre-santos.html" title="See posts by André Santos">
+            </a>
+            <h2 class="">André Santos</h2>
+            <small class=""></small>
+            <h5>Publicado</h5>
+            <p>Seg 30 janeiro 2017</p>
+            <a href="/">&larr;Home</a>
+        </hgroup>
+    </header>
+                                <hgroup class="column-left-social">
                                 <div class="social social-icons">
                                     <a href="https://www.facebook.com/ztzandre" target="_blank">
                                         <i id="social-btn" class="fa fa-facebook fa-3x"></i>
@@ -61,94 +81,58 @@
                                 </div>
                             </hgroup>
 
-<hgroup class="column-left-menu">
-    <img src="http://www.gravatar.com/avatar/4d420075a242b2c9b470b23ec2a914a0.png" alt="" class="img-responsive img-circle image-profile"/>
-    <h1 class="text-center">
-        <a href="/">André Santos - Blog</a>
-    </h1>
-    <br>
-    <div class="menu-sidebar text-center">
-        <div class="btn-burguer">
-            <div>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </div>
-        </div>
-        <ul class="dropdown">
-                <li>
-                        <a href="https://andreztz.github.io//">Home</a>
-
-
-                </li>
-                <li>
-                        <a href="https://andreztz.github.io/archives.html">Arquivo</a>
-
-
-                </li>
-                <li>
-                        <a href="https://andreztz.github.io/pages/about.html">Sobre</a>
-
-
-                </li>
-        </ul>
-    </div>
-</hgroup>
-
                     </header>
                 </div>
                 <section class="col-xs-12 col-md-9 column-right">
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-<div class="content-subhead">
-Posts by 'André Santos'</div>
-<section class="">
-    <header class="">
-        <a href="https://andreztz.github.io/author/andre-santos.html" title="See posts by André Santos">
-        </a>
-        <div class="page-header">            
-            <h3><a class="post-title" href="https://andreztz.github.io/how-to-build-and-install-wxpython-phoenix.html">How to build and install Wxpython Phoenix.</a></h3>
-            <br>
-            <p class="post-meta"><div class="highlight"><pre><span></span>$ wget -c wget -c https://wxpython.org/Phoenix/snapshot-builds/wxPython_Phoenix-3.0.3.dev2755+968784d.tar.gz
+    <div id="layout">
+        <div class="">
+            <div class="content">
+                <section class="">
+                    <header class="content-subhead">
+                        <p class="">&rarr;
+   
+                                <a class="post-category" href="https://andreztz.github.io/tag/python3.html">python3</a>
+   
+                                <a class="post-category" href="https://andreztz.github.io/tag/wxpython.html">wxpython</a>
+                        </p>
+                    </header>
+                    <br>
+                    <article class="well text-justify">
+                        <div class="page-header">
+                            <h1>How to build and install Wxpython Phoenix.</h1>
+                        </div>
+                        <div class="highlight"><pre><span></span>$ wget -c wget -c https://wxpython.org/Phoenix/snapshot-builds/wxPython_Phoenix-3.0.3.dev2755+968784d.tar.gz
 </pre></div>
-<div class="highlight"><pre><span></span>$ tar -vzxf wxPython_Phoenix-3.0.3.dev2759+07a7440.tar.gz ...</pre></div></p>
-            <!-- Inserindo funcionalidade do plugin read-more-->
-            <p><a class="read-more" href="https://andreztz.github.io/how-to-build-and-install-wxpython-phoenix.html">Leia mais...</a></p>
-            '<!-- Inserindo imagem com o plugin representative-image-->
-            <p class="post-meta">
-                em <a href="https://andreztz.github.io/category/python.html">python</a> &middot; Seg 30 janeiro 2017
-            </p>
+<div class="highlight"><pre><span></span>$ tar -vzxf wxPython_Phoenix-3.0.3.dev2759+07a7440.tar.gz
+</pre></div>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> wxPython_Phoenix-3.0.3.dev2759+07a7440
+</pre></div>
+<div class="highlight"><pre><span></span>$ sudo pip install -r requirements.txt
+</pre></div>
+<div class="highlight"><pre><span></span>$ sudo python3.6 build.py build install --python<span class="o">=</span>/usr/bin/python3.6
+</pre></div>
+<div class="highlight"><pre><span></span>$ sudo chmod o+r /usr/lib/python3.6/site-packages/wxPython_Phoenix-3.0.3.dev2759+07a7440-py3.6.egg-info/PKG-INFO
+</pre></div>
+<p><a class="reference external" href="https://wxpython.org/Phoenix/snapshot-builds/">snapshot-builds</a></p>
+
+                    </article>
+                </section>
+                <!-- share_post
+                 -->
+                <!-- 'googleplus_comments' -->
+
+                <div id="commentswrap" style="padding-top: 5%;">
+                    <div id="comments"></div>
+                </div> <!-- end 'googleplus_comments'  -->
+
+
+                <a href="#" class="go-top">Go Top</a>
+               
+            </div>
         </div>
-    </header>
-</section><section class="">
-    <header class="">
-        <a href="https://andreztz.github.io/author/andre-santos.html" title="See posts by André Santos">
-        </a>
-        <div class="page-header">            
-            <h3><a class="post-title" href="https://andreztz.github.io/hello-world.html">Hello World</a></h3>
-            <br>
-            <p class="post-meta"><p>Olá! Este é o primeiro artigo do blog, então vamos de lorem ipsum!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor ...</p></p>
-            <!-- Inserindo funcionalidade do plugin read-more-->
-            <p><a class="read-more" href="https://andreztz.github.io/hello-world.html">Leia mais...</a></p>
-            '<!-- Inserindo imagem com o plugin representative-image-->
-            <p class="post-meta">
-                em <a href="https://andreztz.github.io/category/hello-word.html">hello word</a> &middot; Sex 27 fevereiro 2015
-            </p>
-        </div>
-    </header>
-</section><div class="" style="margin-left: 45%;">
-    <ul class="pagination">
-        <li>
-                &nbsp;
-        </li>
-        <li>
-        </li>
-    </ul>
-</div>
-<br>
-<a href="#" class="go-top">Go Top</a>
+    </div>
 <footer>
     <div class="col-xs-12 col-md-6 col-md-offset-0 column-right">
         <small><p class="text-center">© André Santos - Blog</p><small>
