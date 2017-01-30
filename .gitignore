@@ -92,3 +92,7 @@ plugins/
 .travisdeploykey.pub
 
 *.draft
+pelican.pid
+srv.pid
+
+*.draft
