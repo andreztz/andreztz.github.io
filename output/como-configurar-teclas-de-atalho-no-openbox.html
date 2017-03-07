@@ -6,7 +6,7 @@
         <meta name="description" content="André Santos - Blog, ">
 
 
-            <title>André Santos - Blog </title>
+            <title>Como configurar teclas de atalho no Openbox. // André Santos - Blog </title>
 
         <link href="./extras/favicon.ico" rel="icon" sizes="32x32" type="image/png">
 
@@ -34,13 +34,33 @@
           ga('send', 'pageview');
 
         </script>
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     </head>
     <body class="container-fluid">
         <main class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="row">
                     <header class="col-xs-12 col-md-3 column-left">
-                            <hgroup class="column-left-social">
+    <header class="column-left-menu">
+        <br><br>
+        <hgroup class="text-center">
+            <a href="./author/andre-santos.html" title="See posts by André Santos">
+            </a>
+            <h2 class="">André Santos</h2>
+            <small class=""></small>
+            <h5>Publicado</h5>
+            <p>ter 07 março 2017</p>
+            <a href="/">&larr;Home</a>
+        </hgroup>
+    </header>
+                                <hgroup class="column-left-social">
                                 <div class="social social-icons">
                                     <a href="https://www.facebook.com/ztzandre" target="_blank">
                                         <i id="social-btn" class="fa fa-facebook fa-3x"></i>
@@ -59,16 +79,81 @@
                                     </a>
                                 </div>
                             </hgroup>
+
                     </header>
                 </div>
                 <section class="col-xs-12 col-md-9 column-right">
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-<ul>
-    <li><a href="./category/hello-word.html">hello word</a></li>
-    <li><a href="./category/linux.html">linux</a></li>
-    <li><a href="./category/python.html">python</a></li>
+    <div id="layout">
+        <div class="">
+            <div class="content">
+                <section class="">
+                    <header class="content-subhead">
+                        <p class="">&rarr;
+   
+                                <a class="post-category" href="./tag/archlinux.html">archlinux</a>
+   
+                                <a class="post-category" href="./tag/openbox.html">openbox</a>
+                        </p>
+                    </header>
+                    <br>
+                    <article class="well text-justify">
+                        <div class="page-header">
+                            <h1>Como configurar teclas de atalho no Openbox.</h1>
+                        </div>
+                        <p>Teclas de atalho fornecem um método rápido e fácil para a execução comandos, a partir de uma combinação de teclas predefinida.
+No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.</p>
+<div class="section" id="syntax">
+<h2>Syntax</h2>
+<div class="highlight"><pre><span></span>&lt;keyboard&gt;
+    ...
+    &lt;keybind <span class="nv">key</span><span class="o">=</span><span class="s2">&quot;KEY-COMBINATION...&quot;</span>&gt;
+      ...ACTIONS...
+    &lt;/keybind&gt;
+    ...
+ &lt;/keyboard&gt;
+</pre></div>
+<p>KEY-COMBINATION é a combinação de teclas para ligar à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &quot;-&quot;.</p>
+</div>
+<div class="section" id="modificadores">
+<h2>Modificadores</h2>
+<ul class="simple">
+<li>S tecla Shift</li>
+<li>C tecla Control</li>
+<li>A tecla Alt</li>
+<li>W tecla Super (tecla Windows)</li>
+<li>M tecla Meta</li>
+<li>H tecla Hyper</li>
 </ul>
+</div>
+<div class="section" id="exemplo">
+<h2>Exemplo</h2>
+<div class="highlight"><pre><span></span>&lt;keybind <span class="nv">key</span><span class="o">=</span><span class="s2">&quot;S-A-T&quot;</span>&gt;
+    &lt;action <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;Execute&quot;</span>&gt;
+        &lt;command&gt;python /caminho/para/executável&lt;/command&gt;
+    &lt;/action&gt;
+&lt;/keybind&gt;
+</pre></div>
+<p><a class="reference external" href="http://openbox.org/wiki/Help:Bindings#Key_bindings">Referencia: http://openbox.org/wiki/Help:Bindings#Key_bindings</a></p>
+</div>
+
+                    </article>
+                </section>
+                <!-- share_post
+                 -->
+                <!-- 'googleplus_comments' -->
+
+                <div id="commentswrap" style="padding-top: 5%;">
+                    <div id="comments"></div>
+                </div> <!-- end 'googleplus_comments'  -->
+
+
+                <a href="#" class="go-top">Go Top</a>
+               
+            </div>
+        </div>
+    </div>
 <footer>
     <div class="col-xs-12 col-md-6 col-md-offset-0 column-right">
         <small><p class="text-center">© André Santos - Blog</p><small>

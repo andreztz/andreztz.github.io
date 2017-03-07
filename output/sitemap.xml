@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2017-01-30T00:48:33-00:00</lastmod>
+<lastmod>2017-03-07T03:06:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2017-01-30T00:48:33-00:00</lastmod>
+<lastmod>2017-03-07T03:06:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2017-01-30T00:48:33-00:00</lastmod>
+<lastmod>2017-03-07T03:06:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2017-01-30T00:48:33-00:00</lastmod>
+<lastmod>2017-03-07T03:06:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/pages/about.html</loc>
-<lastmod>2017-01-30T00:48:33-00:00</lastmod>
+<lastmod>2017-03-07T03:06:44-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/como-configurar-teclas-de-atalho-no-openbox.html</loc>
+<lastmod>2017-03-07T01:51:00-03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
 </url>
 
 <url>
@@ -60,8 +67,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://andreztz.github.io/category/linux.html</loc>
+<lastmod>2017-03-07T01:51:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://andreztz.github.io/category/python.html</loc>
 <lastmod>2017-01-30T00:25:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/archlinux.html</loc>
+<lastmod>2017-03-07T01:51:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/openbox.html</loc>
+<lastmod>2017-03-07T01:51:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -103,7 +131,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/author/andre-santos.html</loc>
-<lastmod>2017-01-30T00:25:00-03:06</lastmod>
+<lastmod>2017-03-07T01:51:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
