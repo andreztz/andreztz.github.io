@@ -59,11 +59,11 @@ SOCIAL = (
     ('github', 'https://github.com/andreztz'),
     ('youtube', 'https://www.youtube.com/channel/UCAwZjRyaUvoVu2thZBoGO8w'),
     ('google-plus', 'https://plus.google.com/u/0/+AndréSantosztz'),
-    ('twitter', 'https://twitter.com/rootztz')
+    ('twitter', 'https://twitter.com/ztzandre')
 )
 
 
-STATIC_PATHS = ['images', 'extras/CNAME', 'extras/robots.txt']# , 'extra/favicon.ico']
+STATIC_PATHS = ['images', 'extras/CNAME', 'extras/robots.txt']
 
 EXTRA_PATH_METADATA = {
     # 'extras/CNAME': {'path': 'CNAME'},
