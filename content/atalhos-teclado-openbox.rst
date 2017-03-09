@@ -14,7 +14,7 @@ No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/op
 Syntax
 ------
 
-.. code-block:: html
+.. code-block:: python
 
     <keyboard>
         ...
@@ -42,7 +42,7 @@ Exemplo
 -------
 
 
-.. code-block:: bash
+.. code-block:: python
 
     <keybind key="S-A-T">
         <action name="Execute">
@@ -52,7 +52,7 @@ Exemplo
 
 O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configuração. Consequentemente, será necessário recarregar manualmente esses arquivos depois de editados.
 
-.. code-block:: bash
+.. code-block:: python
 
     $ openbox --reconfigure
 

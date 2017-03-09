@@ -87,8 +87,14 @@ PLUGINS = [
     'pelican_youtube',
     'pelican_vimeo',
     'sitemap',
+    'better_codeblock_line_numbering',
 ]
 # , 'share_post', , ,'better_figures_and_images',
+
+MD_EXTENSIONS = [
+    'codehilite(css_class=highlight,linenums=True)',
+    'extra'
+    ]
 
 SITEMAP = {
     'format': 'xml',

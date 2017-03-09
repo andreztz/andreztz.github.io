@@ -106,13 +106,13 @@
 No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.</p>
 <div class="section" id="syntax">
 <h2>Syntax</h2>
-<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">keyboard</span><span class="p">&gt;</span>
-    ...
-    <span class="p">&lt;</span><span class="nt">keybind</span> <span class="na">key</span><span class="o">=</span><span class="s">&quot;KEY-COMBINATION...&quot;</span><span class="p">&gt;</span>
-      ...ACTIONS...
-    <span class="p">&lt;/</span><span class="nt">keybind</span><span class="p">&gt;</span>
-    ...
- <span class="p">&lt;/</span><span class="nt">keyboard</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keyboard</span><span class="o">&gt;</span></span>
+<span class="code-line">    <span class="o">...</span></span>
+<span class="code-line">    <span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;KEY-COMBINATION...&quot;</span><span class="o">&gt;</span></span>
+<span class="code-line">      <span class="o">...</span><span class="n">ACTIONS</span><span class="o">...</span></span>
+<span class="code-line">    <span class="o">&lt;/</span><span class="n">keybind</span><span class="o">&gt;</span></span>
+<span class="code-line">    <span class="o">...</span></span>
+<span class="code-line"> <span class="o">&lt;/</span><span class="n">keyboard</span><span class="o">&gt;</span></span>
 </pre></div>
 <p>KEY-COMBINATION é a combinação de teclas para ligar à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &quot;-&quot;.</p>
 </div>
@@ -129,14 +129,14 @@ No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/op
 </div>
 <div class="section" id="exemplo">
 <h2>Exemplo</h2>
-<div class="highlight"><pre><span></span>&lt;keybind <span class="nv">key</span><span class="o">=</span><span class="s2">&quot;S-A-T&quot;</span>&gt;
-    &lt;action <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;Execute&quot;</span>&gt;
-        &lt;command&gt;python /caminho/para/executável&lt;/command&gt;
-    &lt;/action&gt;
-&lt;/keybind&gt;
+<div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;S-A-T&quot;</span><span class="o">&gt;</span></span>
+<span class="code-line">    <span class="o">&lt;</span><span class="n">action</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Execute&quot;</span><span class="o">&gt;</span></span>
+<span class="code-line">        <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span><span class="n">python</span> <span class="o">/</span><span class="n">caminho</span><span class="o">/</span><span class="n">para</span><span class="o">/</span><span class="n">executável</span><span class="o">&lt;/</span><span class="n">command</span><span class="o">&gt;</span></span>
+<span class="code-line">    <span class="o">&lt;/</span><span class="n">action</span><span class="o">&gt;</span></span>
+<span class="code-line"><span class="o">&lt;/</span><span class="n">keybind</span><span class="o">&gt;</span></span>
 </pre></div>
 <p>O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configuração. Consequentemente, será necessário recarregar manualmente esses arquivos depois de editados.</p>
-<div class="highlight"><pre><span></span>$ openbox --reconfigure
+<div class="highlight"><pre><span class="code-line"><span></span><span class="err">$</span> <span class="n">openbox</span> <span class="o">--</span><span class="n">reconfigure</span></span>
 </pre></div>
 <p><a class="reference external" href="http://openbox.org/wiki/Help:Bindings#Key_bindings">Referencia: http://openbox.org/wiki/Help:Bindings#Key_bindings</a></p>
 </div>
