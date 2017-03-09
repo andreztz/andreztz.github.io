@@ -5,6 +5,11 @@ How to build and install Wxpython Phoenix.
 :category: python
 :tags: python3, wxpython,
 
+.. image:: https://upload.wikimedia.org/wikipedia/commons/c/c0/WxPython-logo.png
+    :alt: WxPython-logo
+
+
+wxPython é um wrapper da biblioteca wxWidgets. Assim como a Tkinter, as aplicações são facilmente portáveis. A diferença é que a wxWidgets utiliza um wrapper sobre a interface gráfica padrão do sistema operacional (GTK em Linux, MFC em Windows), o que permite que as aplicações sejam mais facilmente portáveis e que tenham a aparência de uma aplicação nativa.
 
 .. code-block:: python
 
