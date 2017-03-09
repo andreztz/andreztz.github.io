@@ -1,0 +1,41 @@
+/* Profile Avatar */
+@import url(//fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+
+.avatar-profile {
+    border-radius: 50%;
+    /* width: 30%; */
+}
+
+.cover-avatar {
+    margin-right: 0;
+    text-align:center;
+}
+
+.brand-main a {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+.header hgroup{ text-align: center; }
+
+.header .links a {padding-left: 0; }
+
+.youtube {
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 1%;
+	height: 0;
+
+}
+
+.youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90%;
+	height: 90%;
+
+}
+
+h3{overflow: hidden;}
