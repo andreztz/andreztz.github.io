@@ -104,6 +104,7 @@ SITEMAP = {
     }
 }
 
+
 DEFAULT_PAGINATION = 5
 
 # DISQUS_SITENAME = 'andreztz'

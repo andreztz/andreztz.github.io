@@ -14,7 +14,7 @@ No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/op
 Syntax
 ------
 
-.. code-block:: bash
+.. code-block:: html
 
     <keyboard>
         ...
