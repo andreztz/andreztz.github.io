@@ -1,9 +1,3 @@
-// $.noConflict();
-// jQuery.(document).ready(function() {
-//
-// });
-
-
 var main = function() {
     $("img").addClass("img-responsive");
     $("div[class='youtube']").addClass('embed-responsive embed-responsive-16by9');
