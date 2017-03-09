@@ -27,7 +27,7 @@ SITELOGO = 'http://i.imgbox.com/71jbSiuD.jpg'
 COVER_IMG_URL='http://i.imgbox.com/LXH5WQux.jpeg'
 AVATAR = '4d420075a242b2c9b470b23ec2a914a0.png'
 # PROFILE_IMAGE_URL = 'http://i.imgbox.com/71jbSiuD.jpg'
-PROFILE_IMAGE_URL = 'http://www.gravatar.com/avatar/' + AVATAR
+PROFILE_IMAGE_URL = 'https://www.gravatar.com/avatar/' + AVATAR
 
 
 
