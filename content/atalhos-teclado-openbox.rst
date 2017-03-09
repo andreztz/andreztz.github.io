@@ -50,4 +50,10 @@ Exemplo
         </action>
     </keybind>
 
+O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configuração. Consequentemente, será necessário recarregar manualmente esses arquivos depois de editados.
+
+.. code-block:: bash
+
+    $ openbox --reconfigure
+
 `Referencia: http://openbox.org/wiki/Help:Bindings#Key_bindings <http://openbox.org/wiki/Help:Bindings#Key_bindings>`_
