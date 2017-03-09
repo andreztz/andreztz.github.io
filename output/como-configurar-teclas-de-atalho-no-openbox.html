@@ -102,20 +102,20 @@
                         <div class="page-header">
                             <h1>Como configurar teclas de atalho no Openbox.</h1>
                         </div>
-                        <img alt="print screen openbox" src="https://www.gadgetdaily.xyz/wp-content/uploads/2012/12/archbang1web.png" />
+                        <img alt="print screen openbox" src="https://www.gadgetdaily.xyz/wp-content/uploads/2012/12/archbang1web.png"/>
 <p>Teclas de atalho fornecem um método rápido e fácil para a execução comandos, a partir de uma combinação de teclas predefinida.
 No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.</p>
 <div class="section" id="syntax">
 <h2>Syntax</h2>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keyboard</span><span class="o">&gt;</span></span>
 <span class="code-line">    <span class="o">...</span></span>
-<span class="code-line">    <span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;KEY-COMBINATION...&quot;</span><span class="o">&gt;</span></span>
+<span class="code-line">    <span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">"KEY-COMBINATION..."</span><span class="o">&gt;</span></span>
 <span class="code-line">      <span class="o">...</span><span class="n">ACTIONS</span><span class="o">...</span></span>
 <span class="code-line">    <span class="o">&lt;/</span><span class="n">keybind</span><span class="o">&gt;</span></span>
 <span class="code-line">    <span class="o">...</span></span>
 <span class="code-line"> <span class="o">&lt;/</span><span class="n">keyboard</span><span class="o">&gt;</span></span>
 </pre></div>
-<p>KEY-COMBINATION é a combinação de teclas para ligar à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &quot;-&quot;.</p>
+<p>KEY-COMBINATION é a combinação de teclas para ligar à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um "-".</p>
 </div>
 <div class="section" id="modificadores">
 <h2>Modificadores</h2>
@@ -130,8 +130,8 @@ No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/op
 </div>
 <div class="section" id="exemplo">
 <h2>Exemplo</h2>
-<div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;S-A-T&quot;</span><span class="o">&gt;</span></span>
-<span class="code-line">    <span class="o">&lt;</span><span class="n">action</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Execute&quot;</span><span class="o">&gt;</span></span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">"S-A-T"</span><span class="o">&gt;</span></span>
+<span class="code-line">    <span class="o">&lt;</span><span class="n">action</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Execute"</span><span class="o">&gt;</span></span>
 <span class="code-line">        <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span><span class="n">python</span> <span class="o">/</span><span class="n">caminho</span><span class="o">/</span><span class="n">para</span><span class="o">/</span><span class="n">executável</span><span class="o">&lt;/</span><span class="n">command</span><span class="o">&gt;</span></span>
 <span class="code-line">    <span class="o">&lt;/</span><span class="n">action</span><span class="o">&gt;</span></span>
 <span class="code-line"><span class="o">&lt;/</span><span class="n">keybind</span><span class="o">&gt;</span></span>

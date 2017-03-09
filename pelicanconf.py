@@ -42,11 +42,6 @@ MENUITEMS = (
     ('Home', '/'),
     ('Arquivo', 'archives.html'),
     ('Sobre', 'pages/about.html'),
-    # ('Videos', 'pages/videos.html')
-    # ('Autores', 'authors.html'),
-    # ('Categorias', 'categories.html'),
-    # ('Tags', 'tags.html'),
-    # ('Videos', 'pages/videos.html'),
 )
 
 
@@ -88,13 +83,11 @@ PLUGINS = [
     'pelican_vimeo',
     'sitemap',
     'better_codeblock_line_numbering',
+    'better_figures_and_images',
 ]
-# , 'share_post', , ,'better_figures_and_images',
 
 MD_EXTENSIONS = [
-    'codehilite(css_class=highlight,linenums=True)',
-    'extra'
-    ]
+    'codehilite(css_class=highlight,linenums=True)', 'extra']
 
 SITEMAP = {
     'format': 'xml',
