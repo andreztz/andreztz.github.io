@@ -83,7 +83,7 @@ PLUGINS = [
     'pelican_vimeo',
     'sitemap',
     'better_codeblock_line_numbering',
-    'better_figures_and_images',
+    # 'better_figures_and_images',
 ]
 
 MD_EXTENSIONS = [
