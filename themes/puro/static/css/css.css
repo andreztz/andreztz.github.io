@@ -23,7 +23,7 @@ hr {
     color: #fff;
 }
 
-header hgroup:nth-child(2) {
+header hgroup:nth-child(1) {
 	background-color: rgba(10, 9, 10, 0.57);
     padding-top: 10px;
     padding-bottom: 10px;
