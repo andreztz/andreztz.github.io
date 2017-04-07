@@ -1,0 +1,9 @@
+<hgroup class="column-left-social">
+    <div class="social social-icons">
+        {% for title, link in SOCIAL %}
+        <a href="{{ link }}" target="_blank">
+            <i id="social-btn" class="fa fa-{{ title }} fa-3x"></i>
+        </a>
+        {% endfor %}
+    </div>
+</hgroup>
