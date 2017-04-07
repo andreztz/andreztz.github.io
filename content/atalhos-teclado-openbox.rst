@@ -43,7 +43,7 @@ Exemplo
 -------
 
 
-.. code-block:: python
+.. code-block:: xml
 
     <keybind key="S-A-T">
         <action name="Execute">
@@ -53,7 +53,7 @@ Exemplo
 
 O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configuração. Consequentemente, será necessário recarregar manualmente esses arquivos depois de editados.
 
-.. code-block:: python
+.. code-block:: zsh
 
     $ openbox --reconfigure
 

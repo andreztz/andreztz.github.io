@@ -7,7 +7,7 @@
         <meta name="description" content="André Santos - Blog, ">
 
 
-            <title>André Santos - Blog - Authors</title>
+            <title>Como fazer backup de drivers no Windows // André Santos - Blog </title>
 
         <link href="./extras/favicon.ico" rel="icon" sizes="32x32" type="image/png">
 
@@ -35,13 +35,33 @@
           ga('send', 'pageview');
 
         </script>
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     </head>
     <body class="container-fluid">
         <main class="row">
             <div class="col-xs-12 col-md-12">
                 <div class="row">
                     <header class="col-xs-12 col-md-3 column-left">
-                            <hgroup class="column-left-social">
+    <header class="column-left-menu">
+        <br><br>
+        <hgroup class="text-center">
+            <a href="./author/andre-santos.html" title="See posts by André Santos">
+            </a>
+            <h2 class="">André Santos</h2>
+            <small class=""></small>
+            <h5>Publicado</h5>
+            <p>sex 07 abril 2017</p>
+            <a href="/">&larr;Home</a>
+        </hgroup>
+    </header>
+                                <hgroup class="column-left-social">
                                 <div class="social social-icons">
                                     <a href="https://www.facebook.com/ztzandre" target="_blank">
                                         <i id="social-btn" class="fa fa-facebook fa-3x"></i>
@@ -60,15 +80,59 @@
                                     </a>
                                 </div>
                             </hgroup>
+
                     </header>
                 </div>
                 <section class="col-xs-12 col-md-9 column-right">
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-    <h1>Authors on André Santos - Blog</h1>
+    <div id="layout">
+        <div class="">
+            <div class="content">
+                <section class="">
+                    <header class="content-subhead">
+                        <p class="">&rarr;
+   
+                                <a class="post-category" href="./tag/windows.html">windows</a>
+                        </p>
+                    </header>
+                    <br>
+                    <article class="well text-justify">
+                        <div class="page-header">
+                            <h1>Como fazer backup de drivers no Windows</h1>
+                        </div>
+                        <p>Abra o prompt de comando do Windows.</p>
+<div class="section" id="fazendo-backup-dos-drivers">
+<h2>Fazendo backup dos drivers</h2>
+<p>No prompt de comando digite:</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="go">c:\&gt; dism /online /export-driver /destination:D:\backup_drivers</span></span>
+</pre></div>
+</div>
+<div class="section" id="restaurando-o-backup-dos-drivers">
+<h2>Restaurando o backup dos drivers</h2>
+<p>Os drivers do backup podem ser restaurados pelo gerenciador de dispositivos do Windows solicitando à partir dali a instalação do driver de dispositivo em questão.</p>
+<p>Para restaurar todos os drivers de uma vez só pelo prompt de comando digite:</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="go">c:\&gt; dism /online /Add-Driver /Driver:D:\backup_drivers /Recurse</span></span>
+</pre></div>
+<p>Todos os comandos acima devem ser executados com privilégios administrativos.</p>
+</div>
 
-    <ul>        <li><a href="./author/andre-santos.html">André Santos</a> (4)</li>
-    </ul>
+                    </article>
+                </section>
+                <!-- share_post
+                 -->
+                <!-- 'googleplus_comments' -->
+
+                <div id="commentswrap" style="padding-top: 5%;">
+                    <div id="comments"></div>
+                </div> <!-- end 'googleplus_comments'  -->
+
+
+                <a href="#" class="go-top">Go Top</a>
+               
+            </div>
+        </div>
+    </div>
 <footer>
     <div class="col-xs-12 col-md-6 col-md-offset-0 column-right">
         <small><p class="text-center">© André Santos - Blog</p><small>

@@ -18,9 +18,10 @@ deserunt mollit anim id est laborum.
 
 E claro, um código Python!!
 
-.. code-block:: python
+.. code-block:: py3
+    :linenos:   
 
-        print "Hello World!"
+    print("Hello World!")
 
 .. youtube:: XRjnh8C2Y4c
 
