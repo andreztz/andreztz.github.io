@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>André Santos - Blog</title><link href="https://andreztz.github.io/" rel="alternate"></link><link href="https://andreztz.github.io/feeds/windows.atom.xml" rel="self"></link><id>https://andreztz.github.io/</id><updated>2017-04-07T00:00:00-03:00</updated><entry><title>Como fazer backup de drivers no Windows</title><link href="https://andreztz.github.io/como-fazer-backup-de-drivers-no-windows.html" rel="alternate"></link><published>2017-04-07T00:00:00-03:00</published><updated>2017-04-07T00:00:00-03:00</updated><author><name>André Santos</name></author><id>tag:andreztz.github.io,2017-04-07:como-fazer-backup-de-drivers-no-windows.html</id><summary type="html">&lt;p&gt;Abra o prompt de comando do Windows.&lt;/p&gt;
+&lt;div class="section" id="fazendo-backup-dos-drivers"&gt;
+&lt;h2&gt;Fazendo backup dos drivers&lt;/h2&gt;
+&lt;p&gt;No prompt de comando digite:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;c:\&amp;gt; dism /online /export-driver /destination:D:\backup_drivers&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="restaurando-o-backup-dos-drivers"&gt;
+&lt;h2&gt;Restaurando o backup dos drivers&lt;/h2&gt;
+&lt;p&gt;Os drivers do backup podem ser restaurados pelo gerenciador de dispositivos do Windows solicitando à partir dali a instalação do driver de dispositivo em questão.&lt;/p&gt;
+&lt;p&gt;Para restaurar todos os drivers de uma vez só pelo prompt de comando digite:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;c:\&amp;gt; dism /online /Add-Driver /Driver:D:\backup_drivers /Recurse&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Todos os comandos acima devem ser executados com privilégios administrativos.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="windows"></category></entry></feed>

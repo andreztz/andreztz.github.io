@@ -131,14 +131,14 @@ No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/op
 </div>
 <div class="section" id="exemplo">
 <h2>Exemplo</h2>
-<div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;S-A-T&quot;</span><span class="o">&gt;</span></span>
-<span class="code-line">    <span class="o">&lt;</span><span class="n">action</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Execute&quot;</span><span class="o">&gt;</span></span>
-<span class="code-line">        <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span><span class="n">python</span> <span class="o">/</span><span class="n">caminho</span><span class="o">/</span><span class="n">para</span><span class="o">/</span><span class="n">executável</span><span class="o">&lt;/</span><span class="n">command</span><span class="o">&gt;</span></span>
-<span class="code-line">    <span class="o">&lt;/</span><span class="n">action</span><span class="o">&gt;</span></span>
-<span class="code-line"><span class="o">&lt;/</span><span class="n">keybind</span><span class="o">&gt;</span></span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;S-A-T&quot;</span><span class="nt">&gt;</span></span>
+<span class="code-line">    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span></span>
+<span class="code-line">        <span class="nt">&lt;command&gt;</span>python /caminho/para/executável<span class="nt">&lt;/command&gt;</span></span>
+<span class="code-line">    <span class="nt">&lt;/action&gt;</span></span>
+<span class="code-line"><span class="nt">&lt;/keybind&gt;</span></span>
 </pre></div>
 <p>O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configuração. Consequentemente, será necessário recarregar manualmente esses arquivos depois de editados.</p>
-<div class="highlight"><pre><span class="code-line"><span></span><span class="err">$</span> <span class="n">openbox</span> <span class="o">--</span><span class="n">reconfigure</span></span>
+<div class="highlight"><pre><span class="code-line"><span></span>$ openbox --reconfigure</span>
 </pre></div>
 <p><a class="reference external" href="http://openbox.org/wiki/Help:Bindings#Key_bindings">Referencia: http://openbox.org/wiki/Help:Bindings#Key_bindings</a></p>
 </div>
