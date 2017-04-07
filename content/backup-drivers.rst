@@ -17,7 +17,7 @@ No prompt de comando digite:
     c:\> dism /online /export-driver /destination:D:\backup_drivers
 
 
-Restaurando o backup dos drivers
+Restaurando o backup de drivers
 --------------------------------
 
 Os drivers do backup podem ser restaurados pelo gerenciador de dispositivos do Windows solicitando à partir dali a instalação do driver de dispositivo em questão.
