@@ -60,15 +60,7 @@
                 <div class="row">
                     <header class="col-xs-12 col-md-3 column-left">
                         {% block sidebar %}
-                            <hgroup class="column-left-social">
-                                <div class="social social-icons">
-                                    {% for title, link in SOCIAL %}
-                                    <a href="{{ link }}" target="_blank">
-                                        <i id="social-btn" class="fa fa-{{ title }} fa-3x"></i>
-                                    </a>
-                                    {% endfor %}
-                                </div>
-                            </hgroup>
+
                         {% endblock %}
                     </header>
                 </div>
@@ -76,6 +68,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
                             {% block content %}
+                            
                             {% endblock %}
                             {% include 'footer.html' %}
                         </div>
