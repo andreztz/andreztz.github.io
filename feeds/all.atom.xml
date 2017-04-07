@@ -6,8 +6,8 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;c:\&amp;gt; dism /online /export-driver /destination:D:\backup_drivers&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="restaurando-o-backup-dos-drivers"&gt;
-&lt;h2&gt;Restaurando o backup dos drivers&lt;/h2&gt;
+&lt;div class="section" id="restaurando-o-backup-de-drivers"&gt;
+&lt;h2&gt;Restaurando o backup de drivers&lt;/h2&gt;
 &lt;p&gt;Os drivers do backup podem ser restaurados pelo gerenciador de dispositivos do Windows solicitando à partir dali a instalação do driver de dispositivo em questão.&lt;/p&gt;
 &lt;p&gt;Para restaurar todos os drivers de uma vez só pelo prompt de comando digite:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;c:\&amp;gt; dism /online /Add-Driver /Driver:D:\backup_drivers /Recurse&lt;/span&gt;&lt;/span&gt;
