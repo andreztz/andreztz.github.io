@@ -7,7 +7,7 @@ Como configurar teclas de atalho no Openbox.
 :Image: https://www.gadgetdaily.xyz/wp-content/uploads/2012/12/archbang1web.png
 
 
-Teclas de atalho fornecem um método rápido e fácil para a execução comandos, a partir de uma combinação de teclas predefinida.
+Teclas de atalho fornecem um método rápido e fácil para a executar comandos, a partir de uma combinação de teclas predefinida.
 No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.
 
 
@@ -25,7 +25,7 @@ Syntax
         ...
      </keyboard>
 
-KEY-COMBINATION é a combinação de teclas para ligar à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um "-".
+KEY-COMBINATION é a combinação de teclas que liga à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um "-".
 
 
 Modificadores
@@ -51,7 +51,7 @@ Exemplo
         </action>
     </keybind>
 
-O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configuração. Consequentemente, será necessário recarregar manualmente esses arquivos depois de editados.
+O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configurações, consequentemente será necessário recarregar manualmente esses arquivos depois de editados.
 
 .. code-block:: zsh
 
