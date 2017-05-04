@@ -86,8 +86,9 @@ PLUGINS = [
     # 'better_figures_and_images',
 ]
 
-MD_EXTENSIONS = [
-    'codehilite(css_class=highlight,linenums=True)', 'extra']
+MARKDOWN = {'extensions':
+            ['codehilite(css_class=highlight,linenums=True)', 'extra']
+            }
 
 SITEMAP = {
     'format': 'xml',
