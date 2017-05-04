@@ -5,7 +5,7 @@ Como fazer backup de drivers no Windows
 :category: windows
 :tags: windows
 
-Existem muitas maneiras de fazer backup de drivers de dispositivos no Windows, neste post veremos duas maneiras que fazem uso de ferramentas internas do Windows. A primeira é usar o dism.exe ("Deployment Image Servicing and Management Tool") no prompt do Windows, a segunda é usar o PowerShell que de qualquer forma vai chamar o dism em background.
+Existem muitas maneiras de fazer backup de drivers de dispositivos no Windows. Neste post veremos duas que fazem uso de ferramentas internas do Windows, a primeira é usar o dism.exe ("Deployment Image Servicing and Management Tool") no prompt do Windows, a segunda é usar o PowerShell que de qualquer forma vai chamar o dism em background.
 
 
 Fazendo backup de drivers
