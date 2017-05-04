@@ -86,7 +86,7 @@ PLUGINS = [
     # 'better_figures_and_images',
 ]
 
-MARKDOWN = {'extension_configs':
+MARKDOWN = {'extensions':
             ['codehilite(css_class=highlight,linenums=True)', 'extra']
             }
 
