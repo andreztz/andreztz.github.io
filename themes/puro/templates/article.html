@@ -40,13 +40,13 @@
                 <section class="">
                     <header class="content-subhead">
                         <p class="">&rarr;
-                            {% for tag in article.tags %}   
+                            {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                             {% endfor %}
                         </p>
                     </header>
                     <br>
-                    <article class="well text-justify">
+                    <article class="well">
                         <div class="page-header">
                             <h1>{{ article.title }}</h1>
                         </div>
@@ -79,7 +79,7 @@
                 {% if DISQUS_SITENAME %}
                     {% include 'disqus.html' %}
                 {% endif %}
-               
+
             </div>
         </div>
     </div>
