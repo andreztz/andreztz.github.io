@@ -74,12 +74,11 @@
                 <section class="">
                     <header class="content-subhead">
                         <p class="">&rarr;
-   
                                 <a class="post-category" href="./tag/windows.html">windows</a>
                         </p>
                     </header>
                     <br>
-                    <article class="well text-justify">
+                    <article class="well">
                         <div class="page-header">
                             <h1>Como fazer backup de drivers no Windows</h1>
                         </div>
@@ -89,10 +88,10 @@ Servicing and Management Tool) no prompt de comando a segunda é com o PowerShel
 <div class="section" id="fazendo-backup-de-drivers">
 <h2>Fazendo backup de drivers</h2>
 <p>No prompt de comando:</p>
-<div class="highlight"><pre><span></span><span class="go">C:\Windows\System32&gt; dism /online /export-driver /destination:D:\backup_drivers</span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="go">C:\Windows\System32&gt; dism /online /export-driver /destination:D:\backup_drivers</span></span>
 </pre></div>
 <p>No PowerShell:</p>
-<div class="highlight"><pre><span></span><span class="gp">PS C:\WINDOWS\system32&gt; </span><span class="nb">Export-WindowsDriver</span> <span class="n">-Online</span> <span class="n">-Destination</span> <span class="n">D</span><span class="err">:</span><span class="p">\</span><span class="n">Drivers-Backup</span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="gp">PS C:\WINDOWS\system32&gt; </span><span class="nb">Export-WindowsDriver</span> <span class="n">-Online</span> <span class="n">-Destination</span> <span class="n">D</span><span class="err">:</span><span class="p">\</span><span class="n">Drivers-Backup</span></span>
 </pre></div>
 <p>O resultado dos dois comandos acima é o mesmo.</p>
 </div>
@@ -101,7 +100,7 @@ Servicing and Management Tool) no prompt de comando a segunda é com o PowerShel
 <p>Os drivers do backup podem ser restaurados pelo gerenciador de dispositivos do Windows
 solicitando à partir dali a instalação do driver de dispositivo em questão.</p>
 <p>Para restaurar todos os drivers de uma vez só no prompt de comando:</p>
-<div class="highlight"><pre><span></span><span class="go">c:\&gt; dism /online /Add-Driver /Driver:D:\backup_drivers /Recurse</span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="go">c:\&gt; dism /online /Add-Driver /Driver:D:\backup_drivers /Recurse</span></span>
 </pre></div>
 <p>Todos os comandos acima devem ser executados com privilégios administrativos.</p>
 <p><a class="reference external" href="https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/what-is-dism">O que é dism.exe?</a></p>
@@ -119,7 +118,7 @@ solicitando à partir dali a instalação do driver de dispositivo em questão.<
 
 
                 <a href="#" class="go-top">Go Top</a>
-               
+
             </div>
         </div>
     </div>

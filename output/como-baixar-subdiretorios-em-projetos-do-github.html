@@ -7,7 +7,7 @@
         <meta name="description" content="André Santos - Blog, ">
 
 
-            <title>Como configurar teclas de atalho no Openbox. // André Santos - Blog </title>
+            <title>Como baixar subdiretorios em projetos do GitHub // André Santos - Blog </title>
 
         <link href="./extras/favicon.ico" rel="icon" sizes="32x32" type="image/png">
 
@@ -57,7 +57,7 @@
             <h2 class="">André Santos</h2>
             <small class=""></small>
             <h5>Publicado</h5>
-            <p>ter 07 março 2017</p>
+            <p>qui 22 junho 2017</p>
             <a href="/">&larr;Home</a>
         </hgroup>
     </header>
@@ -74,53 +74,37 @@
                 <section class="">
                     <header class="content-subhead">
                         <p class="">&rarr;
-                                <a class="post-category" href="./tag/archlinux.html">archlinux</a>
-                                <a class="post-category" href="./tag/openbox.html">openbox</a>
+                                <a class="post-category" href="./tag/git.html">git</a>
+                                <a class="post-category" href="./tag/github.html">github</a>
+                                <a class="post-category" href="./tag/svn.html">svn</a>
+                                <a class="post-category" href="./tag/subversion.html">subversion</a>
                         </p>
                     </header>
                     <br>
                     <article class="well">
                         <div class="page-header">
-                            <h1>Como configurar teclas de atalho no Openbox.</h1>
+                            <h1>Como baixar subdiretorios em projetos do GitHub</h1>
                         </div>
-                        <p>Teclas de atalho fornecem um método rápido e fácil para a executar comandos, a partir de uma combinação de teclas predefinida.
-No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.</p>
-<div class="section" id="syntax">
-<h2>Syntax</h2>
-<div class="highlight"><pre><span class="code-line"><span></span><span class="o">&lt;</span><span class="n">keyboard</span><span class="o">&gt;</span></span>
-<span class="code-line">    <span class="o">...</span></span>
-<span class="code-line">    <span class="o">&lt;</span><span class="n">keybind</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;KEY-COMBINATION...&quot;</span><span class="o">&gt;</span></span>
-<span class="code-line">      <span class="o">...</span><span class="n">ACTIONS</span><span class="o">...</span></span>
-<span class="code-line">    <span class="o">&lt;/</span><span class="n">keybind</span><span class="o">&gt;</span></span>
-<span class="code-line">    <span class="o">...</span></span>
-<span class="code-line"> <span class="o">&lt;/</span><span class="n">keyboard</span><span class="o">&gt;</span></span>
+                        <p>Se você deseja baixar um projeto inteiro do GitHub sem os dados de controle de versão,
+você pode usar a opção Download ZIP do site.</p>
+<p>Alternativamente, você pode usar ferramentas de linha de comando, por exemplo:</p>
+<div class="highlight"><pre><span class="code-line"><span></span>$ curl -L -o pyqt5-master.zip https://github.com/baoboa/pyqt5/archive/master.zip</span>
 </pre></div>
-<p>KEY-COMBINATION é a combinação de teclas que liga à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &quot;-&quot;.</p>
-</div>
-<div class="section" id="modificadores">
-<h2>Modificadores</h2>
-<ul class="simple">
-<li>S tecla Shift</li>
-<li>C tecla Control</li>
-<li>A tecla Alt</li>
-<li>W tecla Super (tecla Windows)</li>
-<li>M tecla Meta</li>
-<li>H tecla Hyper</li>
-</ul>
-</div>
-<div class="section" id="exemplo">
-<h2>Exemplo</h2>
-<div class="highlight"><pre><span class="code-line"><span></span><span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;S-A-T&quot;</span><span class="nt">&gt;</span></span>
-<span class="code-line">    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span></span>
-<span class="code-line">        <span class="nt">&lt;command&gt;</span>python /caminho/para/executável<span class="nt">&lt;/command&gt;</span></span>
-<span class="code-line">    <span class="nt">&lt;/action&gt;</span></span>
-<span class="code-line"><span class="nt">&lt;/keybind&gt;</span></span>
+<p>E se você quiser baixar apenas um subdiretório? O site não tem uma opção para isso,
+pelo menos ainda não. Isso não é problema! Graças ao suporte do Subversion no GitHub,
+você pode usar a ferramenta de linha de comando svn para esse efeito.
+Por exemplo, digamos que nosso alvo seja o diretório activeqt do projeto pyqt5.</p>
+<p>A url do nosso alvo é <tt class="docutils literal"><span class="pre">https://github.com/baoboa/pyqt5/tree/master/examples/activeqt</span></tt></p>
+<p>usando o formato <tt class="docutils literal"><span class="pre">https://github.com/USER/PROJECT/trunk/PATH</span> DEST</tt> temos:</p>
+<p>USER = baoboa</p>
+<p>PROJECT = pyqt5</p>
+<p>PATH = examples/activeqt</p>
+<p>DEST = webbrowser</p>
+<p><tt class="docutils literal"><span class="pre">https://github.com/baoboa/pyqt5/trunk/examples/activeqt</span> webbrowser</tt></p>
+<p>agora podemos deixar o resto por conta do svn.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>$ svn <span class="nb">export</span> https://github.com/baoboa/pyqt5/trunk/examples/activeqt browser</span>
 </pre></div>
-<p>O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configurações, consequentemente será necessário recarregar manualmente esses arquivos depois de editados.</p>
-<div class="highlight"><pre><span class="code-line"><span></span>$ openbox --reconfigure</span>
-</pre></div>
-<p><a class="reference external" href="http://openbox.org/wiki/Help:Bindings#Key_bindings">Referencia: http://openbox.org/wiki/Help:Bindings#Key_bindings</a></p>
-</div>
+<p>Isso cria um diretório localmente com o conteúdo do subdiretório especificado do projeto.</p>
 
                     </article>
                 </section>
