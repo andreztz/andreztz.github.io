@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2017-06-23T00:21:07-00:00</lastmod>
+<lastmod>2017-06-23T23:39:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2017-06-23T00:21:07-00:00</lastmod>
+<lastmod>2017-06-23T23:39:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2017-06-23T00:21:07-00:00</lastmod>
+<lastmod>2017-06-23T23:39:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2017-06-23T00:21:07-00:00</lastmod>
+<lastmod>2017-06-23T23:39:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/pages/about.html</loc>
-<lastmod>2017-06-23T00:21:07-00:00</lastmod>
+<lastmod>2017-06-23T23:39:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
@@ -67,10 +67,24 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://andreztz.github.io/comamnd-line-keyboard-shortcuts.html</loc>
+<lastmod>2015-06-24T23:54:00-03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
 <loc>https://andreztz.github.io/hello-world.html</loc>
 <lastmod>2015-02-27T15:17:00-03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/category/cli-utilities.html</loc>
+<lastmod>2015-06-24T23:54:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
@@ -167,6 +181,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://andreztz.github.io/tag/wxpython.html</loc>
 <lastmod>2017-01-30T00:25:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/linux.html</loc>
+<lastmod>2015-06-24T23:54:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/bash.html</loc>
+<lastmod>2015-06-24T23:54:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/terminal.html</loc>
+<lastmod>2015-06-24T23:54:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
