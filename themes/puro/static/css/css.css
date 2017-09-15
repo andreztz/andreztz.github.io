@@ -2,13 +2,28 @@
 @import url(tags.css);
 @import url(code.css);
 
-h1 {
-    font-size: 25pt;
+p {
+  font-size: 12pt;
+  line-height: 1.5;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
 }
 
-h2 {
-    font-size: 18pt;
+h1, h2, h3, h4 {
+    font-size: 16pt;
 }
+
+th, td, tr {
+  padding: 2%;
+}
+
+h1.site-title {
+  margin-top: 10px;
+  margin-bottom: : 10px;
+  font-size: 25pt;
+}
+
 
 hr {
     border: 1px solid #f2f2f0;
@@ -69,9 +84,7 @@ header hgroup:nth-child(1) {
 }
 .post-meta {
     color: #999;
-    font-size: 90%;
-    margin-top: -10px;
-    margin-top: 30px;
+
 }
 
 
@@ -91,7 +104,7 @@ header hgroup:nth-child(1) {
     padding: 0.2em 0.6em;
     color: #fff;
     background: #999;
-    font-size: 90%;
+    font-size: 75%;
 }
 .go-top {
     position: fixed;
