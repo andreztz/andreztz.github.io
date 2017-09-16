@@ -78,13 +78,23 @@ PLUGIN_PATHS = ['pelican-plugins']
 
 PLUGINS = [
     'optimize_images',
-    'representative_image',
     'pelican_youtube',
     'pelican_vimeo',
     'sitemap',
     'better_codeblock_line_numbering',
+    'representative_image',
     # 'better_figures_and_images',
+    'minify',
 ]
+
+# RESPONSIVE_IMAGES = True
+
+MINIFY = {
+  'remove_comments': True,
+  'remove_all_empty_space': True,
+  'remove_optional_attribute_quotes': False
+}
+
 
 MARKDOWN = {'extensions':
             ['codehilite(css_class=highlight,linenums=True)', 'extra']
@@ -107,7 +117,8 @@ SITEMAP = {
 
 DEFAULT_PAGINATION = 5
 
-# DISQUS_SITENAME = 'andreztz'
+DISQUS_SITENAME = 'andreztz'
+
 
 SUMMARY_MAX_LENGTH = 25
 

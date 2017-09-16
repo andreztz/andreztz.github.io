@@ -4,3 +4,4 @@ pelican-vimeo
 pelican-youtube
 pillow
 pygments
+pelican-minify==0.9

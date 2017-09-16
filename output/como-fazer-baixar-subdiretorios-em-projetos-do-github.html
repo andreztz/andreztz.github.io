@@ -1,31 +1,5 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-        <meta name="google-site-verification" content="2GFvqWUV655ExmbvNaUPoPRT4d5Pj7vtLG7QRPJ2qYc" />
-        <meta name="description" content="André Santos - Blog, ">
-
-
-            <title>Como fazer baixar subdiretorios em projetos do GitHub // André Santos - Blog </title>
-
-        <link href="./extras/favicon.ico" rel="icon" sizes="32x32" type="image/png">
-
-        <!-- SEO -->
-        <meta property="og:title" content="Andre Santos Blog">
-        <meta property="og:description" content="Andre Santos Blog. Blog pessoal, anotações.">
-        <meta property="og:url" content="http://andreztz.pythonanywhere.com">
-        <meta property="og:image" content="images/image.jpg">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Andre Santos Blog">
-        <link rel="stylesheet" href="./theme/libs/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./theme/libs/bootstrap/dist/css/bootstrap-theme.min.css">
-        <script src="./theme/libs/jquery/dist/jquery.min.js"></script>
-        <script src="./theme/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="./theme/css/css.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-
-        <script>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"><meta name="google-site-verification" content="2GFvqWUV655ExmbvNaUPoPRT4d5Pj7vtLG7QRPJ2qYc"><meta name="description" content="André Santos - Blog, "><title>Como fazer baixar subdiretorios em projetos do GitHub // André Santos - Blog</title><link href="./extras/favicon.ico" rel="icon" sizes="32x32" type="image/png"><meta property="og:title" content="Andre Santos Blog"><meta property="og:description" content="Andre Santos Blog. Blog pessoal, anotações."><meta property="og:url" content="http://andreztz.pythonanywhere.com"><meta property="og:image" content="images/image.jpg"><meta property="og:type" content="website"><meta property="og:site_name" content="Andre Santos Blog"><link rel="stylesheet" href="./theme/libs/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="./theme/libs/bootstrap/dist/css/bootstrap-theme.min.css"><script src="./theme/libs/jquery/dist/jquery.min.js"></script><script src="./theme/libs/bootstrap/dist/js/bootstrap.min.js"></script><link rel="stylesheet" href="./theme/css/css.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"><script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -34,111 +8,13 @@
           ga('create', 'UA-75331741-1', 'auto');
           ga('send', 'pageview');
 
-        </script>
-    <link rel="stylesheet" href="./theme/css/pygments.css">
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
-    <script>
+        </script><link rel="stylesheet" href="./theme/css/pygments.css"><script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script><script>
         $(document).ready(function(){
             $(".content").fitVids();
         });
-    </script>
-    </head>
-    <body class="container-fluid">
-        <main class="row">
-            <div class="col-xs-12 col-md-12">
-                <div class="row">
-                    <header class="col-xs-12 col-md-3 column-left">
-    <header class="column-left-menu">
-        <br><br>
-        <hgroup class="text-center">
-            <a href="./author/andre-santos.html" title="See posts by André Santos">
-            </a>
-            <h2 class="">André Santos</h2>
-            <small class=""></small>
-            <h5>Publicado</h5>
-            <p>qui 22 junho 2017</p>
-            <a href="/">&larr;Home</a>
-        </hgroup>
-    </header>
-    
-
-                    </header>
-                </div>
-                <section class="col-xs-12 col-md-9 column-right">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-    <div id="layout">
-        <div class="">
-            <div class="content">
-                <section class="">
-                    <header class="content-subhead">
-                        <p class="">&rarr;
-   
-                                <a class="post-category" href="./tag/git.html">git</a>
-   
-                                <a class="post-category" href="./tag/github.html">github</a>
-   
-                                <a class="post-category" href="./tag/svn.html">svn</a>
-   
-                                <a class="post-category" href="./tag/subversion.html">subversion</a>
-                        </p>
-                    </header>
-                    <br>
-                    <article class="well text-justify">
-                        <div class="page-header">
-                            <h1>Como fazer baixar subdiretorios em projetos do GitHub</h1>
-                        </div>
-                        <p>Se você deseja baixar um projeto inteiro do GitHub sem os dados de controle de versão,
-você pode usar a opção Download ZIP do site.</p>
-<p>Alternativamente, você pode usar ferramentas de linha de comando, por exemplo:</p>
-<div class="highlight"><pre><span class="code-line"><span></span>$ curl -L -o pyqt5-master.zip https://github.com/baoboa/pyqt5/archive/master.zip</span>
-</pre></div>
-<p>E se você quiser baixar apenas um subdiretório? O site não tem uma opção para isso,
-pelo menos ainda não. Isso não é problema! Graças ao suporte do Subversion no GitHub,
-você pode usar a ferramenta de linha de comando svn para esse efeito.
-Por exemplo, digamos que nosso alvo seja o diretório activeqt do projeto pyqt5.</p>
-<p>A url do nosso alvo é <em>https://github.com/baoboa/pyqt5/tree/master/examples/activeqt</em></p>
-<p>usando o formato <em>https://github.com/USER/PROJECT/trunk/PATH DEST</em> temos:</p>
-<p>USER = baoboa</p>
-<p>PROJECT = pyqt5</p>
-<p>PATH = examples/activeqt</p>
-<p>DEST = webbrowser</p>
-<p><em>https://github.com/baoboa/pyqt5/trunk/examples/activeqt webbrowser</em></p>
-<p>agora podemos deixar o resto por conta do svn.</p>
-<div class="highlight"><pre><span class="code-line"><span></span>$ svn <span class="nb">export</span> https://github.com/baoboa/pyqt5/trunk/examples/activeqt browser</span>
-</pre></div>
-<p>Isso cria um diretório localmente com o conteúdo do subdiretório especificado do projeto.</p>
-
-                    </article>
-                </section>
-                <!-- share_post
-                 -->
-                <!-- 'googleplus_comments' -->
-
-                <div id="commentswrap" style="padding-top: 5%;">
-                    <div id="comments"></div>
-                </div> <!-- end 'googleplus_comments'  -->
-
-
-                <a href="#" class="go-top">Go Top</a>
-               
-            </div>
-        </div>
-    </div>
-<footer>
-    <div class="col-xs-12 col-md-6 col-md-offset-0 column-right">
-        <small><p class="text-center">© André Santos - Blog</p><small>
-    </div>
-</footer>                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-
-
-        <script src="./theme/js/app.js"></script>
-        <script>
+    </script></head><body class="container-fluid"><main class="row"><div class="col-xs-12 col-md-12"><div class="row"><header class="col-xs-12 col-md-3 column-left"><header class="column-left-menu"><br><br><hgroup class="text-center"><a href="./author/andre-santos.html" title="See posts by André Santos"></a><h2 class>André Santos</h2><small class></small><h5>Publicado</h5><p>qui 22 junho 2017</p><a href="/">&larr;Home</a></hgroup></header></header></div><section class="col-xs-12 col-md-9 column-right"><div class="row"><div class="col-xs-12 col-md-12"><div id="layout"><div class><div class="content"><section class><header class="content-subhead"><p class>&rarr;<a class="post-category" href="./tag/git.html">git</a><a class="post-category" href="./tag/github.html">github</a><a class="post-category" href="./tag/svn.html">svn</a><a class="post-category" href="./tag/subversion.html">subversion</a></p></header><br><article class="well text-justify"><div class="page-header"><h1>Como fazer baixar subdiretorios em projetos do GitHub</h1></div><p>Se você deseja baixar um projeto inteiro do GitHub sem os dados de controle de versão, você pode usar a opção Download ZIP do site.</p><p>Alternativamente, você pode usar ferramentas de linha de comando, por exemplo:</p><div class="highlight"><pre><span class="code-line"><span></span>$ curl -L -o pyqt5-master.zip https://github.com/baoboa/pyqt5/archive/master.zip</span>
+</pre></div><p>E se você quiser baixar apenas um subdiretório? O site não tem uma opção para isso, pelo menos ainda não. Isso não é problema! Graças ao suporte do Subversion no GitHub, você pode usar a ferramenta de linha de comando svn para esse efeito. Por exemplo, digamos que nosso alvo seja o diretório activeqt do projeto pyqt5.</p><p>A url do nosso alvo é <em>https://github.com/baoboa/pyqt5/tree/master/examples/activeqt</em></p><p>usando o formato <em>https://github.com/USER/PROJECT/trunk/PATH DEST</em> temos:</p><p>USER = baoboa</p><p>PROJECT = pyqt5</p><p>PATH = examples/activeqt</p><p>DEST = webbrowser</p><p><em>https://github.com/baoboa/pyqt5/trunk/examples/activeqt webbrowser</em></p><p>agora podemos deixar o resto por conta do svn.</p><div class="highlight"><pre><span class="code-line"><span></span>$ svn <span class="nb">export</span> https://github.com/baoboa/pyqt5/trunk/examples/activeqt browser</span>
+</pre></div><p>Isso cria um diretório localmente com o conteúdo do subdiretório especificado do projeto.</p></article></section><div id="commentswrap" style="padding-top: 5%;"><div id="comments"></div></div><a href="#" class="go-top">Go Top</a></div></div></div><footer><div class="col-xs-12 col-md-6 col-md-offset-0 column-right"><small><p class="text-center">© André Santos - Blog</p><small></div></footer></div></div></section></div></main><script src="./theme/js/app.js"></script><script>
             var $top = $('.go-top');
             // Show or hide the sticky footer button
             $(window).scroll(function() {
@@ -161,6 +37,4 @@ Por exemplo, digamos que nosso alvo seja o diretório activeqt do projeto pyqt5.
                 event.preventDefault();
                 console.log($(this).scrollTop());
             });
-        </script>
-    </body>
-</html>
+        </script></body></html>

@@ -56,29 +56,29 @@
                 {% if article.share_post and article.status != 'draft' %}
                 <section style="padding-top: 5%;">
                     <p id="post-share-links">
-                        <a href="{{article.share_post['twitter']}}" target="_blank" title="Compartilhe no Twitter"><img src="http://i.imgbox.com/sCwsMVpo.png"></a>
+                        <a href="{{article.share_post['twitter']}}" target="_blank" rel="noopener" title="Compartilhe no Twitter"><img src="http://i.imgbox.com/sCwsMVpo.png"></a>
 
-                        <a href="{{article.share_post['facebook']}}" target="_blank" title="Compartilhe no Facebook"><img src="http://i.imgbox.com/biAKDPdQ.png"></a>
+                        <a href="{{article.share_post['facebook']}}" target="_blank" rel="noopener" title="Compartilhe no Facebook"><img src="http://i.imgbox.com/biAKDPdQ.png"></a>
 
-                        <a href="{{article.share_post['google-plus']}}" target="_blank" title="Compartilhe no Google Plus"><img src="http://i.imgbox.com/Ncriqy4P.png"></a>
+                        <a href="{{article.share_post['google-plus']}}" target="_blank" rel="noopener" title="Compartilhe no Google Plus"><img src="http://i.imgbox.com/Ncriqy4P.png"></a>
 
-                        <a href="{{article.share_post['email']}}" target="_blank" title="Compartilhe via Email"><img src="http://i.imgbox.com/X6rd1oYd.png"></a>
+                        <a href="{{article.share_post['email']}}" target="_blank" rel="noopener" title="Compartilhe via Email"><img src="http://i.imgbox.com/X6rd1oYd.png"></a>
                     </p>
                 </section>
                 {% endif %}
                  -->
-                <!-- 'googleplus_comments' -->
+                <!-- 'googleplus_comments' 
 
                 <div id="commentswrap" style="padding-top: 5%;">
                     <div id="comments">{{ article.metadata.googleplus_comments }}</div>
-                </div> <!-- end 'googleplus_comments'  -->
+                </div> end 'googleplus_comments'  -->
 
 
-                <a href="#" class="go-top">Go Top</a>
+
                 {% if DISQUS_SITENAME %}
                     {% include 'disqus.html' %}
                 {% endif %}
-
+                <a href="#" class="go-top">Go Top</a>
             </div>
         </div>
     </div>
