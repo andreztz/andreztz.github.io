@@ -3,7 +3,7 @@ Como instalar o Wxpython3 Phoenix.
 
 :date: 2017-10-06 17:45
 :category: python
-:tags: python3, wxpython, wxpython3, Phoenix
+:tags: python3, wxpython3
 :Image: https://upload.wikimedia.org/wikipedia/commons/c/c0/WxPython-logo.png
 
 
