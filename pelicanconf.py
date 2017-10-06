@@ -85,6 +85,7 @@ PLUGINS = [
     'representative_image',
     # 'better_figures_and_images',
     'minify',
+    # 'cssminify',
 ]
 
 # RESPONSIVE_IMAGES = True
