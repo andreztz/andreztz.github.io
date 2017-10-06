@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2017-10-06T17:53:32-00:00</lastmod>
+<lastmod>2017-10-06T17:55:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2017-10-06T17:53:32-00:00</lastmod>
+<lastmod>2017-10-06T17:55:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2017-10-06T17:53:32-00:00</lastmod>
+<lastmod>2017-10-06T17:55:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2017-10-06T17:53:32-00:00</lastmod>
+<lastmod>2017-10-06T17:55:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/pages/about.html</loc>
-<lastmod>2017-10-06T17:53:32-00:00</lastmod>
+<lastmod>2017-10-06T17:55:05-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
@@ -130,21 +130,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://andreztz.github.io/tag/wxpython.html</loc>
-<lastmod>2017-10-06T17:45:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://andreztz.github.io/tag/wxpython3.html</loc>
-<lastmod>2017-10-06T17:45:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://andreztz.github.io/tag/phoenix.html</loc>
 <lastmod>2017-10-06T17:45:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
