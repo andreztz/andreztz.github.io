@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2017-10-06T17:55:05-00:00</lastmod>
+<lastmod>2017-10-13T05:05:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2017-10-06T17:55:05-00:00</lastmod>
+<lastmod>2017-10-13T05:05:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2017-10-06T17:55:05-00:00</lastmod>
+<lastmod>2017-10-13T05:05:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2017-10-06T17:55:05-00:00</lastmod>
+<lastmod>2017-10-13T05:05:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/pages/about.html</loc>
-<lastmod>2017-10-06T17:55:05-00:00</lastmod>
+<lastmod>2017-10-13T05:05:18-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/como-depurar-aplicacoes-em-nodejs.html</loc>
+<lastmod>2017-10-13T04:27:00-03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
 </url>
 
 <url>
@@ -109,6 +116,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://andreztz.github.io/category/nodjs.html</loc>
+<lastmod>2017-10-13T04:27:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://andreztz.github.io/category/python.html</loc>
 <lastmod>2017-10-06T17:45:00-03:06</lastmod>
 <changefreq>daily</changefreq>
@@ -118,6 +132,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://andreztz.github.io/category/windows.html</loc>
 <lastmod>2017-04-07T00:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/javascript.html</loc>
+<lastmod>2017-10-13T04:27:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/nodejs.html</loc>
+<lastmod>2017-10-13T04:27:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/depurar.html</loc>
+<lastmod>2017-10-13T04:27:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://andreztz.github.io/tag/debug.html</loc>
+<lastmod>2017-10-13T04:27:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -229,7 +271,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/author/andre-santos.html</loc>
-<lastmod>2017-10-06T17:45:00-03:06</lastmod>
+<lastmod>2017-10-13T04:27:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
