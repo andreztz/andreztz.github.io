@@ -25,7 +25,7 @@ Syntax
         ...
      </keyboard>
 
-KEY-COMBINATION é a combinação de teclas que liga à uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um "-".
+KEY-COMBINATION é a combinação de teclas que liga a uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um "-".
 
 
 Modificadores
