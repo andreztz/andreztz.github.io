@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block title %}Todos as postagens - {{ super() }}{% endblock title %}
+{% block pagetitle %}Todas as postagens{% endblock pagetitle %}
+
+
+{% block sidebar %}
+
+{{ super() }}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="">
+    <div class="">
+        <div class="content">
+            <div class="content-subhead">Todas as postagens</div>
+            {% for article in dates %}
+                <div class="">
+                    <h5 class="">{{ article.date|strftime('%d %B  de %Y') }}</h5>
+                    <div class="">
+                        <a href="{{ article.url }}">{{ article.title }}</a>
+                    </div>
+                    <p class="">{{ article.author }} em <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
