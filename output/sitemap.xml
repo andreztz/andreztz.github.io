@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2018-10-11T16:39:01-00:00</lastmod>
+<lastmod>2019-03-10T23:22:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2018-10-11T16:39:01-00:00</lastmod>
+<lastmod>2019-03-10T23:22:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2018-10-11T16:39:01-00:00</lastmod>
+<lastmod>2019-03-10T23:22:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2018-10-11T16:39:01-00:00</lastmod>
+<lastmod>2019-03-10T23:22:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/pages/about.html</loc>
-<lastmod>2018-10-11T16:39:01-00:00</lastmod>
+<lastmod>2019-03-10T23:22:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
@@ -41,13 +41,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://andreztz.github.io/como-baixar-subdiretorios-em-projetos-do-github.html</loc>
 <lastmod>2017-06-22T00:00:00-03:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://andreztz.github.io/como-fazer-backup-de-drivers-no-windows.html</loc>
-<lastmod>2017-04-07T00:00:00-03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.8</priority>
 </url>
@@ -88,13 +81,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://andreztz.github.io/category/windows.html</loc>
-<lastmod>2017-04-07T00:00:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://andreztz.github.io/tag/git.html</loc>
 <lastmod>2017-06-22T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
@@ -118,13 +104,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://andreztz.github.io/tag/subversion.html</loc>
 <lastmod>2017-06-22T00:00:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://andreztz.github.io/tag/windows.html</loc>
-<lastmod>2017-04-07T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
