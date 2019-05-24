@@ -57,4 +57,4 @@ O Openbox nem sempre reflete automaticamente as alterações feitas em seus arqu
 
     $ openbox --reconfigure
 
-`Referencia: http://openbox.org/wiki/Help:Bindings#Key_bindings <http://openbox.org/wiki/Help:Bindings#Key_bindings>`_
+`Referência: http://openbox.org/wiki/Help:Bindings#Key_bindings <http://openbox.org/wiki/Help:Bindings#Key_bindings>`_
