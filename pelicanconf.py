@@ -105,7 +105,7 @@ MARKDOWN = {
 
 MARKDOWN = {
     "extension_configs": {
-        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.codehilite": {"css_class": "highlight", "linenums": True},
         "markdown.extensions.extra": {},
         "markdown.extensions.meta": {},
     },
@@ -125,3 +125,5 @@ USE_GOOGLE_FONTS = True
 THEME_STATIC_DIR = "static"
 
 DISABLE_URL_HASH = True
+# PLUGIN_PATHS.extend(["./plugins"])
+# PLUGINS.extend(["exampleplugin", "clean"])

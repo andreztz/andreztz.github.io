@@ -94,3 +94,4 @@ pelican-plugins/
 *.draft
 pelican.pid
 srv.pid
+plugins
