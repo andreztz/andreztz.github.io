@@ -72,13 +72,13 @@ FAVICON = "extras/favicon.ico"
 PLUGIN_PATHS = ["pelican-plugins"]
 
 PLUGINS = [
-    "optimize_images",
+    # "optimize_images",
     "pelican_youtube",
     "pelican_vimeo",
     "sitemap",
     "better_codeblock_line_numbering",
     "representative_image",
-    # 'better_figures_and_images',
+    # "better_figures_and_images",
     "minify",
 ]
 
