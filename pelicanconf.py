@@ -58,7 +58,7 @@ MENUITEMS = (
 PLUGIN_PATHS = ["./pelican-plugins"]
 
 # Enable i18n plugin.
-PLUGINS = ["i18n_subsites"]
+PLUGINS = ["i18n_subsites", "pelican_youtube"]
 # Enable Jinja2 i18n extension used to parse translations.
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 
