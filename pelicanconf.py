@@ -3,7 +3,8 @@
 from datetime import datetime
 
 AUTHOR = "André P. Santos"
-SITEURL = "http://localhost:5000"
+# SITEURL = "http://localhost:5000"
+SITEURL = "."
 SITENAME = "__ztz__"
 SITETITLE = "__ztz__"
 SITESUBTITLE = "André P. Santos blog"
