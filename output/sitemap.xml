@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://andreztz.github.io/</loc>
-<lastmod>2019-03-11T00:28:10-00:00</lastmod>
+<lastmod>2019-05-24T01:27:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/archives.html</loc>
-<lastmod>2019-03-11T00:28:10-00:00</lastmod>
+<lastmod>2019-05-24T01:27:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tags.html</loc>
-<lastmod>2019-03-11T00:28:10-00:00</lastmod>
+<lastmod>2019-05-24T01:27:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/categories.html</loc>
-<lastmod>2019-03-11T00:28:10-00:00</lastmod>
+<lastmod>2019-05-24T01:27:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/pages/about.html</loc>
-<lastmod>2019-03-11T00:28:10-00:00</lastmod>
+<lastmod>2019-05-24T01:27:32-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
 
 <url>
-<loc>https://andreztz.github.io/como-baixar-subdiretorios-em-projetos-do-github.html</loc>
-<lastmod>2017-06-22T00:00:00-03:00</lastmod>
+<loc>https://andreztz.github.io/como-baixar-diretorios-do-GitHub.html</loc>
+<lastmod>2019-05-24T00:00:00-03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.8</priority>
 </url>
@@ -60,15 +60,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://andreztz.github.io/my-super-post.html</loc>
-<lastmod>2010-12-05T19:30:00-02:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
 <loc>https://andreztz.github.io/category/github.html</loc>
-<lastmod>2017-06-22T00:00:00-03:06</lastmod>
+<lastmod>2019-05-24T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -88,36 +81,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://andreztz.github.io/category/python.html</loc>
-<lastmod>2010-12-05T19:30:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://andreztz.github.io/tag/git.html</loc>
-<lastmod>2017-06-22T00:00:00-03:06</lastmod>
+<lastmod>2019-05-24T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tag/github.html</loc>
-<lastmod>2017-06-22T00:00:00-03:06</lastmod>
+<lastmod>2019-05-24T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tag/svn.html</loc>
-<lastmod>2017-06-22T00:00:00-03:06</lastmod>
+<lastmod>2019-05-24T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://andreztz.github.io/tag/subversion.html</loc>
-<lastmod>2017-06-22T00:00:00-03:06</lastmod>
+<lastmod>2019-05-24T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -158,36 +144,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://andreztz.github.io/tag/pelican.html</loc>
-<lastmod>2010-12-05T19:30:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://andreztz.github.io/tag/publishing.html</loc>
-<lastmod>2010-12-05T19:30:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://andreztz.github.io/author/alexis-metaireau.html</loc>
-<lastmod>2010-12-05T19:30:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://andreztz.github.io/author/andre-santos.html</loc>
-<lastmod>2017-06-22T00:00:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://andreztz.github.io/author/conan-doyle.html</loc>
-<lastmod>2010-12-05T19:30:00-03:06</lastmod>
+<lastmod>2019-05-24T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
