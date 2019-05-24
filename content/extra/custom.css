@@ -32,6 +32,17 @@ a.btn:hover {
   background-color: #4da7de;
 }
 
+.tag-cloud a {
+  background-color: #608ce2;
+}
+
+.tag-cloud a:hover {
+  color: #fff;
+  background-color: #4da7de;
+}
+
+
+
 .social a {
   color: #fff;
 }
