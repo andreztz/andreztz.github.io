@@ -87,6 +87,7 @@ EXTRA_PATH_METADATA = {
     # 'images/favicon.ico': {'path': 'favicon.ico'}
     "extra/custom.css": {"path": "static/custom.css"},
 }
+# https://stackoverflow.com/questions/44209165/hosting-raw-html-pages-in-a-pelican-static-website
 # diretorios e arquivos que são incluidos no output a partir do content
 # diretorios vazios não são incluidos.
 STATIC_PATHS = ["images", "extra"]
