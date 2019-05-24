@@ -1,1 +1,37 @@
  /* CUSTOM_CSS */
+
+aside {
+  background-color: ##2f2e2e;
+  color: #608ce2;;
+}
+
+aside a {
+  color: #608ce2;
+
+}
+
+aside a:hover {
+  color: #4da7de;
+}
+
+article a {
+  color: #608ce2;
+}
+
+article a:hover {
+  color: #4da7de;
+
+}
+
+a.btn {
+  background-color: #608ce2;
+}
+
+a.btn:hover {
+  color: #fff;
+  background-color: #4da7de;
+}
+
+.social a {
+  color: #fff;
+}
