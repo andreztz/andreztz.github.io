@@ -53,7 +53,7 @@ SOCIAL = (
     ("facebook", "https://www.facebook.com/ztzandre"),
     ("github", "https://github.com/andreztz"),
     ("youtube", "https://www.youtube.com/channel/UCAwZjRyaUvoVu2thZBoGO8w"),
-    ("google-plus", "https://plus.google.com/u/0/+AndréSantosztz"),
+    # ("google-plus", "https://plus.google.com/u/0/+AndréSantosztz"),
     ("twitter", "https://twitter.com/ztzandre"),
 )
 

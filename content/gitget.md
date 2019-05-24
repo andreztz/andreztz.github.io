@@ -1,4 +1,4 @@
-title: Como baixar subdiretorios em projetos do GitHub
+title: Como baixar subdiretórios em projetos do GitHub
 slug: como-baixar-diretorios-do-GitHub
 date: 2017-06-22
 modified: 2019-05-24
