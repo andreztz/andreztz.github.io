@@ -6,8 +6,8 @@ Como configurar teclas de atalho no Openbox.
 :tags: archlinux, openbox
 
 
-Teclas de atalho fornecem um método rápido e fácil para a executar comandos, a partir de uma combinação de teclas predefinida.
-No openbox, para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.
+Teclas de atalho fornecem um método rápido e fácil para a executar comandos a partir de uma combinação de teclas predefinida.
+No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.
 
 
 
