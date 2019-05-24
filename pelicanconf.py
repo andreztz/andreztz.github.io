@@ -19,7 +19,7 @@ PYGMENTS_STYLE = "monokai"
 ROBOTS = "index, follow"
 
 THEME = "themes/Flex"
-# PATH = "content"
+PATH = "content"
 # OUTPUT_PATH = "blog/"
 TIMEZONE = "America/Sao_Paulo"
 
@@ -38,13 +38,13 @@ USE_FOLDER_AS_CATEGORY = True
 MAIN_MENU = (
     True
 )  # BUG Quando habilitado no menu de navegação superior ao clicar sobre andre santos
-HOME_HIDE_TAGS = False
+HOME_HIDE_TAGS = True
 
 SOCIAL = (
     ("facebook", "https://www.facebook.com/ztzandre"),
     ("github", "https://github.com/andreztz"),
     ("twitter", "https://twitter.com/andreztz"),
-    ("rss", "/blog/feeds/all.atom.xml"),
+    ("rss", "/feeds/all.atom.xml"),
 )
 
 MENUITEMS = (
@@ -54,12 +54,6 @@ MENUITEMS = (
     ("About", "/pages/about"),
     # ("Test", "/pages/test"),
 )
-
-CC_LICENSE = {
-    "name": "Creative Commons Attribution-ShareAlike",
-    "version": "4.0",
-    "slug": "by-sa",
-}
 
 PLUGIN_PATHS = ["./pelican-plugins"]
 
@@ -81,8 +75,6 @@ ADD_THIS_ID = "ra-55adbb025d4f7e55"
 
 
 EXTRA_PATH_METADATA = {
-    # "extra/static": {"path": "static"},
-    # "extra": {"path": "extra"},
     "extra/CNAME": {"path": "CNAME"},
     "extra/robots.txt": {"path": "robots.txt"},
     # 'images/favicon.ico': {'path': 'favicon.ico'}
@@ -102,8 +94,34 @@ SITEMAP = {
     "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
 }
 
+MARKDOWN = {
+    "extension_configs": {
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+    },
+    "output_format": "html5",
+}
+
+MARKDOWN = {
+    "extension_configs": {
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+    },
+    "output_format": "html5",
+}
+
+CC_LICENSE = {
+    "name": "Creative Commons Attribution-ShareAlike",
+    "version": "4.0",
+    "slug": "by-sa",
+}
+
 RELATIVE_URLS = True
 DELETE_OUTPUT_DIRECTORY = True
 
 USE_GOOGLE_FONTS = True
 THEME_STATIC_DIR = "static"
+
+DISABLE_URL_HASH = True
