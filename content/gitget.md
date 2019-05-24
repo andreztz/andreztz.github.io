@@ -5,7 +5,7 @@ modified: 2019-05-24
 category: github
 tags: git, github, svn, subversion, python, script
 Authors: André P. Santos
-
+Summary: Como baixar subdiretórios em projetos do GitHub
 
 ##### Segue o script:
 
