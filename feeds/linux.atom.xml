@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>__ztz__ - linux</title><link href="./" rel="alternate"></link><link href="./feeds/linux.atom.xml" rel="self"></link><id>./</id><updated>2017-03-07T01:51:00-03:00</updated><entry><title>Como configurar teclas de atalho no Openbox.</title><link href="./como-configurar-teclas-de-atalho-no-openbox.html" rel="alternate"></link><published>2017-03-07T01:51:00-03:00</published><updated>2017-03-07T01:51:00-03:00</updated><author><name>André P. Santos</name></author><id>tag:None,2017-03-07:./como-configurar-teclas-de-atalho-no-openbox.html</id><summary type="html">&lt;p&gt;Teclas de atalho fornecem um método rápido e fácil para a executar comandos a partir de uma combinação de teclas predefinida.
+No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.&lt;/p&gt;
+&lt;div class="section" id="syntax"&gt;
+&lt;h2&gt;Syntax&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;keyboard&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;keybind&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;KEY-COMBINATION...&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="n"&gt;ACTIONS&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;keybind&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;keyboard&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;KEY-COMBINATION é a combinação de …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Teclas de atalho fornecem um método rápido e fácil para a executar comandos a partir de uma combinação de teclas predefinida.
+No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.&lt;/p&gt;
+&lt;div class="section" id="syntax"&gt;
+&lt;h2&gt;Syntax&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;keyboard&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;keybind&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;KEY-COMBINATION...&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="n"&gt;ACTIONS&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;keybind&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;keyboard&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;KEY-COMBINATION é a combinação de teclas que liga a uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &amp;quot;-&amp;quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="modificadores"&gt;
+&lt;h2&gt;Modificadores&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;S tecla Shift&lt;/li&gt;
+&lt;li&gt;C tecla Control&lt;/li&gt;
+&lt;li&gt;A tecla Alt&lt;/li&gt;
+&lt;li&gt;W tecla Super (tecla Windows)&lt;/li&gt;
+&lt;li&gt;M tecla Meta&lt;/li&gt;
+&lt;li&gt;H tecla Hyper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo"&gt;
+&lt;h2&gt;Exemplo&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;keybind&lt;/span&gt; &lt;span class="na"&gt;key=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;S-A-T&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;action&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;command&amp;gt;&lt;/span&gt;python /caminho/para/executável&lt;span class="nt"&gt;&amp;lt;/command&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/keybind&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O Openbox nem sempre reflete automaticamente as alterações feitas em seus arquivos de configurações, consequentemente será necessário recarregar manualmente esses arquivos depois de editados.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ openbox --reconfigure
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://openbox.org/wiki/Help:Bindings#Key_bindings"&gt;Referência: http://openbox.org/wiki/Help:Bindings#Key_bindings&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="archlinux"></category><category term="openbox"></category></entry></feed>
