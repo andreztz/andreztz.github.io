@@ -25,6 +25,8 @@ TIMEZONE = "America/Sao_Paulo"
 
 LOCALE = ("pt_BR.utf8",)
 
+DEFAULT_LANG = "pt_BR"
+OG_LOCALE = "pt_BR"
 
 DATE_FORMATS = {"en": "%B %d, %Y", "pt_BR.utf-8": " %d/%m/%Y"}
 
@@ -35,6 +37,11 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 USE_FOLDER_AS_CATEGORY = True
+
+COPYRIGHT_YEAR = datetime.now().year
+
+DEFAULT_PAGINATION = 5
+
 MAIN_MENU = (
     True
 )  # BUG Quando habilitado no menu de navegação superior ao clicar sobre andre santos
@@ -57,21 +64,20 @@ MENUITEMS = (
 
 PLUGIN_PATHS = ["./pelican-plugins"]
 
+I18N_TEMPLATES_LANG = "pt_BR"
+
 # Enable i18n plugin.
 PLUGINS = ["i18n_subsites", "pelican_youtube"]
+
+# mapping: language_code -> settings_overrides_dict
+I18N_SUBSITES = {"en": {"SITENAME": "__ztz__"}}
+
 # Enable Jinja2 i18n extension used to parse translations.
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 
-DEFAULT_LANG = "pt_BR"
-OG_LOCALE = "pt_BR"
-I18N_TEMPLATES_LANG = "en"
-
-
-COPYRIGHT_YEAR = datetime.now().year
-DEFAULT_PAGINATION = 5
-
 DISQUS_SITENAME = "andreztz"
-ADD_THIS_ID = "ra-55adbb025d4f7e55"
+
+# ADD_THIS_ID = "ra-55adbb025d4f7e55"
 
 
 EXTRA_PATH_METADATA = {
@@ -92,15 +98,6 @@ SITEMAP = {
     "format": "xml",
     "priorities": {"articles": 0.6, "indexes": 0.6, "pages": 0.5},
     "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
-}
-
-MARKDOWN = {
-    "extension_configs": {
-        "markdown.extensions.codehilite": {"css_class": "highlight"},
-        "markdown.extensions.extra": {},
-        "markdown.extensions.meta": {},
-    },
-    "output_format": "html5",
 }
 
 MARKDOWN = {
