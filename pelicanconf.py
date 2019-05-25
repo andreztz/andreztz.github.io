@@ -70,7 +70,7 @@ I18N_TEMPLATES_LANG = "pt_BR"
 PLUGINS = ["i18n_subsites", "pelican_youtube"]
 
 # mapping: language_code -> settings_overrides_dict
-I18N_SUBSITES = {"en": {"SITENAME": "__ztz__"}}
+# I18N_SUBSITES = {"en": {"SITENAME": "__ztz__"}}
 
 # Enable Jinja2 i18n extension used to parse translations.
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
