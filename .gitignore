@@ -95,3 +95,4 @@ pelican-plugins/
 pelican.pid
 srv.pid
 plugins
+publicar.readme.txt
