@@ -51,6 +51,8 @@ SOCIAL = (
     ("facebook", "https://www.facebook.com/ztzandre"),
     ("github", "https://github.com/andreztz"),
     ("twitter", "https://twitter.com/andreztz"),
+    ("instagram", "https://www.instagram.com/andreztz/"),
+    ("strava", "https://www.strava.com/athletes/27260098"),
     ("rss", "/feeds/all.atom.xml"),
 )
 
