@@ -47,6 +47,12 @@ a.btn:hover {
   color: #fff;
 }
 
+
+.sc-strava {
+  background-color: #8a84842e;
+}
+
+
 /*
  * Responsive design style sheet for pelican YouTube integration.
  * Makes the video as wide as possible, keeping a specified aspect ratio
