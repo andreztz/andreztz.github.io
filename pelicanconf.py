@@ -52,7 +52,7 @@ THEME = "themes/pure-single"
 
 MENUITEMS = (
     ("Archives", "/archives.html"),
-    ("About", "/pages/about"),
+    # ("About", "/pages/about"),
     # ("Blog", "/blog.html"),
     ("Categories", "/categories.html"),
     ("Tags", "/tags.html"),
