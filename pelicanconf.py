@@ -1,51 +1,64 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-
-from datetime import datetime
+from __future__ import unicode_literals
 
 AUTHOR = "André P. Santos"
-# SITEURL = "http://localhost:5000"
-SITEURL = "."
 SITENAME = "__ztz__"
-SITETITLE = "__ztz__"
-SITESUBTITLE = "André P. Santos blog"
-SITEDESCRIPTION = "Anotações"
-SITELOGO = "http://i.imgbox.com/71jbSiuD.jpg"
-# FAVICON = '/images/favicon.ico'
-BROWSER_COLOR = "#333333"
-PYGMENTS_STYLE = "monokai"
+SITEURL = "."
 
-# USE_PAGER = "True" ???
-
-ROBOTS = "index, follow"
-
-THEME = "themes/Flex"
 PATH = "content"
-# OUTPUT_PATH = "blog/"
+
 TIMEZONE = "America/Sao_Paulo"
 
-LOCALE = ("pt_BR.utf8",)
-
 DEFAULT_LANG = "pt_BR"
-OG_LOCALE = "pt_BR"
 
-DATE_FORMATS = {"en": "%B %d, %Y", "pt_BR.utf-8": " %d/%m/%Y"}
-
+# Feed generation is usually not desired when developing
 FEED_ALL_ATOM = "feeds/all.atom.xml"
-CATEGORY_FEED_ATOM = "feeds/%s.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-USE_FOLDER_AS_CATEGORY = True
+# Blogroll
+# LINKS = (
+#     ("Pelican", "http://getpelican.com/"),
+#     ("Python.org", "http://python.org/"),
+#     ("Jinja2", "http://jinja.pocoo.org/"),
+#     ("You can modify those links in your config file", "#"),
+# )
 
-COPYRIGHT_YEAR = datetime.now().year
+# Social widget
+# SOCIAL = (
+#     ("You can add links in your config file", "#"),
+#     ("Another social link", "#"),
+# )
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 10
 
-MAIN_MENU = (
-    True
-)  # BUG Quando habilitado no menu de navegação superior ao clicar sobre andre santos
-HOME_HIDE_TAGS = True
+STATIC_PATHS = ["images", "extra"]
+ICONS_PATH = "images/icons"
+
+PLUGIN_PATHS = ["plugins/"]
+PLUGINS = ["assets", "neighbors"]
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
+
+THEME = "themes/pure-single"
+
+
+### pure-single ###
+
+
+MENUITEMS = (
+    ("Archives", "/archives.html"),
+    ("About", "/pages/about"),
+    # ("Blog", "/blog.html"),
+    ("Categories", "/categories.html"),
+    ("Tags", "/tags.html"),
+    # ("Test", "/pages/test"),
+)
+
 
 SOCIAL = (
     ("facebook", "https://www.facebook.com/ztzandre"),
@@ -56,73 +69,18 @@ SOCIAL = (
     ("rss", "/feeds/all.atom.xml"),
 )
 
-MENUITEMS = (
-    ("Archives", "/archives.html"),
-    ("Categories", "/categories.html"),
-    ("Tags", "/tags.html"),
-    ("About", "/pages/about"),
-    # ("Test", "/pages/test"),
-)
-
-PLUGIN_PATHS = ["./pelican-plugins"]
-
-I18N_TEMPLATES_LANG = "pt_BR"
-
-# Enable i18n plugin.
-PLUGINS = ["i18n_subsites", "pelican_youtube"]
-
-# mapping: language_code -> settings_overrides_dict
-# I18N_SUBSITES = {"en": {"SITENAME": "__ztz__"}}
-
-# Enable Jinja2 i18n extension used to parse translations.
-JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
-
+# Set the sidebar image (Optional).
+COVER_IMG_URL = "images/cover.jpg"
+# Set the image for the top circle cutout
+PROFILE_IMG_URL = "images/icons/avatar.png"
+#  Used for the page titles and some meta tags.
+TAGLINE = "High tech, Low life."
+#  Set the favicon image
+FAVICON_URL = ""
+# Set this to enable disqus comments in articles.
 DISQUS_SITENAME = "andreztz"
+# Set this to True to enable disqus comments in pages.
+DISQUS_ON_PAGES = ""
+# Set the Google Analytics code (eg. "UA-000000-00")
+GOOGLE_ANALYTICS = ""
 
-# ADD_THIS_ID = "ra-55adbb025d4f7e55"
-
-
-EXTRA_PATH_METADATA = {
-    "extra/CNAME": {"path": "CNAME"},
-    "extra/robots.txt": {"path": "robots.txt"},
-    # 'images/favicon.ico': {'path': 'favicon.ico'}
-    "extra/custom.css": {"path": "static/custom.css"},
-}
-# https://stackoverflow.com/questions/44209165/hosting-raw-html-pages-in-a-pelican-static-website
-# diretorios e arquivos que são incluidos no output a partir do content
-# diretorios vazios não são incluidos.
-STATIC_PATHS = ["images", "extra"]
-CUSTOM_CSS = "static/custom.css"
-USE_LESS = True
-
-
-SITEMAP = {
-    "format": "xml",
-    "priorities": {"articles": 0.6, "indexes": 0.6, "pages": 0.5},
-    "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
-}
-
-MARKDOWN = {
-    "extension_configs": {
-        "markdown.extensions.codehilite": {"css_class": "highlight", "linenums": True},
-        "markdown.extensions.extra": {},
-        "markdown.extensions.meta": {},
-    },
-    "output_format": "html5",
-}
-
-CC_LICENSE = {
-    "name": "Creative Commons Attribution-ShareAlike",
-    "version": "4.0",
-    "slug": "by-sa",
-}
-
-RELATIVE_URLS = True
-DELETE_OUTPUT_DIRECTORY = True
-
-USE_GOOGLE_FONTS = True
-THEME_STATIC_DIR = "static"
-
-DISABLE_URL_HASH = True
-# PLUGIN_PATHS.extend(["./plugins"])
-# PLUGINS.extend(["exampleplugin", "clean"])

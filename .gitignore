@@ -88,11 +88,11 @@ ENV/
  # Rope project settings
 .ropeproject
 
+
+.vscode/
 plugins/
-pelican-plugins/
 .travisdeploykey.pub
 *.draft
 pelican.pid
 srv.pid
-plugins
 publicar.readme.txt

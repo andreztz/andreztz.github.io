@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>__ztz__ - web</title><link href="./" rel="alternate"></link><link href="./feeds/web.atom.xml" rel="self"></link><id>./</id><updated>2019-07-14T00:00:00-03:00</updated><entry><title>Como apagar a lista assistir mais tarde do youtube</title><link href="./como-apagar-a-lista-assitir-mais-tarde-do-youtube.html" rel="alternate"></link><published>2019-07-14T00:00:00-03:00</published><updated>2019-07-14T00:00:00-03:00</updated><author><name>André P. Santos</name></author><id>tag:None,2019-07-14:./como-apagar-a-lista-assitir-mais-tarde-do-youtube.html</id><summary type="html">&lt;p&gt;Como apagar a lista assistir mais tarde do youtube&lt;/p&gt;</summary><content type="html">&lt;p&gt;1- Abra &lt;a href="https://www.youtube.com/playlist?list=WL&amp;amp;disable_polymer=true"&gt;your watch later playlist&lt;/a&gt; no youtube.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>__ztz__ - web</title><link href="https://andreztz.github.io/" rel="alternate"></link><link href="https://andreztz.github.io/feeds/web.atom.xml" rel="self"></link><id>https://andreztz.github.io/</id><updated>2019-07-14T00:00:00-03:00</updated><entry><title>Como apagar a lista assistir mais tarde do youtube</title><link href="https://andreztz.github.io/como-apagar-a-lista-assitir-mais-tarde-do-youtube.html" rel="alternate"></link><published>2019-07-14T00:00:00-03:00</published><updated>2019-07-14T00:00:00-03:00</updated><author><name>André P. Santos</name></author><id>tag:andreztz.github.io,2019-07-14:/como-apagar-a-lista-assitir-mais-tarde-do-youtube.html</id><summary type="html">&lt;p&gt;Como apagar a lista assistir mais tarde do youtube&lt;/p&gt;</summary><content type="html">&lt;p&gt;1- Abra &lt;a href="https://www.youtube.com/playlist?list=WL&amp;amp;disable_polymer=true"&gt;your watch later playlist&lt;/a&gt; no youtube.&lt;/p&gt;
 &lt;p&gt;2- Abra o console de desenvolvimento do seu navegador ( Ctrl+Shift+J para o chrome, Ctrl+Shift+K para o firefox )&lt;/p&gt;
 &lt;p&gt;3- Cole o seguinte script no console&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;interval&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;setInterval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;removeOne&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;// execute removeOne() every 30 milliseconds&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;interval&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;setInterval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;removeOne&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;// execute removeOne() every 30 milliseconds&lt;/span&gt;
 
 &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;lastNumVideos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="c1"&gt;// the number of displayed videos in the last execution of removeOne()&lt;/span&gt;
 
@@ -44,7 +24,7 @@
   &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 
 &lt;p&gt;4- Pressione a tecla Enter, e aguarde o script finalizar.&lt;/p&gt;
 &lt;p&gt;5- Atualize a página (F5 para atualizar), se ainda existir videos na playlist volte ao passo 3, caso contrário seja feliz.&lt;/p&gt;
