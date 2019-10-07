@@ -39,7 +39,7 @@ STATIC_PATHS = ["images", "extra"]
 ICONS_PATH = "images/icons"
 
 PLUGIN_PATHS = ["plugins/"]
-PLUGINS = ["assets", "neighbors"]
+PLUGINS = ["summary"]
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -63,7 +63,7 @@ MENUITEMS = (
 SOCIAL = (
     ("facebook", "https://www.facebook.com/ztzandre"),
     ("github", "https://github.com/andreztz"),
-    ("twitter", "https://twitter.com/andreztz"),
+    ("twitter", "https://twitter.com/ztzandre"),
     ("instagram", "https://www.instagram.com/andreztz/"),
     ("strava", "https://www.strava.com/athletes/27260098"),
     ("rss", "/feeds/all.atom.xml"),

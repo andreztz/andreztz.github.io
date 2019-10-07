@@ -4,7 +4,7 @@ date: 2019-07-14
 category: web
 tags: web, internet, youtube
 Authors: André P. Santos
-Summary: Como apagar a lista assistir mais tarde do youtube
+
 
 
 1- Abra [your watch later playlist](https://www.youtube.com/playlist?list=WL&disable_polymer=true) no youtube.

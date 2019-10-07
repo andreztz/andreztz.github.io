@@ -7,7 +7,7 @@
     <meta name="description"
         content="__ztz__, High tech, Low life.">
 
-    <link rel="alternate" href="https://andreztz.github.io/feeds/all.atom.xml" type="application/atom+xml"
+    <link rel="alternate" href="./feeds/all.atom.xml" type="application/atom+xml"
         title="__ztz__ Full Atom Feed" />
 
     <title>__ztz__ // High tech, Low life.</title>
@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://andreztz.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
@@ -28,7 +28,7 @@
                     <header class="header">
                         <hgroup>
                             <img class="avatar" src="images/icons/avatar.png">
-                            <h1 class="brand-main"><a href="https://andreztz.github.io">__ztz__</a></h1>
+                            <h1 class="brand-main"><a href=".">__ztz__</a></h1>
                             <p class="tagline">High tech, Low life.</p>
                             <p class="links"><a href="/archives.html">Archives</a></p>
                             <p class="links"><a href="/categories.html">Categories</a></p>
@@ -40,7 +40,7 @@
                                 <a href="https://github.com/andreztz">
                                     <i class="fa fa-github fa-3x"></i>
                                 </a>
-                                <a href="https://twitter.com/andreztz">
+                                <a href="https://twitter.com/ztzandre">
                                     <i class="fa fa-twitter fa-3x"></i>
                                 </a>
                                 <a href="https://www.instagram.com/andreztz/">
@@ -67,25 +67,46 @@
                 </h1>
                     <section class="post">
                         <header class="post-header">
-                            <h3><a class="post-title" href="https://andreztz.github.io/como-apagar-a-lista-assitir-mais-tarde-do-youtube.html">Como apagar a lista assistir mais tarde do youtube</a></h3>
-                            <p class="post-meta"><p>Como apagar a lista assistir mais tarde do youtube</p></p>
+                            <h3><a class="post-title" href="./como-apagar-a-lista-assitir-mais-tarde-do-youtube.html">Como apagar a lista assistir mais tarde do youtube</a></h3>
+                            <p class="post-meta"><p>1- Abra <a href="https://www.youtube.com/playlist?list=WL&amp;disable_polymer=true">your watch later playlist</a> no youtube.</p>
+<p>2- Abra o console de desenvolvimento do seu navegador ( Ctrl+Shift+J para o chrome, Ctrl+Shift+K para o firefox )</p>
+<p>3- Cole o seguinte script no console</p>
+<div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">removeOne</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1">// execute removeOne() every 30 milliseconds</span>
+
+<span class="kd">var</span> <span class="nx">lastNumVideos</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// the …</span></pre></div></p>
                             <p class="post-meta">
-                                in <a href="https://andreztz.github.io/category/web.html">web</a> &middot; dom 14 julho 2019
+                                in <a href="./category/web.html">web</a> &middot; dom 14 julho 2019
                             </p>
                         </header>
                     </section>
                     <section class="post">
                         <header class="post-header">
-                            <h3><a class="post-title" href="https://andreztz.github.io/como-baixar-diretorios-do-GitHub.html">Como baixar subdiretórios em projetos do GitHub</a></h3>
-                            <p class="post-meta"><p>Como baixar subdiretórios em projetos do GitHub</p></p>
+                            <h3><a class="post-title" href="./como-baixar-diretorios-do-GitHub.html">Como baixar subdiretórios em projetos do GitHub</a></h3>
+                            <p class="post-meta"><h5>Segue o script:</h5>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Download a specific folder from a github repo:</span>
+<span class="sd">    gitget.py https://github.com/divs1210/kilvish/tree/master/examples/bricksnball</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Divyansh Prakash&#39;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">github_src</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">head</span><span class="p">,</span> <span class="n">branch_etc</span> <span class="o">=</span> <span class="n">github_src</span><span class="o">.</span><span class="n">split …</span></pre></div></p>
                             <p class="post-meta">
-                                in <a href="https://andreztz.github.io/category/github.html">github</a> &middot; qui 22 junho 2017
+                                in <a href="./category/github.html">github</a> &middot; qui 22 junho 2017
                             </p>
                         </header>
                     </section>
                     <section class="post">
                         <header class="post-header">
-                            <h3><a class="post-title" href="https://andreztz.github.io/como-configurar-teclas-de-atalho-no-openbox.html">Como configurar teclas de atalho no Openbox.</a></h3>
+                            <h3><a class="post-title" href="./como-configurar-teclas-de-atalho-no-openbox.html">Como configurar teclas de atalho no Openbox.</a></h3>
                             <p class="post-meta"><p>Teclas de atalho fornecem um método rápido e fácil para a executar comandos a partir de uma combinação de teclas predefinida.
 No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.</p>
 <div class="section" id="syntax">
@@ -100,7 +121,7 @@ No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/ope
 </pre></div>
 <p>KEY-COMBINATION é a combinação de …</p></div></p>
                             <p class="post-meta">
-                                in <a href="https://andreztz.github.io/category/linux.html">linux</a> &middot; ter 07 março 2017
+                                in <a href="./category/linux.html">linux</a> &middot; ter 07 março 2017
                             </p>
                         </header>
                     </section>
@@ -145,16 +166,6 @@ No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/ope
         $('body').on('click', 'a[href="#"]', function (event) {
             event.preventDefault();
         });
-    </script>
-    <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-        try {
-            var pageTracker = _gat._getTracker("UA-75331741-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
     </script>
 
 </body>
