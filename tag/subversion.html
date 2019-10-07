@@ -40,7 +40,7 @@
                                 <a href="https://github.com/andreztz">
                                     <i class="fa fa-github fa-3x"></i>
                                 </a>
-                                <a href="https://twitter.com/andreztz">
+                                <a href="https://twitter.com/ztzandre">
                                     <i class="fa fa-twitter fa-3x"></i>
                                 </a>
                                 <a href="https://www.instagram.com/andreztz/">
@@ -67,7 +67,23 @@ Posts tagged 'subversion'                </h1>
                     <section class="post">
                         <header class="post-header">
                             <h3><a class="post-title" href="https://andreztz.github.io/como-baixar-diretorios-do-GitHub.html">Como baixar subdiretórios em projetos do GitHub</a></h3>
-                            <p class="post-meta"><p>Como baixar subdiretórios em projetos do GitHub</p></p>
+                            <p class="post-meta"><h5>Segue o script:</h5>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Download a specific folder from a github repo:</span>
+<span class="sd">    gitget.py https://github.com/divs1210/kilvish/tree/master/examples/bricksnball</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Divyansh Prakash&#39;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">github_src</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">head</span><span class="p">,</span> <span class="n">branch_etc</span> <span class="o">=</span> <span class="n">github_src</span><span class="o">.</span><span class="n">split …</span></pre></div></p>
                             <p class="post-meta">
                                 in <a href="https://andreztz.github.io/category/github.html">github</a> &middot; qui 22 junho 2017
                             </p>
