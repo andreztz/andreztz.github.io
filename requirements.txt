@@ -2,7 +2,7 @@ bs4==0.0.1
 pelican==4.1.1
 pelican-vimeo==0.1.1
 pelican-youtube==0.2.0
-Pillow==6.1.0
+Pillow==6.2.0
 Pygments==2.4.2
 pelican-minify==0.9
 markdown==3.1.1
