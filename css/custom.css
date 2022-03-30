@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+body {
+    background-color: #252526 !important;
+}
+
+.highlight {
+
+    padding: 10px 5px 0px 5px !important;
+    background-color: #1e1e1e !important;
+}
+
+div.chroma * {
+    background-color: #1e1e1e !important;
+    border: 0 !important;
+    font-family: 'PT Mono', monospace !important;
+}
+pre.chroma {
+    padding: 0 !important;
+}
+
+.vsc-initialized {
+
+    background-color: #252526 !important;
+    /* color: #cccccb !important; */
+}
+
+
