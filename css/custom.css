@@ -10,6 +10,10 @@ div.chroma * {
     font-family: 'PT Mono', monospace !important;
 }
 
+code {
+    background-color: #1e1e1e !important;
+}
+
 pre {
     background-color: #1e1e1e !important;
     padding: 0 !important;
@@ -21,11 +25,9 @@ pre.chroma {
 .highlight {
     padding: 10px 5px 5px 10px !important;
     background-color: #1e1e1e !important;
+
+    border: 2px solid #2d3252 !important;
 }
-
-
-
-
 
 .vsc-initialized {
 
@@ -33,4 +35,10 @@ pre.chroma {
     /* color: #cccccb !important; */
 }
 
+table th, table td {
+    background-color: #1e1e1e !important;
+    /* bordas da tabela */
+    /* border: 1px solid #9472c1 !important;  */
+    border: 2px solid #2d3252 !important;
 
+}
