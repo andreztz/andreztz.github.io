@@ -1,9 +1,9 @@
-# Verificação ortográfica usando o Neovim
+# Corretor ortográfico no Neovim
 
-# Verificação ortográfica usando o neovim 
+# Corretor ortográfico no neovim 
 
 
-O neovim usa o formato de arquivo `.spl`, esse contém palavras de uma determinada linguagem, a quais são usadas para fazer a verificação ortográfica. O arquivo `.spl` é arquivo binário o qual proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
+O neovim usa o formato de arquivo `.spl` para armazenar palavras de uma determinada linguagem, a quais são usadas para fazer a verificação ortográfica. O arquivo `.spl` é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
 
 O arquivo `.spl` pode ser criado a partir de arquivos myspell `.aff` e `.dic` usados pelo verificador ortográfico [VERO](https://pt-br.libreoffice.org/projetos/vero/#baixarvero) sigla que significa **VER**ificador **O**rtografico do LibreOffice.
 
@@ -56,7 +56,7 @@ Obs.: De acordo com a documentação, o neovim busca por spellfiles no [runtimep
 
 A medida que o corretor ortográfico detecta a palavra incorreta, essa é marcada com um sublinhado. Para corrigi-la, posicione o cursor sob a mesma, no modo Visual pressione `z + =`. Um menu irá mostrar as palavras sugeridas pelo corretor, então é só escolher a correta.  
 
-No modo de inserção depois da palavra com erro ortográfico, pressione `ctrl + x + s` para exibir a caixa de sugestões, funciona como o autocompletar de palavras usando o `ctrl + p`. 
+No modo de inserção, com o cursor posicionado no fim da palavra com erro, pressione `ctrl + x + s` para exibir a caixa de sugestões, funciona como o autocompletar de palavras usando o `ctrl + p`. 
 
 
 - Ativar o corretor ortográfico:
@@ -68,7 +68,7 @@ No modo de inserção depois da palavra com erro ortográfico, pressione `ctrl +
     Obs.: É possivel ativar mais de uma linguagem 
 
 
-- Carregar um arquivo `.spl` e ativá-los
+- Carregar um arquivo `.spl` e ativá-lo:
 
     ```vim
     : setlocal spell spellfile="/usr/share/vim/vimfiles/spell/pt.utf-8.spl" spelllang=pt_br 
@@ -112,7 +112,7 @@ vim.cmd [[ autocmd BufRead, BufNewFile *.md setlocal spell spelllang=pt_br]]
 ```
 
 
-### Ativar o corretor ortográfica sob demanda 
+### Ativar o corretor ortográfico sob demanda 
 
 
 ```vim 
@@ -139,8 +139,7 @@ vim.o.spelllang="pt_br"
 
 ### [Outras linguagens](http://ftp.vim.org/vim/runtime/spell/)
 
-No web site do vim.org existe um [diretório](http://ftp.vim.org/vim/runtime/spell/) com as linguagens disponibilizadas pelo vim. Então simplesmente escolha uma, baixe no diretório `~/.local/share/nvim/spell` e ative o corretor ortográfico. 
-
+No web site do vim.org existe um [diretório](http://ftp.vim.org/vim/runtime/spell/) com as linguagens usadas pelo vim. Então simplesmente escolha uma, baixe no diretório `~/.local/share/nvim/spell` e ative o corretor ortográfico. 
 
 [Nvim documentation: spell](https://neovim.io/doc/user/spell.html)
 
