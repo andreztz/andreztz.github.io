@@ -80,7 +80,7 @@ No modo de inserção, com o cursor posicionado no fim da palavra com erro, pres
     :set nospell
     ```
 
-### Comandos do corretor ortográfico no modo visual:
+### Comandos do corretor ortográfico no modo visual
 
 
 |Comando    |Ação 
