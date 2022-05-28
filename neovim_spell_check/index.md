@@ -139,7 +139,7 @@ vim.o.spelllang="pt_br"
 
 ### [Outras linguagens](http://ftp.vim.org/vim/runtime/spell/)
 
-No web site do vim.org existe um [diretório](http://ftp.vim.org/vim/runtime/spell/) com as linguagens usadas pelo vim. Então simplesmente escolha uma, baixe no diretório `~/.local/share/nvim/spell` e ative o corretor ortográfico. 
+No web site do vim.org existe um [diretório](http://ftp.vim.org/vim/runtime/spell/) com as linguagens usadas pelo vim. Então simplesmente escolha uma, baixe-a no diretório `~/.local/share/nvim/spell` e ative o corretor ortográfico. 
 
 [Nvim documentation: spell](https://neovim.io/doc/user/spell.html)
 
