@@ -3,7 +3,7 @@
 # Corretor ortográfico no neovim 
 
 
-O neovim usa o formato de arquivo `.spl` para armazenar palavras de uma determinada linguagem, a quais são usadas para fazer a verificação ortográfica. O arquivo `.spl` é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
+O editor de texto neovim usa o formato de arquivo `.spl` para armazenar palavras de uma determinada linguagem, a quais são usadas para fazer a verificação ortográfica. O arquivo `.spl` é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
 
 O arquivo `.spl` pode ser criado a partir de arquivos myspell `.aff` e `.dic` usados pelo verificador ortográfico [VERO](https://pt-br.libreoffice.org/projetos/vero/#baixarvero) sigla que significa **VER**ificador **O**rtografico do LibreOffice.
 
