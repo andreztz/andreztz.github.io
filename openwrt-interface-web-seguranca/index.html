@@ -1,124 +1,374 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Protegendo o acesso a interface web do Openwrt - André P. Santos</title><meta name=Description content="André P. Santos - Posts"><meta property="og:title" content="Protegendo o acesso a interface web do Openwrt"><meta property="og:description" content="Protegendo o acesso a interface web do openwrt O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário LuCI. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o HTTPS. Por esse motivo existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro."><meta property="og:type" content="article"><meta property="og:url" content="http://andreztz.github.io/openwrt-interface-web-seguranca/"><meta property="og:image" content="http://andreztz.github.io/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-04-05T03:49:21-03:00"><meta property="article:modified_time" content="2022-04-05T03:49:21-03:00"><meta property="og:site_name" content="André P. Santos"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://andreztz.github.io/logo.png"><meta name=twitter:title content="Protegendo o acesso a interface web do Openwrt"><meta name=twitter:description content="Protegendo o acesso a interface web do openwrt O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário LuCI. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o HTTPS. Por esse motivo existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro."><meta name=application-name content="André P. Santos"><meta name=apple-mobile-web-app-title content="André P. Santos"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=http://andreztz.github.io/openwrt-interface-web-seguranca/><link rel=prev href=http://andreztz.github.io/apagar-lista-assistir-mais-tarde-youtube/><link rel=next href=http://andreztz.github.io/neovim_spell_check/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Protegendo o acesso a interface web do Openwrt","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/andreztz.github.io\/openwrt-interface-web-seguranca\/"},"genre":"posts","wordcount":909,"url":"http:\/\/andreztz.github.io\/openwrt-interface-web-seguranca\/","datePublished":"2022-04-05T03:49:21-03:00","dateModified":"2022-04-05T03:49:21-03:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"André P. Santos"},"description":""}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="André P. Santos"></a></div><div class=menu><div class=menu-inner><a class=menu-item href=/ title="André P. Santos - Home Page">Home </a><a class=menu-item href=/posts/ title="André P. Santos - Blog">Blog </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
-<input type=text placeholder="Pesquisar títulos ou conteúdos ..." id=search-input-desktop>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Pesquisa><i class="fas fa-search fa-fw" aria-hidden=true></i></a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Limpar><i class="fas fa-times-circle fa-fw" aria-hidden=true></i></a>
-<span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin" aria-hidden=true></i></span>
-</span><a href=javascript:void(0); class="menu-item theme-switch" title="Trocar tema"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="André P. Santos"></a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Pesquisar títulos ou conteúdos ..." id=search-input-mobile>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Pesquisa><i class="fas fa-search fa-fw" aria-hidden=true></i></a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Limpar><i class="fas fa-times-circle fa-fw" aria-hidden=true></i></a>
-<span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Cancelar</a></div><a class=menu-item href=/ title="André P. Santos - Home Page">Home</a><a class=menu-item href=/posts/ title="André P. Santos - Blog">Blog</a><a href=javascript:void(0); class="menu-item theme-switch" title="Trocar tema">
-<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Conteúdos</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Protegendo o acesso a interface web do Openwrt</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw" aria-hidden=true></i>André P. Santos</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=04-05-2022>04-05-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden=true></i>&nbsp;909 palavras&nbsp;
-<i class="far fa-clock fa-fw" aria-hidden=true></i>&nbsp;5 minutos&nbsp;</div></div><div class="details toc" id=toc-static data-kept=true><div class="details-summary toc-title"><span>Conteúdos</span>
-<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#segurança-adicional>Segurança adicional</a></li><li><a href=#uci-comandos>uci comandos</a></li></ul></nav></div></div><div class=content id=content><h1 id=protegendo-o-acesso-a-interface-web-do-openwrt>Protegendo o acesso a interface web do openwrt</h1><p>O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário <a href=https://openwrt.org/docs/guide-user/luci/start target=_blank rel="noopener noreffer">LuCI</a>. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o HTTPS. Por esse motivo existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/images/openwrt_captura_de_credenciais.png data-srcset="/images/openwrt_captura_de_credenciais.png, /images/openwrt_captura_de_credenciais.png 1.5x, /images/openwrt_captura_de_credenciais.png 2x" data-sizes=auto alt=/images/openwrt_captura_de_credenciais.png title="captura do tráfego http com wireshark"></p><p>O Openwrt oferece a opção de implementar o HTTPS, mas é preciso gerar e armazenar um certificado TLS autoassinado e requer a instalação de pacotes adicionais (uci-ssl e dependências). No caso de dispositivos com pouca memoria, instalar pacotes adicionais não é uma opção, então gostaria de apresentar outra configuração que pode ser usada para proteger o acesso à interface web do Openwrt, que é <strong>encapsular o tráfego http via ssh</strong>.</p><p>Primeiro vamos fazer uma cópia e olhar o arquivo de configuração padrão do servidor web.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ scp openwrt:/etc/config/uhttpd ~
-</span></span><span class=line><span class=cl>uhttpd                                                       100%  710   458.3KB/s   00:00 
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ head ~/uhttpd 
-</span></span><span class=line><span class=cl># Server configuration
-</span></span><span class=line><span class=cl>config uhttpd main
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	# HTTP listen addresses, multiple allowed
-</span></span><span class=line><span class=cl>	list listen_http	0.0.0.0:80
-</span></span><span class=line><span class=cl>	list listen_http	[::]:80
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	# HTTPS listen addresses, multiple allowed
-</span></span><span class=line><span class=cl>	list listen_https	0.0.0.0:443
-</span></span><span class=line><span class=cl>	list listen_https	[::]:443
-</span></span></code></pre></td></tr></table></div></div><p>Usando o comando <code>netstat -apn | grep :80</code> listamos os soquetes TCP/IP abertos pelo servidor web.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash-session data-lang=bash-session><span class=line><span class=cl><span class=go>root@openwrt:~# netstat -apn | grep :80
-</span></span></span><span class=line><span class=cl><span class=go>tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      
-</span></span></span><span class=line><span class=cl><span class=go>tcp        0      0 :::80                   :::*                    LISTEN
-</span></span></span><span class=line><span class=cl><span class=go>root@openwrt:~# netstat -ana | grep :443
-</span></span></span><span class=line><span class=cl><span class=go>root@openwrt:~# 
-</span></span></span></code></pre></td></tr></table></div></div><p>A linha <code>0.0.0.0:80</code> nos diz que o computador local esta ouvindo a porta 80, a espera de conexões de qualquer computador remoto. O <code>0.0.0.0</code> é um endereço especial que representa todas as interfaces de rede com um IP válido nesse host, por exemplo, poderíamos ter duas interfaces com os seguintes endereços <code>192.168.1.1</code>, <code>172.17.0.2</code> como o servidor web escuta usando o endereço <code>0.0.0.0:80</code> ambos respondem por esse endereço de socket.</p><p>Agora a configuração do servidor web uHTTPd deve ser ajustada, para fazer isso conectamos ao roteador via SSH e abrimos o arquivo <code>/etc/config/uhttpd</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># vim /etc/config/uhttpd</span>
-</span></span></code></pre></td></tr></table></div></div><p>Em seguida, comentamos as linhas que contêm <code>list listen_http *</code> e adicionamos a linha <code>list listen_http 127.0.0.1:80</code> . A seguir temos as primeiras linhas do arquivo de configuração após a edição.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># Server configuration
-</span></span><span class=line><span class=cl>config uhttpd main
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	# HTTP listen addresses, multiple allowed
-</span></span><span class=line><span class=cl>	# list listen_http	0.0.0.0:80 # esta linha deve estar comentada
-</span></span><span class=line><span class=cl>	# list listen_http	[::]:80 # esta linha deve estar comentada
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	# HTTPS listen addresses, multiple allowed
-</span></span><span class=line><span class=cl>	# list listen_https	0.0.0.0:443 # esta linha deve estar comentada
-</span></span><span class=line><span class=cl>	# list listen_https	[::]:443  # esta linha deve estar comentada
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    # linha adicionada
-</span></span><span class=line><span class=cl>    list listen_http        127.0.0.1:80
-</span></span><span class=line><span class=cl>	
-</span></span><span class=line><span class=cl>    ...
-</span></span></code></pre></td></tr></table></div></div><p>Salve o arquivo e reinicie o serviço uHTTPd usando o comando:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># /etc/init.d/uhttpd restart</span>
-</span></span></code></pre></td></tr></table></div></div><p>Com o comando <code>netstat</code> vemos que agora nosso servidor web escuta em um novo endereço:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@openwrt:~# netstat -na | grep :80
-</span></span><span class=line><span class=cl>tcp        0      0 127.0.0.1:80            0.0.0.0:*               LISTEN   
-</span></span></code></pre></td></tr></table></div></div><p>O uso do endereço <code>127.0.0.1</code> tem objetivo de restringir o acesso a interface web para host remotos usando a interface de loopback, que é uma interface de rede virtual que é reservada para a comunicação interna no host.</p><p>Depois de reiniciar o servidor, a interface web do LuCI não esta acessível através do IP usual <code>192.168.1.1</code>, agora o servidor web escuta por novas conexões usando o endereço <code>127.0.0.1:80</code> e só podemos alcançá-la por meio de um túnel ssh.</p><p>Para criar o túnel, execute o seguinte comando no terminal:</p><p>veja: <a href=https://stackoverflow.com/questions/20778771/what-is-the-difference-between-0-0-0-0-127-0-0-1-and-localhost target=_blank rel="noopener noreffer">127.0.0.1 vs 0.0.0.0</a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># ssh -L 127.0.0.1:8080:127.0.0.1:80 root@192.168.1.1</span>
-</span></span></code></pre></td></tr></table></div></div><p>veja:
-<a href=https://man.archlinux.org/man/ssh.1#L~4 target=_blank rel="noopener noreffer">manual ssh -L</a>
-<a href=https://wiki.archlinux.org/title/OpenSSH#Forwarding_other_ports target=_blank rel="noopener noreffer">Encaminhamento de portas</a></p><p>Para evitar sempre digitar todo o comando que cria o túnel ssh adicione ao arquivo <code>~/.ssh/config</code> o seguite:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Host luci-tunnel
-</span></span><span class=line><span class=cl>	Hostname openwrt.lan
-</span></span><span class=line><span class=cl>	Port 22
-</span></span><span class=line><span class=cl>	User root
-</span></span><span class=line><span class=cl>	LocalForward 127.0.0.1:8080 127.0.0.1:80
-</span></span></code></pre></td></tr></table></div></div><p>Então o tunel ssh pode ser criado com o seguinte comando:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># ssh luci-tunnel
-</span></span></code></pre></td></tr></table></div></div><p>O endereço local <code>127.0.0.1:8080</code> da máquina cliente é ligado através do túnel ssh ao endereço <code>127.0.0.1:80</code> do openwrt, onde o servidor web uHTTPd está aguardando solicitações. Agora é possível abrir o endereço <a href=http://127.0.0.1 target=_blank rel="noopener noreffer">http://127.0.0.1:8080</a> no navegador e todo a comunicação HTTP com o servidor web é encapsulada no túnel SSH. Com isso todo o tráfico HTTP tem o mesmo nível de encriptação de uma sessão SSH. Enquanto a sessão SSH estiver aberta, será possível acessar a interface web usando um cliente HTTP. No terminal a combinação de teclas <code>ctrl+c</code> encerra a sessão SSH e a interface web do LuCI fica indisponível.</p><p>Na minha opinião essa configuração não é mais complexa do que instalar o pacote luci-ssl e depois gerar um certificado TLS (autoassinado), e é a configuração ideal para dispositivos com pouca memória.</p><h2 id=segurança-adicional>Segurança adicional</h2><p>Para minimizar os riscos de acesso não autorizado através da interface web, ative o servidor web via ssh somente quando necessário.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>/etc/init.d/uhttpd disable
-</span></span><span class=line><span class=cl>/etc/init.d/uhttpd stop
-</span></span></code></pre></td></tr></table></div></div><h2 id=uci-comandos>uci comandos</h2><p>O <a href=https://openwrt.org/docs/guide-user/base-system/uci target=_blank rel="noopener noreffer">uci</a> pode ajustar a configuração do uhttpd sem usar um editor de texto, no terminal digite as linhas a seguir:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># uci -q delete uhttpd.main.listen_http</span>
-</span></span><span class=line><span class=cl><span class=c1># uci add_list uhttpd.main.listen_http=&#34;127.0.0.1:80&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1># uci add_list uhttpd.main.listen_http=&#34;[::1]:80&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1># uci -q delete uhttpd.main.listen_https</span>
-</span></span><span class=line><span class=cl><span class=c1># uci add_list uhttpd.main.listen_https=&#34;127.0.0.1:443&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1># uci add_list uhttpd.main.listen_https=&#34;[::1]:443&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1># uci commit uhttpd</span>
-</span></span><span class=line><span class=cl><span class=c1># /etc/init.d/uhttpd restart</span>
-</span></span></code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Atualizado em 04-05-2022</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Compartilhe em Twitter" data-sharer=twitter data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/ data-title="Protegendo o acesso a interface web do Openwrt" data-via=ztzandre><i class="fab fa-twitter fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Compartilhe em Facebook" data-sharer=facebook data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/><i class="fab fa-facebook-square fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Compartilhe em Linkedin" data-sharer=linkedin data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/><i class="fab fa-linkedin fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Compartilhe em Hacker News" data-sharer=hackernews data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/ data-title="Protegendo o acesso a interface web do Openwrt"><i class="fab fa-hacker-news fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Compartilhe em Reddit" data-sharer=reddit data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/><i class="fab fa-reddit fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Compartilhe em Line" data-sharer=line data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/ data-title="Protegendo o acesso a interface web do Openwrt"><i data-svg-src=/lib/simple-icons/icons/line.min.svg aria-hidden=true></i></a><a href=javascript:void(0); title="Compartilhe em 微博" data-sharer=weibo data-url=http://andreztz.github.io/openwrt-interface-web-seguranca/ data-title="Protegendo o acesso a interface web do Openwrt"><i class="fab fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Voltar</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/apagar-lista-assistir-mais-tarde-youtube/ class=prev rel=prev title="Como apagar a lista assistir mais tarde do youtube"><i class="fas fa-angle-left fa-fw" aria-hidden=true></i>Como apagar a lista assistir mais tarde do youtube</a>
-<a href=/neovim_spell_check/ class=next rel=next title="Corretor ortográfico no Neovim">Corretor ortográfico no Neovim<i class="fas fa-angle-right fa-fw" aria-hidden=true></i></a></div></div><div id=comments><div id=utterances class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line itemscope itemtype=http://schema.org/CreativeWork><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>André P. Santos</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Voltar ao topo"><i class="fas fa-arrow-up fa-fw" aria-hidden=true></i>
-</a><a href=# id=view-comments class=fixed-button title="Ver comentários"><i class="fas fa-comment fa-fw" aria-hidden=true></i></a></div><link rel=stylesheet href=/lib/katex/katex.min.css><link rel=stylesheet href=/lib/katex/copy-tex.min.css><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><script type=text/javascript src=/lib/autocomplete/autocomplete.min.js></script><script type=text/javascript src=/lib/lunr/lunr.min.js></script><script type=text/javascript src=/lib/lunr/lunr.stemmer.support.min.js></script><script type=text/javascript src=/lib/lunr/lunr.pt.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/twemoji/twemoji.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript src=/lib/katex/katex.min.js></script><script type=text/javascript src=/lib/katex/auto-render.min.js></script><script type=text/javascript src=/lib/katex/copy-tex.min.js></script><script type=text/javascript src=/lib/katex/mhchem.min.js></script><script type=text/javascript src=/lib/cookieconsent/cookieconsent.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"Copiar para a área de transferência",maxShownLines:50},comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"✨💬✨",lightTheme:"github-light",repo:"andreztz/comments"}},cookieconsent:{content:{dismiss:"Aceita",link:"Saber mais",message:"Este site usa Cookies para melhorar sua experiência."},enable:!0,palette:{button:{background:"#f0f0f0"},popup:{background:"#1aa3ff"}},theme:"edgeless"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"\\begin{equation}",right:"\\end{equation}"},{display:!0,left:"\\begin{equation*}",right:"\\end{equation*}"},{display:!0,left:"\\begin{align}",right:"\\end{align}"},{display:!0,left:"\\begin{align*}",right:"\\end{align*}"},{display:!0,left:"\\begin{alignat}",right:"\\end{alignat}"},{display:!0,left:"\\begin{alignat*}",right:"\\end{alignat*}"},{display:!0,left:"\\begin{gather}",right:"\\end{gather}"},{display:!0,left:"\\begin{CD}",right:"\\end{CD}"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},search:{highlightTag:"em",lunrIndexURL:"/index.json",lunrLanguageCode:"pt",maxResultLength:10,noResultsFound:"Nenhum resultado encontrado",snippetLength:30,type:"lunr"},twemoji:!0}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-N2DNZ49Z76")</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script><noscript><img src=https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/pixel.gif></noscript><script defer src=https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/script.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Protegendo o acesso a interface web do Openwrt - André P. Santos</title><meta name="Description" content="André P. Santos - Posts"><meta property="og:title" content="Protegendo o acesso a interface web do Openwrt" />
+<meta property="og:description" content="Protegendo o acesso a interface web do openwrt O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário LuCI. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o HTTPS. Por esse motivo existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://andreztz.github.io/openwrt-interface-web-seguranca/" /><meta property="og:image" content="http://andreztz.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-05T03:49:21-03:00" />
+<meta property="article:modified_time" content="2022-04-05T03:49:21-03:00" /><meta property="og:site_name" content="André P. Santos" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://andreztz.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Protegendo o acesso a interface web do Openwrt"/>
+<meta name="twitter:description" content="Protegendo o acesso a interface web do openwrt O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário LuCI. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o HTTPS. Por esse motivo existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro."/>
+<meta name="application-name" content="André P. Santos">
+<meta name="apple-mobile-web-app-title" content="André P. Santos"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://andreztz.github.io/openwrt-interface-web-seguranca/" /><link rel="prev" href="http://andreztz.github.io/apagar-lista-assistir-mais-tarde-youtube/" /><link rel="next" href="http://andreztz.github.io/neovim_spell_check/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Protegendo o acesso a interface web do Openwrt",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/andreztz.github.io\/openwrt-interface-web-seguranca\/"
+        },"genre": "posts","wordcount":  909 ,
+        "url": "http:\/\/andreztz.github.io\/openwrt-interface-web-seguranca\/","datePublished": "2022-04-05T03:49:21-03:00","dateModified": "2022-04-05T03:49:21-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "André P. Santos"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="André P. Santos"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="André P. Santos - Home Page"> Home </a><a class="menu-item" href="/posts/" title="André P. Santos - Blog"> Blog </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="André P. Santos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/" title="André P. Santos - Home Page">Home</a><a class="menu-item" href="/posts/" title="André P. Santos - Blog">Blog</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Protegendo o acesso a interface web do Openwrt</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="04-05-2022">04-05-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;909 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#segurança-adicional">Segurança adicional</a></li>
+    <li><a href="#uci-comandos">uci comandos</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="protegendo-o-acesso-a-interface-web-do-openwrt">Protegendo o acesso a interface web do openwrt</h1>
+<p>O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário <a href="https://openwrt.org/docs/guide-user/luci/start" target="_blank" rel="noopener noreffer">LuCI</a>. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o  HTTPS. Por esse motivo  existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/openwrt_captura_de_credenciais.png"
+        data-srcset="/images/openwrt_captura_de_credenciais.png, /images/openwrt_captura_de_credenciais.png 1.5x, /images/openwrt_captura_de_credenciais.png 2x"
+        data-sizes="auto"
+        alt="/images/openwrt_captura_de_credenciais.png"
+        title="captura do tráfego http com wireshark" /></p>
+<p>O Openwrt oferece a opção de implementar o HTTPS,  mas é preciso gerar e armazenar um certificado TLS autoassinado e requer a instalação de pacotes adicionais (uci-ssl e dependências). No caso de dispositivos com pouca memoria, instalar pacotes adicionais não é uma opção, então gostaria de apresentar outra configuração que pode ser usada para proteger o acesso à interface web do Openwrt, que é <strong>encapsular o tráfego http via ssh</strong>.</p>
+<p>Primeiro vamos fazer uma cópia e olhar o arquivo de configuração padrão do servidor web.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ scp openwrt:/etc/config/uhttpd ~
+</span></span><span class="line"><span class="cl">uhttpd                                                       100%  710   458.3KB/s   00:00 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ head ~/uhttpd 
+</span></span><span class="line"><span class="cl"># Server configuration
+</span></span><span class="line"><span class="cl">config uhttpd main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	# HTTP listen addresses, multiple allowed
+</span></span><span class="line"><span class="cl">	list listen_http	0.0.0.0:80
+</span></span><span class="line"><span class="cl">	list listen_http	[::]:80
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	# HTTPS listen addresses, multiple allowed
+</span></span><span class="line"><span class="cl">	list listen_https	0.0.0.0:443
+</span></span><span class="line"><span class="cl">	list listen_https	[::]:443
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Usando o comando <code>netstat -apn | grep :80</code> listamos os soquetes TCP/IP abertos pelo servidor web.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash-session" data-lang="bash-session"><span class="line"><span class="cl"><span class="go">root@openwrt:~# netstat -apn | grep :80
+</span></span></span><span class="line"><span class="cl"><span class="go">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      
+</span></span></span><span class="line"><span class="cl"><span class="go">tcp        0      0 :::80                   :::*                    LISTEN
+</span></span></span><span class="line"><span class="cl"><span class="go">root@openwrt:~# netstat -ana | grep :443
+</span></span></span><span class="line"><span class="cl"><span class="go">root@openwrt:~# 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>A linha <code>0.0.0.0:80</code> nos diz que o computador local esta ouvindo a porta 80, a espera de conexões de qualquer computador remoto.  O <code>0.0.0.0</code> é um endereço especial que representa todas as interfaces de rede com um IP válido nesse host, por exemplo,  poderíamos ter duas interfaces com os seguintes endereços <code>192.168.1.1</code>, <code>172.17.0.2</code>  como o servidor web escuta usando o endereço  <code>0.0.0.0:80</code> ambos respondem por esse endereço de socket.</p>
+<p>Agora  a configuração do servidor web uHTTPd deve ser ajustada, para fazer isso conectamos ao roteador via SSH e abrimos o arquivo <code>/etc/config/uhttpd</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># vim /etc/config/uhttpd</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Em seguida, comentamos as linhas que contêm <code>list listen_http *</code> e adicionamos a linha <code>list listen_http 127.0.0.1:80</code> . A seguir temos as primeiras linhas do arquivo de configuração após a edição.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Server configuration
+</span></span><span class="line"><span class="cl">config uhttpd main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	# HTTP listen addresses, multiple allowed
+</span></span><span class="line"><span class="cl">	# list listen_http	0.0.0.0:80 # esta linha deve estar comentada
+</span></span><span class="line"><span class="cl">	# list listen_http	[::]:80 # esta linha deve estar comentada
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	# HTTPS listen addresses, multiple allowed
+</span></span><span class="line"><span class="cl">	# list listen_https	0.0.0.0:443 # esta linha deve estar comentada
+</span></span><span class="line"><span class="cl">	# list listen_https	[::]:443  # esta linha deve estar comentada
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # linha adicionada
+</span></span><span class="line"><span class="cl">    list listen_http        127.0.0.1:80
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    ...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Salve o arquivo e reinicie o serviço uHTTPd usando o comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/init.d/uhttpd restart</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Com o comando <code>netstat</code> vemos que agora nosso servidor web escuta em um novo endereço:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@openwrt:~# netstat -na | grep :80
+</span></span><span class="line"><span class="cl">tcp        0      0 127.0.0.1:80            0.0.0.0:*               LISTEN   
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O uso do endereço <code>127.0.0.1</code> tem objetivo de restringir o acesso a interface web para host remotos usando a interface de loopback, que é uma interface de rede virtual que é reservada para a comunicação interna no host.</p>
+<p>Depois de reiniciar o servidor, a interface web do LuCI não esta acessível através do IP usual <code>192.168.1.1</code>, agora o servidor web escuta por novas conexões usando o endereço <code>127.0.0.1:80</code> e só podemos alcançá-la por meio de um túnel ssh.</p>
+<p>Para criar o túnel, execute o seguinte comando no terminal:</p>
+<p>veja: <a href="https://stackoverflow.com/questions/20778771/what-is-the-difference-between-0-0-0-0-127-0-0-1-and-localhost" target="_blank" rel="noopener noreffer">127.0.0.1 vs 0.0.0.0</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ssh -L 127.0.0.1:8080:127.0.0.1:80 root@192.168.1.1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>veja:
+<a href="https://man.archlinux.org/man/ssh.1#L~4" target="_blank" rel="noopener noreffer">manual ssh -L</a>
+<a href="https://wiki.archlinux.org/title/OpenSSH#Forwarding_other_ports" target="_blank" rel="noopener noreffer">Encaminhamento de portas</a></p>
+<p>Para evitar sempre digitar todo o comando que cria o túnel ssh adicione  ao arquivo <code>~/.ssh/config</code> o seguite:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host luci-tunnel
+</span></span><span class="line"><span class="cl">	Hostname openwrt.lan
+</span></span><span class="line"><span class="cl">	Port 22
+</span></span><span class="line"><span class="cl">	User root
+</span></span><span class="line"><span class="cl">	LocalForward 127.0.0.1:8080 127.0.0.1:80
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Então o tunel ssh pode ser criado com o seguinte comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># ssh luci-tunnel
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O endereço local <code>127.0.0.1:8080</code> da máquina cliente é ligado através do túnel ssh ao endereço <code>127.0.0.1:80</code> do openwrt, onde o servidor web uHTTPd está aguardando solicitações. Agora é possível abrir o endereço <a href="http://127.0.0.1" target="_blank" rel="noopener noreffer">http://127.0.0.1:8080</a> no navegador e todo a comunicação HTTP com o servidor web é encapsulada no túnel SSH. Com isso todo o tráfico HTTP tem o mesmo nível de encriptação de uma sessão SSH. Enquanto a sessão SSH estiver aberta, será possível acessar a interface web usando um cliente HTTP. No terminal a combinação de teclas <code>ctrl+c</code> encerra a sessão SSH e a interface web do LuCI fica indisponível.</p>
+<p>Na minha opinião essa configuração não é mais complexa do que instalar o pacote luci-ssl e depois gerar um certificado TLS (autoassinado), e é a configuração ideal para dispositivos com pouca memória.</p>
+<h2 id="segurança-adicional">Segurança adicional</h2>
+<p>Para minimizar os riscos de acesso não autorizado através da interface web, ative o servidor web via ssh somente quando necessário.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/etc/init.d/uhttpd disable
+</span></span><span class="line"><span class="cl">/etc/init.d/uhttpd stop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="uci-comandos">uci comandos</h2>
+<p>O <a href="https://openwrt.org/docs/guide-user/base-system/uci" target="_blank" rel="noopener noreffer">uci</a> pode ajustar a configuração do uhttpd sem usar um editor de texto, no terminal digite as linhas a seguir:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># uci -q delete uhttpd.main.listen_http</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># uci add_list uhttpd.main.listen_http=&#34;127.0.0.1:80&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># uci add_list uhttpd.main.listen_http=&#34;[::1]:80&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># uci -q delete uhttpd.main.listen_https</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># uci add_list uhttpd.main.listen_https=&#34;127.0.0.1:443&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># uci add_list uhttpd.main.listen_https=&#34;[::1]:443&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># uci commit uhttpd</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /etc/init.d/uhttpd restart</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 04-05-2022</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/" data-title="Protegendo o acesso a interface web do Openwrt" data-via="ztzandre"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Linkedin" data-sharer="linkedin" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/" data-title="Protegendo o acesso a interface web do Openwrt"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Reddit" data-sharer="reddit" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/" data-title="Protegendo o acesso a interface web do Openwrt"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://andreztz.github.io/openwrt-interface-web-seguranca/" data-title="Protegendo o acesso a interface web do Openwrt"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/apagar-lista-assistir-mais-tarde-youtube/" class="prev" rel="prev" title="Como apagar a lista assistir mais tarde do youtube"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Como apagar a lista assistir mais tarde do youtube</a>
+            <a href="/neovim_spell_check/" class="next" rel="next" title="Corretor ortográfico no Neovim">Corretor ortográfico no Neovim<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">André P. Santos</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"✨💬✨","lightTheme":"github-light","repo":"andreztz/comments"}},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-N2DNZ49Z76', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script><noscript><img src="https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/pixel.gif"></noscript>
+        <script defer src="https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/script.js"></script></body>
+</html>
