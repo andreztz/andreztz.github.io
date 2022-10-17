@@ -37,7 +37,7 @@
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -58,8 +58,7 @@
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </div>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
@@ -102,7 +101,7 @@
             <h2 class="toc-title">Conteúdos</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Protegendo o acesso a interface web do Openwrt</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="04-05-2022">04-05-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;909 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
@@ -117,7 +116,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="protegendo-o-acesso-a-interface-web-do-openwrt">Protegendo o acesso a interface web do openwrt</h1>
-<p>O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário <a href="https://openwrt.org/docs/guide-user/luci/start" target="_blank" rel="noopener noreffer">LuCI</a>. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o  HTTPS. Por esse motivo  existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.</p>
+<p>O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário <a href="https://openwrt.org/docs/guide-user/luci/start" target="_blank" rel="noopener noreffer ">LuCI</a>. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o  HTTPS. Por esse motivo  existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -253,7 +252,7 @@
 </div><p>O uso do endereço <code>127.0.0.1</code> tem objetivo de restringir o acesso a interface web para host remotos usando a interface de loopback, que é uma interface de rede virtual que é reservada para a comunicação interna no host.</p>
 <p>Depois de reiniciar o servidor, a interface web do LuCI não esta acessível através do IP usual <code>192.168.1.1</code>, agora o servidor web escuta por novas conexões usando o endereço <code>127.0.0.1:80</code> e só podemos alcançá-la por meio de um túnel ssh.</p>
 <p>Para criar o túnel, execute o seguinte comando no terminal:</p>
-<p>veja: <a href="https://stackoverflow.com/questions/20778771/what-is-the-difference-between-0-0-0-0-127-0-0-1-and-localhost" target="_blank" rel="noopener noreffer">127.0.0.1 vs 0.0.0.0</a></p>
+<p>veja: <a href="https://stackoverflow.com/questions/20778771/what-is-the-difference-between-0-0-0-0-127-0-0-1-and-localhost" target="_blank" rel="noopener noreffer ">127.0.0.1 vs 0.0.0.0</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -263,8 +262,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>veja:
-<a href="https://man.archlinux.org/man/ssh.1#L~4" target="_blank" rel="noopener noreffer">manual ssh -L</a>
-<a href="https://wiki.archlinux.org/title/OpenSSH#Forwarding_other_ports" target="_blank" rel="noopener noreffer">Encaminhamento de portas</a></p>
+<a href="https://man.archlinux.org/man/ssh.1#L~4" target="_blank" rel="noopener noreffer ">manual ssh -L</a>
+<a href="https://wiki.archlinux.org/title/OpenSSH#Forwarding_other_ports" target="_blank" rel="noopener noreffer ">Encaminhamento de portas</a></p>
 <p>Para evitar sempre digitar todo o comando que cria o túnel ssh adicione  ao arquivo <code>~/.ssh/config</code> o seguite:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -291,7 +290,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># ssh luci-tunnel
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>O endereço local <code>127.0.0.1:8080</code> da máquina cliente é ligado através do túnel ssh ao endereço <code>127.0.0.1:80</code> do openwrt, onde o servidor web uHTTPd está aguardando solicitações. Agora é possível abrir o endereço <a href="http://127.0.0.1" target="_blank" rel="noopener noreffer">http://127.0.0.1:8080</a> no navegador e todo a comunicação HTTP com o servidor web é encapsulada no túnel SSH. Com isso todo o tráfico HTTP tem o mesmo nível de encriptação de uma sessão SSH. Enquanto a sessão SSH estiver aberta, será possível acessar a interface web usando um cliente HTTP. No terminal a combinação de teclas <code>ctrl+c</code> encerra a sessão SSH e a interface web do LuCI fica indisponível.</p>
+</div><p>O endereço local <code>127.0.0.1:8080</code> da máquina cliente é ligado através do túnel ssh ao endereço <code>127.0.0.1:80</code> do openwrt, onde o servidor web uHTTPd está aguardando solicitações. Agora é possível abrir o endereço <a href="http://127.0.0.1" target="_blank" rel="noopener noreffer ">http://127.0.0.1:8080</a> no navegador e todo a comunicação HTTP com o servidor web é encapsulada no túnel SSH. Com isso todo o tráfico HTTP tem o mesmo nível de encriptação de uma sessão SSH. Enquanto a sessão SSH estiver aberta, será possível acessar a interface web usando um cliente HTTP. No terminal a combinação de teclas <code>ctrl+c</code> encerra a sessão SSH e a interface web do LuCI fica indisponível.</p>
 <p>Na minha opinião essa configuração não é mais complexa do que instalar o pacote luci-ssl e depois gerar um certificado TLS (autoassinado), e é a configuração ideal para dispositivos com pouca memória.</p>
 <h2 id="segurança-adicional">Segurança adicional</h2>
 <p>Para minimizar os riscos de acesso não autorizado através da interface web, ative o servidor web via ssh somente quando necessário.</p>
@@ -306,7 +305,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="uci-comandos">uci comandos</h2>
-<p>O <a href="https://openwrt.org/docs/guide-user/base-system/uci" target="_blank" rel="noopener noreffer">uci</a> pode ajustar a configuração do uhttpd sem usar um editor de texto, no terminal digite as linhas a seguir:</p>
+<p>O <a href="https://openwrt.org/docs/guide-user/base-system/uci" target="_blank" rel="noopener noreffer ">uci</a> pode ajustar a configuração do uhttpd sem usar um editor de texto, no terminal digite as linhas a seguir:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -354,7 +353,7 @@
             <a href="/neovim_spell_check/" class="next" rel="next" title="Corretor ortográfico no Neovim">Corretor ortográfico no Neovim<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="utterances" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">André P. Santos</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
@@ -366,9 +365,8 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"✨💬✨","lightTheme":"github-light","repo":"andreztz/comments"}},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"✨💬✨","lightTheme":"github-light","repo":"andreztz/comments"}},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'G-N2DNZ49Z76', { 'anonymize_ip': true });
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script><noscript><img src="https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/pixel.gif"></noscript>
-        <script defer src="https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/script.js"></script></body>
+            gtag('config', 'G-N2DNZ49Z76');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script></body>
 </html>

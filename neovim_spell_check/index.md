@@ -13,7 +13,7 @@ O arquivo `.spl` pode ser criado a partir de arquivos myspell `.aff` e `.dic` us
 Para gerar o arquivo `.spl` português do Brasil siga os passos a seguir: 
 
 
-```bash
+```
 $ mkdir /tmp/vero && cd /tmp/vero
 $ wget https://pt-br.libreoffice.org/assets/Uploads/PT-BR-Documents/VERO/VeroptBR3215AOC.oxt
 $ file VeroptBR3215AOC.oxt
@@ -24,7 +24,7 @@ $ unzip VeroptBR3215AOC.oxt
 Abra o vim no diretório corrente e execute o comando `:mkspell pt pt_BR` para gerar o `.spl`
 
 
-```bash
+```
 :mkspell pt pt_BR
 # ... Saída suprimida
 Reading dictionary file pt_BR.dic...
@@ -43,7 +43,7 @@ Done!
 A saída é um arquivo `pt.utf-8.spl`, mova-o para `~/.local/share/nvim/spell/`
 
 
-```bash
+```
 $ mv /tmp/vero/pt.utf-8.spl ~/.local/share/nvim/spell
 
 ```
