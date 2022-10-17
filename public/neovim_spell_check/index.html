@@ -39,7 +39,7 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -60,8 +60,7 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </div>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
@@ -104,7 +103,7 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
             <h2 class="toc-title">Conteúdos</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Corretor ortográfico no Neovim</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="05-15-2022">05-15-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;562 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
@@ -130,8 +129,8 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
 </nav></div>
             </div><div class="content" id="content"><h1 id="corretor-ortográfico-no-neovim">Corretor ortográfico no neovim</h1>
 <p>O editor de texto neovim usa o formato de arquivo <code>.spl</code> para armazenar palavras de uma determinada linguagem, a quais são usadas para fazer a verificação ortográfica. O arquivo <code>.spl</code> é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.</p>
-<p>O arquivo <code>.spl</code> pode ser criado a partir de arquivos myspell <code>.aff</code> e <code>.dic</code> usados pelo verificador ortográfico <a href="https://pt-br.libreoffice.org/projetos/vero/#baixarvero" target="_blank" rel="noopener noreffer">VERO</a> sigla que significa <strong>VER</strong>ificador <strong>O</strong>rtografico do LibreOffice.</p>
-<h3 id="gerar-um-arquivo-spellhttpsneovimiodocuserspellhtmlspell-mkspell"><a href="https://neovim.io/doc/user/spell.html#spell-mkspell" target="_blank" rel="noopener noreffer">Gerar um arquivo spell</a></h3>
+<p>O arquivo <code>.spl</code> pode ser criado a partir de arquivos myspell <code>.aff</code> e <code>.dic</code> usados pelo verificador ortográfico <a href="https://pt-br.libreoffice.org/projetos/vero/#baixarvero" target="_blank" rel="noopener noreffer ">VERO</a> sigla que significa <strong>VER</strong>ificador <strong>O</strong>rtografico do LibreOffice.</p>
+<h3 id="gerar-um-arquivo-spellhttpsneovimiodocuserspellhtmlspell-mkspell"><a href="https://neovim.io/doc/user/spell.html#spell-mkspell" target="_blank" rel="noopener noreffer ">Gerar um arquivo spell</a></h3>
 <p>Para gerar o arquivo <code>.spl</code> português do Brasil siga os passos a seguir:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -142,10 +141,10 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir /tmp/vero <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /tmp/vero
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ mkdir /tmp/vero &amp;&amp; cd /tmp/vero
 </span></span><span class="line"><span class="cl">$ wget https://pt-br.libreoffice.org/assets/Uploads/PT-BR-Documents/VERO/VeroptBR3215AOC.oxt
 </span></span><span class="line"><span class="cl">$ file VeroptBR3215AOC.oxt
-</span></span><span class="line"><span class="cl">VeroptBR3215AOC.oxt: Zip archive data, at least v2.0 to extract, compression <span class="nv">method</span><span class="o">=</span>deflate
+</span></span><span class="line"><span class="cl">VeroptBR3215AOC.oxt: Zip archive data, at least v2.0 to extract, compression method=deflate
 </span></span><span class="line"><span class="cl">$ unzip VeroptBR3215AOC.oxt
 </span></span></code></pre></td></tr></table>
 </div>
@@ -166,16 +165,16 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">:mkspell pt pt_BR
-</span></span><span class="line"><span class="cl"><span class="c1"># ... Saída suprimida</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:mkspell pt pt_BR
+</span></span><span class="line"><span class="cl"># ... Saída suprimida
 </span></span><span class="line"><span class="cl">Reading dictionary file pt_BR.dic...
-</span></span><span class="line"><span class="cl">Compressed <span class="k">case</span>-folded of <span class="m">16207519</span> nodes<span class="p">;</span> <span class="m">290324</span> <span class="o">(</span>1%<span class="o">)</span> remaining             
-</span></span><span class="line"><span class="cl">Compressed keep-case of <span class="m">189406</span> nodes<span class="p">;</span> <span class="m">10459</span> <span class="o">(</span>5%<span class="o">)</span> remaining                  
-</span></span><span class="line"><span class="cl"><span class="c1"># ... Saída suprimida</span>
-</span></span><span class="line"><span class="cl">Compressed keep-case of <span class="m">596998</span> nodes<span class="p">;</span> <span class="m">596998</span> <span class="o">(</span>100%<span class="o">)</span> remaining
+</span></span><span class="line"><span class="cl">Compressed case-folded of 16207519 nodes; 290324 (1%) remaining             
+</span></span><span class="line"><span class="cl">Compressed keep-case of 189406 nodes; 10459 (5%) remaining                  
+</span></span><span class="line"><span class="cl"># ... Saída suprimida
+</span></span><span class="line"><span class="cl">Compressed keep-case of 596998 nodes; 596998 (100%) remaining
 </span></span><span class="line"><span class="cl">Compressing word tree...
-</span></span><span class="line"><span class="cl">Compressed <span class="k">case</span>-folded of <span class="m">55323495</span> nodes<span class="p">;</span> <span class="m">47773995</span> <span class="o">(</span>86%<span class="o">)</span> remaining
-</span></span><span class="line"><span class="cl">Compressed keep-case of <span class="m">746484</span> nodes<span class="p">;</span> <span class="m">601437</span> <span class="o">(</span>80%<span class="o">)</span> remaining
+</span></span><span class="line"><span class="cl">Compressed case-folded of 55323495 nodes; 47773995 (86%) remaining
+</span></span><span class="line"><span class="cl">Compressed keep-case of 746484 nodes; 601437 (80%) remaining
 </span></span><span class="line"><span class="cl">Writing spell file pt.utf-8.spl...
 </span></span><span class="line"><span class="cl">Done!
 </span></span></code></pre></td></tr></table>
@@ -186,10 +185,10 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mv /tmp/vero/pt.utf-8.spl ~/.local/share/nvim/spell
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ mv /tmp/vero/pt.utf-8.spl ~/.local/share/nvim/spell
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Obs.: De acordo com a documentação, o neovim busca por spellfiles no <a href="https://neovim.io/doc/user/spell.html#spell-load" target="_blank" rel="noopener noreffer">runtimepath</a> no diretório <code>spell</code>.</p>
+</div><p>Obs.: De acordo com a documentação, o neovim busca por spellfiles no <a href="https://neovim.io/doc/user/spell.html#spell-load" target="_blank" rel="noopener noreffer ">runtimepath</a> no diretório <code>spell</code>.</p>
 <h3 id="uso">Uso</h3>
 <p>A medida que o corretor ortográfico detecta a palavra incorreta, essa é marcada com um sublinhado. Para corrigi-la, posicione o cursor sob a mesma, no modo Visual pressione <code>z + =</code>. Um menu irá mostrar as palavras sugeridas pelo corretor, então é só escolher a correta.</p>
 <p>No modo de inserção, com o cursor posicionado no fim da palavra com erro, pressione <code>ctrl + x + s</code> para exibir a caixa de sugestões, funciona como o autocompletar de palavras usando o <code>ctrl + p</code>.</p>
@@ -332,9 +331,9 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
 <pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">vim.o</span><span class="p">.</span><span class="n">spelllang</span><span class="o">=</span><span class="s2">&#34;pt_br&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="outras-linguagenshttpftpvimorgvimruntimespell"><a href="http://ftp.vim.org/vim/runtime/spell/" target="_blank" rel="noopener noreffer">Outras linguagens</a></h3>
-<p>No web site do vim.org existe um <a href="http://ftp.vim.org/vim/runtime/spell/" target="_blank" rel="noopener noreffer">diretório</a> com as linguagens usadas pelo vim. Então simplesmente escolha uma, baixe-a no diretório <code>~/.local/share/nvim/spell</code> e ative o corretor ortográfico.</p>
-<p><a href="https://neovim.io/doc/user/spell.html" target="_blank" rel="noopener noreffer">Nvim documentation: spell</a></p>
+</div><h3 id="outras-linguagenshttpftpvimorgvimruntimespell"><a href="http://ftp.vim.org/vim/runtime/spell/" target="_blank" rel="noopener noreffer ">Outras linguagens</a></h3>
+<p>No web site do vim.org existe um <a href="http://ftp.vim.org/vim/runtime/spell/" target="_blank" rel="noopener noreffer ">diretório</a> com as linguagens usadas pelo vim. Então simplesmente escolha uma, baixe-a no diretório <code>~/.local/share/nvim/spell</code> e ative o corretor ortográfico.</p>
+<p><a href="https://neovim.io/doc/user/spell.html" target="_blank" rel="noopener noreffer ">Nvim documentation: spell</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -359,7 +358,7 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
     <div class="post-nav"><a href="/openwrt-interface-web-seguranca/" class="prev" rel="prev" title="Protegendo o acesso a interface web do Openwrt"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Protegendo o acesso a interface web do Openwrt</a></div>
 </div>
 <div id="comments"><div id="utterances" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">André P. Santos</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
@@ -371,9 +370,8 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
             </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"✨💬✨","lightTheme":"github-light","repo":"andreztz/comments"}},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"✨💬✨","lightTheme":"github-light","repo":"andreztz/comments"}},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'G-N2DNZ49Z76', { 'anonymize_ip': true });
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script><noscript><img src="https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/pixel.gif"></noscript>
-        <script defer src="https://analytics-andreztz.herokuapp.com/ingress/c91d7a7f-7686-45ab-80f4-4210817ff3ca/script.js"></script></body>
+            gtag('config', 'G-N2DNZ49Z76');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script></body>
 </html>
