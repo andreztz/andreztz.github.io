@@ -1,6 +1,6 @@
-all: clean build prod
+all: clean build server
 
-prod:
+server:
 	hugo server -e production 
 
 dev:
