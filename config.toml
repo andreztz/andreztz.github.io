@@ -201,7 +201,7 @@ languageName = "English"
   # Social config about the author
   [params.social]
     GitHub = "andreztz"
-    Linkedin = "andreztz"
+    Linkedin = "" # andreztz
     Twitter = "ztzandre"
     Instagram = ""
     Facebook = ""
@@ -215,7 +215,7 @@ languageName = "English"
     Quora = ""
     Keybase = ""
     Pinterest = ""
-    Reddit = "andreztz"
+    Reddit = ""
     Codepen = ""
     FreeCodeCamp = ""
     Bitbucket = ""
@@ -267,7 +267,7 @@ languageName = "English"
     [params.social.Mastodon]
       weight = 56 
       id = "@andreztz"
-      prefix = "https://mastodon.technology"
+      prefix = "https://mastodon.social"
       title = "Mastodon"
 
   #  Page global config
