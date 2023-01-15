@@ -12,7 +12,7 @@
     <pubDate>Sun, 15 May 2022 22:24:09 -0300</pubDate>
     <author>André P. Santos</author>
     <guid>http://andreztz.github.io/neovim_spell_check/</guid>
-    <description><![CDATA[Corretor ortográfico no neovim O editor de texto neovim usa o formato de arquivo .spl para armazenar palavras de uma determinada linguagem, a quais são usadas para fazer a verificação ortográfica. O arquivo .spl é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
+    <description><![CDATA[Corretor ortográfico no neovim O editor de texto neovim usa o formato de arquivo .spl para armazenar palavras de uma determinada linguagem, essas são usadas para fazer a verificação ortográfica. O arquivo .spl é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
 O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados pelo verificador ortográfico VERO sigla que significa VERificador Ortografico do LibreOffice.]]></description>
 </item>
 <item>

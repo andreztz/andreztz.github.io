@@ -41,6 +41,18 @@ languageName = "English"
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = "André P. Santos - Blog"
+  [[menu.main]]
+    weight = 2
+    identifier = "about"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "About"
+    url = "/about/"
+    # title will be shown when you hover on this menu link
+    title = "André P. Santos - Blog"
+  # [[menu.main]]
   # [[menu.main]]
   #   weight = 3
   #   identifier = "tags"
