@@ -4,9 +4,19 @@
         <link>http://andreztz.github.io/</link>
         <description>André P. Santos - Posts</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>andreztz@gmail.com (André P. Santos)</managingEditor>
-            <webMaster>andreztz@gmail.com (André P. Santos)</webMaster><lastBuildDate>Sun, 15 May 2022 22:24:09 -0300</lastBuildDate>
+            <webMaster>andreztz@gmail.com (André P. Santos)</webMaster><lastBuildDate>Fri, 17 Mar 2023 02:36:32 -0300</lastBuildDate>
             <atom:link href="http://andreztz.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</title>
+    <link>http://andreztz.github.io/desativar_avisos_no_pytest/</link>
+    <pubDate>Fri, 17 Mar 2023 02:36:32 -0300</pubDate>
+    <author>André P. Santos</author>
+    <guid>http://andreztz.github.io/desativar_avisos_no_pytest/</guid>
+    <description><![CDATA[Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
+Entendendo o problema Vamos imaginar que estamos executando testes em uma aplicação Python utilizando o Pytest e nos deparamos com a seguinte saída:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ===================================== warnings summary ====================================== tests/test_translator.]]></description>
+</item>
+<item>
     <title>Corretor ortográfico no Neovim</title>
     <link>http://andreztz.github.io/neovim_spell_check/</link>
     <pubDate>Sun, 15 May 2022 22:24:09 -0300</pubDate>
