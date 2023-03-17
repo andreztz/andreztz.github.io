@@ -31,7 +31,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/"
-        },"genre": "posts","wordcount":  612 ,
+        },"genre": "posts","wordcount":  605 ,
         "url": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/","datePublished": "2023-03-17T02:36:32-03:00","dateModified": "2023-03-17T02:36:32-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -105,7 +105,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;612 palavras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;605 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -167,7 +167,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
 </span></span><span class="line"><span class="cl">-- Docs: https://docs.pytest.org/en/stable/warnings.html
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, sendo úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão ou podem simplesmente ser irritantes, sujando a tela e tirando o foco do resultado dos testes.</p>
+</div><p>Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, sendo úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão, sujando a tela e tirando o foco do resultado dos testes.</p>
 <h2 id="entendendo-o-pytest_addopts">Entendendo o PYTEST_ADDOPTS</h2>
 <blockquote>
 <p>PYTEST_ADDOPTS¶
@@ -248,7 +248,7 @@ for more information.</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="conclusão">Conclusão</h2>
-<p>O <a href="https://docs.pytest.org/en/7.2.x/" target="_blank" rel="noopener noreffer ">Pytest</a> é uma ferramenta importante para garantir a qualidade do código em projetos Python. No entanto, durante a execução dos testes automatizados, podem ser gerados avisos (warnings) que, em alguns casos, podem ser irrelevantes ou irritantes. Nesse sentido, a opção <code>-p no:warnings</code>, definida na variável de ambiente <a href="https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS" target="_blank" rel="noopener noreffer ">PYTEST_ADDOPTS¶</a> pode ser utilizada para desativar todos os avisos durante a execução dos testes. No entanto, é importante lembrar que esses avisos podem conter informações importantes para identificar possíveis problemas na aplicação ou bibliotecas utilizadas. Portanto, a desativação dos avisos deve ser feita com cuidado e de forma criteriosa, de modo a não comprometer a qualidade do código.</p>
+<p>O <a href="https://docs.pytest.org/en/7.2.x/" target="_blank" rel="noopener noreffer ">Pytest</a> é uma ferramenta importante para garantir a qualidade do código em projetos Python. No entanto, durante a execução dos testes automatizados, podem ser gerados avisos (warnings) que, em alguns casos, podem ser irrelevantes. Nesse sentido, a opção <code>-p no:warnings</code>, definida na variável de ambiente <a href="https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS" target="_blank" rel="noopener noreffer ">PYTEST_ADDOPTS¶</a> pode ser utilizada para desativar todos os avisos durante a execução dos testes. No entanto, é importante lembrar que esses avisos podem conter informações importantes para identificar possíveis problemas na aplicação ou bibliotecas utilizadas. Portanto, a desativação dos avisos deve ser feita com cuidado e de forma criteriosa, de modo a não comprometer a qualidade do código.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
