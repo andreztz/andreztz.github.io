@@ -1,14 +1,10 @@
-# Desativar_avisos_do_pytest
-
-
-
 # Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest
+
+
 
 
 Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a `PYTEST_ADDOPTS` para desabilita-los.
 
-    PYTEST_ADDOPTS¶
-    This contains a command-line (parsed by the py:mod:shlex module) that will be prepended to the command line given by the user, see Builtin configuration file options for more information.
 
 
 ## Entendendo o problema
@@ -43,7 +39,15 @@ Esses avisos podem ser gerados por diversos motivos, como o uso de funções obs
 
 ## Utilizando o PYTEST_ADDOPTS
 
-O **PYTEST_ADDOPTS** é uma variável de ambiente que permite passar opções para o pytest através do `Makefile` ou exportando-a direto no terminal. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção `-p no:warnings`.
+
+> PYTEST_ADDOPTS¶ 
+> This contains a command-line (parsed by the py:mod:shlex module) that will be prepended 
+> to the command line given by the user, see Builtin configuration file options 
+> for more information.
+
+
+
+O **PYTEST_ADDOPTS** é uma variável de ambiente, que armazena parâmetros de linha de comando, que durante a execução do pytest serão adicionados a linha de comando fornecida pelo usuário. É possível defini-la exportando-a no terminal ou direto no arquivo `Makefile`. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção `-p no:warnings`.
 
 
 ### Desativando os avisos no makefile
@@ -96,8 +100,6 @@ $ env PYTEST_ADDOPTS="-p no:warnings" pytest -s -v
 
 ## Conclusão
 
-O Pytest é uma ferramenta importante para garantir a qualidade do código em projetos Python. No entanto, durante a execução dos testes automatizados, podem ser gerados avisos (warnings) que, em alguns casos, podem ser irrelevantes ou irritantes. Nesse sentido, a opção `-p no:warnings`, definida na variável de ambiente `PYTEST_ADDOPTS` pode ser utilizada para desativar todos os avisos durante a execução dos testes. No entanto, é importante lembrar que esses avisos podem conter informações importantes para identificar possíveis problemas na aplicação ou bibliotecas utilizadas. Portanto, a desativação dos avisos deve ser feita com cuidado e de forma criteriosa, de modo a não comprometer a qualidade do código.
+O [Pytest](https://docs.pytest.org/en/7.2.x/) é uma ferramenta importante para garantir a qualidade do código em projetos Python. No entanto, durante a execução dos testes automatizados, podem ser gerados avisos (warnings) que, em alguns casos, podem ser irrelevantes ou irritantes. Nesse sentido, a opção `-p no:warnings`, definida na variável de ambiente [PYTEST_ADDOPTS¶](https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS) pode ser utilizada para desativar todos os avisos durante a execução dos testes. No entanto, é importante lembrar que esses avisos podem conter informações importantes para identificar possíveis problemas na aplicação ou bibliotecas utilizadas. Portanto, a desativação dos avisos deve ser feita com cuidado e de forma criteriosa, de modo a não comprometer a qualidade do código.
 
-https://docs.pytest.org/en/7.2.x/
-https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS
 

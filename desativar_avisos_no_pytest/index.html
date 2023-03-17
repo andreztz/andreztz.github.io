@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Desativar_avisos_do_pytest - André P. Santos</title><meta name="Description" content="André P. Santos - Posts"><meta property="og:title" content="Desativar_avisos_do_pytest" />
-<meta property="og:description" content="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
-PYTEST_ADDOPTS¶ This contains a command-line (parsed by the py:mod:shlex module) that will be prepended to the command line given by the user, see Builtin configuration file options for more information." />
+        <title>Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest - André P. Santos</title><meta name="Description" content="André P. Santos - Posts"><meta property="og:title" content="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest" />
+<meta property="og:description" content="Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
+Entendendo o problema Vamos imaginar que estamos executando testes em uma aplicação Python utilizando o Pytest e nos deparamos com a seguinte saída:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ===================================== warnings summary ====================================== tests/test_translator." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://andreztz.github.io/desativar_avisos_no_pytest/" /><meta property="og:image" content="http://andreztz.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-17T02:36:32-03:00" />
@@ -14,9 +15,10 @@ PYTEST_ADDOPTS¶ This contains a command-line (parsed by the py:mod:shlex module
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://andreztz.github.io/logo.png"/>
 
-<meta name="twitter:title" content="Desativar_avisos_do_pytest"/>
-<meta name="twitter:description" content="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
-PYTEST_ADDOPTS¶ This contains a command-line (parsed by the py:mod:shlex module) that will be prepended to the command line given by the user, see Builtin configuration file options for more information."/>
+<meta name="twitter:title" content="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest"/>
+<meta name="twitter:description" content="Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
+Entendendo o problema Vamos imaginar que estamos executando testes em uma aplicação Python utilizando o Pytest e nos deparamos com a seguinte saída:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ===================================== warnings summary ====================================== tests/test_translator."/>
 <meta name="application-name" content="André P. Santos">
 <meta name="apple-mobile-web-app-title" content="André P. Santos"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://andreztz.github.io/desativar_avisos_no_pytest/" /><link rel="prev" href="http://andreztz.github.io/neovim_spell_check/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -24,12 +26,12 @@ PYTEST_ADDOPTS¶ This contains a command-line (parsed by the py:mod:shlex module
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Desativar_avisos_do_pytest",
+        "headline": "Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/"
-        },"genre": "posts","wordcount":  597 ,
+        },"genre": "posts","wordcount":  604 ,
         "url": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/","datePublished": "2023-03-17T02:36:32-03:00","dateModified": "2023-03-17T02:36:32-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -101,9 +103,9 @@ PYTEST_ADDOPTS¶ This contains a command-line (parsed by the py:mod:shlex module
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Conteúdos</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Desativar_avisos_do_pytest</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;597 palavras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;604 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -122,11 +124,7 @@ PYTEST_ADDOPTS¶ This contains a command-line (parsed by the py:mod:shlex module
     <li><a href="#conclusão">Conclusão</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="entendendo-o-pytest_addopts-e-como-desabilitar-warnings-no-pytest">Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</h1>
-<p>Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a <code>PYTEST_ADDOPTS</code> para desabilita-los.</p>
-<pre><code>PYTEST_ADDOPTS¶
-This contains a command-line (parsed by the py:mod:shlex module) that will be prepended to the command line given by the user, see Builtin configuration file options for more information.
-</code></pre>
+            </div><div class="content" id="content"><p>Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a <code>PYTEST_ADDOPTS</code> para desabilita-los.</p>
 <h2 id="entendendo-o-problema">Entendendo o problema</h2>
 <p>Vamos imaginar que estamos executando testes em uma aplicação <strong>Python</strong> utilizando o <strong>Pytest</strong> e nos deparamos com a seguinte saída:</p>
 <div class="highlight"><div class="chroma">
@@ -171,7 +169,13 @@ This contains a command-line (parsed by the py:mod:shlex module) that will be pr
 </div>
 </div><p>Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, sendo úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão ou podem simplesmente ser irritantes, sujando a tela e tirando o foco do resultado dos testes.</p>
 <h2 id="utilizando-o-pytest_addopts">Utilizando o PYTEST_ADDOPTS</h2>
-<p>O <strong>PYTEST_ADDOPTS</strong> é uma variável de ambiente que permite passar opções para o pytest através do <code>Makefile</code> ou exportando-a direto no terminal. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção <code>-p no:warnings</code>.</p>
+<blockquote>
+<p>PYTEST_ADDOPTS¶
+This contains a command-line (parsed by the py:mod:shlex module) that will be prepended
+to the command line given by the user, see Builtin configuration file options
+for more information.</p>
+</blockquote>
+<p>O <strong>PYTEST_ADDOPTS</strong> é uma variável de ambiente, que armazena parâmetros de linha de comando, que durante a execução do pytest serão adicionados a linha de comando fornecida pelo usuário. É possível defini-la exportando-a no terminal ou direto no arquivo <code>Makefile</code>. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção <code>-p no:warnings</code>.</p>
 <h3 id="desativando-os-avisos-no-makefile">Desativando os avisos no makefile</h3>
 <p>Para utilizar o <code>PYTEST_ADDOPTS</code> em conjunto com o <code>Makefile</code>, podemos definir a variável de ambiente no início do arquivo, antes da definição da regra <code>test</code>. Veja o exemplo abaixo:</p>
 <div class="highlight"><div class="chroma">
@@ -243,9 +247,7 @@ This contains a command-line (parsed by the py:mod:shlex module) that will be pr
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="conclusão">Conclusão</h2>
-<p>O Pytest é uma ferramenta importante para garantir a qualidade do código em projetos Python. No entanto, durante a execução dos testes automatizados, podem ser gerados avisos (warnings) que, em alguns casos, podem ser irrelevantes ou irritantes. Nesse sentido, a opção <code>-p no:warnings</code>, definida na variável de ambiente <code>PYTEST_ADDOPTS</code> pode ser utilizada para desativar todos os avisos durante a execução dos testes. No entanto, é importante lembrar que esses avisos podem conter informações importantes para identificar possíveis problemas na aplicação ou bibliotecas utilizadas. Portanto, a desativação dos avisos deve ser feita com cuidado e de forma criteriosa, de modo a não comprometer a qualidade do código.</p>
-<p><a href="https://docs.pytest.org/en/7.2.x/" target="_blank" rel="noopener noreffer ">https://docs.pytest.org/en/7.2.x/</a>
-<a href="https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS" target="_blank" rel="noopener noreffer ">https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS</a></p>
+<p>O <a href="https://docs.pytest.org/en/7.2.x/" target="_blank" rel="noopener noreffer ">Pytest</a> é uma ferramenta importante para garantir a qualidade do código em projetos Python. No entanto, durante a execução dos testes automatizados, podem ser gerados avisos (warnings) que, em alguns casos, podem ser irrelevantes ou irritantes. Nesse sentido, a opção <code>-p no:warnings</code>, definida na variável de ambiente <a href="https://docs.pytest.org/en/7.2.x/reference/reference.html#envvar-PYTEST_ADDOPTS" target="_blank" rel="noopener noreffer ">PYTEST_ADDOPTS¶</a> pode ser utilizada para desativar todos os avisos durante a execução dos testes. No entanto, é importante lembrar que esses avisos podem conter informações importantes para identificar possíveis problemas na aplicação ou bibliotecas utilizadas. Portanto, a desativação dos avisos deve ser feita com cuidado e de forma criteriosa, de modo a não comprometer a qualidade do código.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -255,7 +257,7 @@ This contains a command-line (parsed by the py:mod:shlex module) that will be pr
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Desativar_avisos_do_pytest" data-via="ztzandre"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Linkedin" data-sharer="linkedin" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Desativar_avisos_do_pytest"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Reddit" data-sharer="reddit" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Desativar_avisos_do_pytest"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Desativar_avisos_do_pytest"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest" data-via="ztzandre"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Linkedin" data-sharer="linkedin" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Reddit" data-sharer="reddit" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://andreztz.github.io/desativar_avisos_no_pytest/" data-title="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
