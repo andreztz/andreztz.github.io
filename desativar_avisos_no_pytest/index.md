@@ -34,7 +34,7 @@ tests/test_translator.py::test_api_manager
 
 
 
-Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, sendo úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão, sujando a tela e tirando o foco do resultado dos testes. 
+Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, e são úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão, sujando a tela e tirando o foco do resultado dos testes. 
 
 
 ## Entendendo o PYTEST_ADDOPTS
