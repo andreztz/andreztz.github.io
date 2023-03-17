@@ -31,7 +31,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/"
-        },"genre": "posts","wordcount":  604 ,
+        },"genre": "posts","wordcount":  605 ,
         "url": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/","datePublished": "2023-03-17T02:36:32-03:00","dateModified": "2023-03-17T02:36:32-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -105,7 +105,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;604 palavras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;605 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -117,7 +117,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
     <li><a href="#entendendo-o-problema">Entendendo o problema</a></li>
     <li><a href="#utilizando-o-pytest_addopts">Utilizando o PYTEST_ADDOPTS</a>
       <ul>
-        <li><a href="#desativando-os-avisos-no-makefile">Desativando os avisos no makefile</a></li>
+        <li><a href="#desativar-os-avisos-usando-o-makefile">Desativar os avisos usando o makefile</a></li>
         <li><a href="#desativando-os-avisos-na-linha-de-comando">Desativando os avisos na linha de comando</a></li>
       </ul>
     </li>
@@ -176,7 +176,7 @@ to the command line given by the user, see Builtin configuration file options
 for more information.</p>
 </blockquote>
 <p>O <strong>PYTEST_ADDOPTS</strong> é uma variável de ambiente, que armazena parâmetros de linha de comando, que durante a execução do pytest serão adicionados a linha de comando fornecida pelo usuário. É possível defini-la exportando-a no terminal ou direto no arquivo <code>Makefile</code>. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção <code>-p no:warnings</code>.</p>
-<h3 id="desativando-os-avisos-no-makefile">Desativando os avisos no makefile</h3>
+<h3 id="desativar-os-avisos-usando-o-makefile">Desativar os avisos usando o makefile</h3>
 <p>Para utilizar o <code>PYTEST_ADDOPTS</code> em conjunto com o <code>Makefile</code>, podemos definir a variável de ambiente no início do arquivo, antes da definição da regra <code>test</code>. Veja o exemplo abaixo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

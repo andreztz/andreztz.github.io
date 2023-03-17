@@ -50,7 +50,7 @@ Esses avisos podem ser gerados por diversos motivos, como o uso de funções obs
 O **PYTEST_ADDOPTS** é uma variável de ambiente, que armazena parâmetros de linha de comando, que durante a execução do pytest serão adicionados a linha de comando fornecida pelo usuário. É possível defini-la exportando-a no terminal ou direto no arquivo `Makefile`. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção `-p no:warnings`.
 
 
-### Desativando os avisos no makefile
+### Desativar os avisos usando o makefile
 
 Para utilizar o `PYTEST_ADDOPTS` em conjunto com o `Makefile`, podemos definir a variável de ambiente no início do arquivo, antes da definição da regra `test`. Veja o exemplo abaixo:
 
