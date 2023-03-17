@@ -31,7 +31,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/"
-        },"genre": "posts","wordcount":  605 ,
+        },"genre": "posts","wordcount":  612 ,
         "url": "http:\/\/andreztz.github.io\/desativar_avisos_no_pytest\/","datePublished": "2023-03-17T02:36:32-03:00","dateModified": "2023-03-17T02:36:32-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -105,7 +105,7 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;605 palavras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="03-17-2023">03-17-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;612 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -115,10 +115,10 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#entendendo-o-problema">Entendendo o problema</a></li>
-    <li><a href="#utilizando-o-pytest_addopts">Utilizando o PYTEST_ADDOPTS</a>
+    <li><a href="#entendendo-o-pytest_addopts">Entendendo o PYTEST_ADDOPTS</a>
       <ul>
-        <li><a href="#desativar-os-avisos-usando-o-makefile">Desativar os avisos usando o makefile</a></li>
         <li><a href="#desativando-os-avisos-na-linha-de-comando">Desativando os avisos na linha de comando</a></li>
+        <li><a href="#desativar-os-avisos-usando-o-makefile">Desativar os avisos usando o makefile</a></li>
       </ul>
     </li>
     <li><a href="#conclusão">Conclusão</a></li>
@@ -168,35 +168,67 @@ Entendendo o problema Vamos imaginar que estamos executando testes em uma aplica
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, sendo úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão ou podem simplesmente ser irritantes, sujando a tela e tirando o foco do resultado dos testes.</p>
-<h2 id="utilizando-o-pytest_addopts">Utilizando o PYTEST_ADDOPTS</h2>
+<h2 id="entendendo-o-pytest_addopts">Entendendo o PYTEST_ADDOPTS</h2>
 <blockquote>
 <p>PYTEST_ADDOPTS¶
 This contains a command-line (parsed by the py:mod:shlex module) that will be prepended
 to the command line given by the user, see Builtin configuration file options
 for more information.</p>
 </blockquote>
-<p>O <strong>PYTEST_ADDOPTS</strong> é uma variável de ambiente, que armazena parâmetros de linha de comando, que durante a execução do pytest serão adicionados a linha de comando fornecida pelo usuário. É possível defini-la exportando-a no terminal ou direto no arquivo <code>Makefile</code>. Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção <code>-p no:warnings</code>.</p>
-<h3 id="desativar-os-avisos-usando-o-makefile">Desativar os avisos usando o makefile</h3>
-<p>Para utilizar o <code>PYTEST_ADDOPTS</code> em conjunto com o <code>Makefile</code>, podemos definir a variável de ambiente no início do arquivo, antes da definição da regra <code>test</code>. Veja o exemplo abaixo:</p>
+<p>O <strong>PYTEST_ADDOPTS</strong> é uma variável de ambiente, que armazena parâmetros de linha de comando, que durante a execução do pytest serão adicionados a linha de comando fornecida pelo usuário. É possível defini-la exportando-a no terminal ou direto no arquivo <code>Makefile</code>.</p>
+<h3 id="desativando-os-avisos-na-linha-de-comando">Desativando os avisos na linha de comando</h3>
+<p>Para desabilitar os avisos (warnings) no pytest, podemos utilizar a opção <code>-p no:warnings</code>. Veja o exemplo a seguir:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pytest -s -v -p no:warnings
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Outra opção é exportar a variável de ambiente <code>PYTEST_ADDOPTS</code> com a opção <code>-p no:warnings</code>. Para isso usamos o comando <code>export</code>, veja o exemplo abaixo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PYTEST_ADDOPTS</span><span class="o">=</span>-p no:warnings
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">.PHONY: <span class="nb">test</span>
-</span></span><span class="line"><span class="cl">test:
-</span></span><span class="line"><span class="cl">    poetry run pytest -s -v
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ export PYTEST_ADDOPTS=&#34;-p no:warnings&#34;
+</span></span><span class="line"><span class="cl">$ poetry run pytest -s -v
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Com a variável <code>PYTEST_ADDOPTS</code> definida, o <code>pytest</code> será executado com a opção <code>-p no:warnings</code>, que desabilita todos os avisos (warnings) durante a execução dos testes. Caso você queira desabilitar somente alguns avisos específicos, é possível utilizar a opção <code>-W</code> do <code>pytest</code> em conjunto com a opção <code>-p no:warnings</code>. Veja o exemplo abaixo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ export PYTEST_ADDOPTS=-p no:warnings -W ignore::DeprecationWarning
+</span></span><span class="line"><span class="cl">$ poetry run pytest -s -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Com a opção <code>-W ignore::DeprecationWarning</code>, o <code>pytest</code> irá desabilitar somente os avisos do tipo <code>DeprecationWarning</code>.</p>
+<p>Para remover a variável <code>PYTEST_ADDOPTS</code>, use o comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ unset PYTEST_ADDOPTS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Utilizando o comando <code>env</code> a variável de ambiente <code>PYTEST_ADDOPTS</code> será definida apenas para a execução do <code>pytest</code> e não afetará outras execuções. Veja o exemplo abaixo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ env PYTEST_ADDOPTS=&#34;-p no:warnings&#34; pytest -s -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="desativar-os-avisos-usando-o-makefile">Desativar os avisos usando o makefile</h3>
+<p>Para utilizar o <code>PYTEST_ADDOPTS</code> em conjunto com o <code>Makefile</code>, podemos definir a variável de ambiente no início do arquivo, antes da definição da regra <code>test</code>. Veja o exemplo abaixo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -213,37 +245,6 @@ for more information.</p>
 </span></span><span class="line"><span class="cl">.PHONY: <span class="nb">test</span>
 </span></span><span class="line"><span class="cl">test:
 </span></span><span class="line"><span class="cl">    poetry run pytest -s -v
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Com a opção <code>-W ignore::DeprecationWarning</code>, o <code>pytest</code> irá desabilitar somente os avisos do tipo <code>DeprecationWarning</code>.</p>
-<h3 id="desativando-os-avisos-na-linha-de-comando">Desativando os avisos na linha de comando</h3>
-<p>Além de definir a variável de ambiente no arquivo <code>makefile</code>, também é possível exportá-la na linha de comando utilizando o comando <code>export</code>. Veja o exemplo abaixo:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ export PYTEST_ADDOPTS=&#34;-p no:warnings&#34;
-</span></span><span class="line"><span class="cl">$ poetry run pytest -s -v
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Para remover a variável <code>PYTEST_ADDOPTS</code>, use o comando:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ unset PYTEST_ADDOPTS
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Utilizando o comando <code>env</code> a variável de ambiente <code>PYTEST_ADDOPTS</code> será definida apenas para a execução do <code>pytest</code> e não afetará outras execuções. Veja o exemplo abaixo:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ env PYTEST_ADDOPTS=&#34;-p no:warnings&#34; pytest -s -v
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="conclusão">Conclusão</h2>
