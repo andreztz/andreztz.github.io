@@ -4,7 +4,17 @@
         <link>http://andreztz.github.io/posts/</link>
         <description>Posts | André P. Santos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>andreztz@gmail.com (André P. Santos)</managingEditor>
-            <webMaster>andreztz@gmail.com (André P. Santos)</webMaster><lastBuildDate>Fri, 17 Mar 2023 02:36:32 -0300</lastBuildDate><atom:link href="http://andreztz.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>andreztz@gmail.com (André P. Santos)</webMaster><lastBuildDate>Sun, 09 Apr 2023 01:24:22 -0300</lastBuildDate><atom:link href="http://andreztz.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Use o git para gerenciar dotfiles</title>
+    <link>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</link>
+    <pubDate>Sun, 09 Apr 2023 01:24:22 -0300</pubDate>
+    <author>André P. Santos</author>
+    <guid>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</guid>
+    <description><![CDATA[Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+Vantagens:
+Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:]]></description>
+</item>
+<item>
     <title>Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</title>
     <link>http://andreztz.github.io/desativar_avisos_no_pytest/</link>
     <pubDate>Fri, 17 Mar 2023 02:36:32 -0300</pubDate>

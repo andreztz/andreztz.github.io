@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Use o git para gerenciar dotfiles - André P. Santos</title><meta name="Description" content="André P. Santos - Posts"><meta property="og:title" content="Use o git para gerenciar dotfiles" />
+<meta property="og:description" content="Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+Vantagens:
+Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/" /><meta property="og:image" content="http://andreztz.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-09T01:24:22-03:00" />
+<meta property="article:modified_time" content="2023-04-09T01:24:22-03:00" /><meta property="og:site_name" content="André P. Santos" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://andreztz.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Use o git para gerenciar dotfiles"/>
+<meta name="twitter:description" content="Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+Vantagens:
+Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:"/>
+<meta name="application-name" content="André P. Santos">
+<meta name="apple-mobile-web-app-title" content="André P. Santos"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/" /><link rel="prev" href="http://andreztz.github.io/desativar_avisos_no_pytest/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Use o git para gerenciar dotfiles",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/andreztz.github.io\/use_o_git_para_gerenciar_dotfiles\/"
+        },"genre": "posts","wordcount":  619 ,
+        "url": "http:\/\/andreztz.github.io\/use_o_git_para_gerenciar_dotfiles\/","datePublished": "2023-04-09T01:24:22-03:00","dateModified": "2023-04-09T01:24:22-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "André P. Santos"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="André P. Santos"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="André P. Santos - Home Page"> Home </a><a class="menu-item" href="/about/" title="André P. Santos - Blog"> About </a><a class="menu-item" href="/posts/" title="André P. Santos - Blog"> Blog </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="André P. Santos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/" title="André P. Santos - Home Page">Home</a><a class="menu-item" href="/about/" title="André P. Santos - Blog">About</a><a class="menu-item" href="/posts/" title="André P. Santos - Blog">Blog</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Use o git para gerenciar dotfiles</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="04-09-2023">04-09-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;619 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#configuração-inicial">Configuração inicial</a></li>
+    <li><a href="#configurando-repositório-remoto">Configurando repositório remoto</a></li>
+    <li><a href="#instalar-os-dotfiles-em-um-novo-sistema">Instalar os dotfiles em um novo sistema</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="use-o-git-para-gerenciar-dotfiles">Use o Git para gerenciar dotfiles.</h1>
+<p>A técnica de versionamento de <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory" target="_blank" rel="noopener noreffer ">dotfiles</a> consiste em criar um repositório Git do tipo <a href="https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/" target="_blank" rel="noopener noreffer ">bare</a> dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.</p>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Não há necessidade de usar ferramentas externas</li>
+<li>Não há uso de links simbólicos</li>
+<li>Os arquivos são rastreados pelo Git</li>
+<li>É possível usar branches diferentes para computadores diferentes</li>
+<li>É possível replicar a configuração facilmente em uma nova instalação</li>
+</ul>
+<h2 id="configuração-inicial">Configuração inicial</h2>
+<p>Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Cria o repositório ~/.dotfiles </span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">dotfiles</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Define o alias `dotfiles`</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">alias</span> <span class="n">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Define que o Git não deve rastrear a $HOME inteira, mas somente arquivos adicionados explicitamente</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">config</span> <span class="o">--</span><span class="n">local</span> <span class="n">status</span><span class="o">.</span><span class="n">showUntrackedFiles</span> <span class="n">no</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Adiciona o alias no `~/.bashrc`</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">echo</span> <span class="s2">&#34;alias dotfiles=&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;&#34;</span> <span class="o">&gt;&gt;</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">bashrc</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Depois de executar a configuração inicial, qualquer arquivo dentro da pasta <code>$HOME</code> pode ser versionado com as opções normais do comando <code>git</code>, substituindo-o pelo alias <code>dotfiles</code>, conforme mostrado abaixo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">vimrc</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add vimrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add bashrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">push</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="configurando-repositório-remoto">Configurando repositório remoto</h2>
+<p>Para configurar o repositório remoto, primeiro crie um repositório no seu Gitlab ou GitHub e siga os passos a seguir, substituindo o <code>&lt;username&gt;</code> pelo seu usuário no remoto.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Para Gitlab</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@gitlab.com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">dotfiles</span><span class="o">.</span><span class="n">git</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Para GitHub</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@github.com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">dotfiles</span><span class="o">.</span><span class="n">git</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span> 
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">push</span> <span class="o">-</span><span class="n">uf</span> <span class="n">origin</span> <span class="n">main</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="instalar-os-dotfiles-em-um-novo-sistema">Instalar os dotfiles em um novo sistema</h2>
+<p>Primeiro, verifique se o alias foi adicionado ao seu <code>.bashrc</code> ou <code>.zshrc</code>. Certifique-se também de adicionar a pasta onde você irá clonar o repositório no arquivo <code>.gitignore</code>, para evitar problemas de recursão.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">echo</span> <span class="s2">&#34;.dotfiles&#34;</span> <span class="o">&gt;&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agora, clone seus dotfiles em um repositório <strong>bare</strong> em uma pasta oculta do seu $HOME:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">bare</span> <span class="o">&lt;</span><span class="n">git</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">dotfiles</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Defina o alias no escopo do shell atual:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">alias</span> <span class="n">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Faça o check-out do conteúdo real do repositório vazio para o seu $HOME:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">checkout</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Nota:</strong> O passo anterior pode falhar e retornar uma mensagem de erro:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">error</span><span class="p">:</span> <span class="no">The</span> <span class="n">following</span> <span class="n">untracked</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">files</span> <span class="n">would</span> <span class="n">be</span> <span class="n">overwritten</span> <span class="n">by</span> <span class="ss">checkout</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">gitignore</span>
+</span></span><span class="line"><span class="cl"><span class="no">Please</span> <span class="n">move</span> <span class="ow">or</span> <span class="n">remove</span> <span class="n">them</span> <span class="n">before</span> <span class="n">you</span> <span class="n">can</span> <span class="n">switch</span> <span class="n">branches</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="no">Aborting</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<blockquote>
+<p>Isso ocorre porque sua pasta <code>$HOME</code> pode conter alguns arquivos de configurações locais, que serão substituídos pelos do Git. A solução é simples: faça backup dos arquivos se você se importa com eles, ou remova-os. Segue abaixo um possível atalho para mover todos os arquivos incorretos para uma pasta.</p>
+</blockquote>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">.</span><span class="n">dotfiles</span><span class="o">-</span><span class="n">backup</span> <span class="o">&amp;&amp;</span> \
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">checkout</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s2">&#34;\s+\.&#34;</span> <span class="o">|</span> <span class="n">awk</span> <span class="p">{</span><span class="s1">&#39;print $1&#39;</span><span class="p">}</span> <span class="o">|</span> \
+</span></span><span class="line"><span class="cl"><span class="n">xargs</span> <span class="o">-</span><span class="n">I</span><span class="p">{}</span> <span class="n">mv</span> <span class="p">{}</span> <span class="o">.</span><span class="n">dotfiles</span><span class="o">-</span><span class="n">backup</span><span class="o">/</span><span class="p">{}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Nota:</strong> Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o <code>dotfiles check-out</code>.</p>
+<p>Agora defina o valor de <code>showUntrackedFiles</code> como <code>no</code> para este repositório:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotfiles config --local status.showUntrackedFiles no
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Pronto, a partir de agora você pode usar o alias definido anteriormente para gerenciar seus dotfiles na sua nova maquina:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">vimrc</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add vimrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add bashrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">push</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 04-09-2023</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/" data-title="Use o git para gerenciar dotfiles" data-via="ztzandre"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Linkedin" data-sharer="linkedin" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/" data-title="Use o git para gerenciar dotfiles"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Reddit" data-sharer="reddit" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/" data-title="Use o git para gerenciar dotfiles"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/" data-title="Use o git para gerenciar dotfiles"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/desativar_avisos_no_pytest/" class="prev" rel="prev" title="Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">André P. Santos</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"✨💬✨","lightTheme":"github-light","repo":"andreztz/comments"}},"cookieconsent":{"content":{"dismiss":"Aceita","link":"Saber mais","message":"Este site usa Cookies para melhorar sua experiência."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-N2DNZ49Z76');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N2DNZ49Z76" async></script></body>
+</html>
