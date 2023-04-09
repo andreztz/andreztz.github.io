@@ -82,7 +82,7 @@ Defina o alias no escopo do shell atual:
 $ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
-Faça o check-out do conteúdo real do repositório vazio para o seu $HOME:
+Faça o checkout do conteúdo real do repositório vazio para o seu $HOME:
 
 ```python
 $ dotfiles checkout
@@ -106,7 +106,7 @@ dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .dotfiles-backup/{}
 ```
 
-**Nota:** Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o `dotfiles check-out`.
+**Nota:** Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o `dotfiles checkout`.
 
 
 Agora defina o valor de `showUntrackedFiles` como `no` para este repositório:
