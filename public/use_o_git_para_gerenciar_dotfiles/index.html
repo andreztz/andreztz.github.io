@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>Use o git para gerenciar dotfiles - André P. Santos</title><meta name="Description" content="André P. Santos - Posts"><meta property="og:title" content="Use o git para gerenciar dotfiles" />
-<meta property="og:description" content="Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+<meta property="og:description" content="Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.
 Vantagens:
 Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:" />
 <meta property="og:type" content="article" />
@@ -16,7 +16,7 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 <meta name="twitter:image" content="http://andreztz.github.io/logo.png"/>
 
 <meta name="twitter:title" content="Use o git para gerenciar dotfiles"/>
-<meta name="twitter:description" content="Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+<meta name="twitter:description" content="Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.
 Vantagens:
 Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:"/>
 <meta name="application-name" content="André P. Santos">
@@ -31,7 +31,7 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/andreztz.github.io\/use_o_git_para_gerenciar_dotfiles\/"
-        },"genre": "posts","wordcount":  619 ,
+        },"genre": "posts","wordcount":  567 ,
         "url": "http:\/\/andreztz.github.io\/use_o_git_para_gerenciar_dotfiles\/","datePublished": "2023-04-09T01:24:22-03:00","dateModified": "2023-04-09T01:24:22-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -105,7 +105,7 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Use o git para gerenciar dotfiles</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="04-09-2023">04-09-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;619 palavras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="04-09-2023">04-09-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;567 palavras&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -120,7 +120,7 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="use-o-git-para-gerenciar-dotfiles">Use o Git para gerenciar dotfiles.</h1>
-<p>A técnica de versionamento de <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory" target="_blank" rel="noopener noreffer ">dotfiles</a> consiste em criar um repositório Git do tipo <a href="https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/" target="_blank" rel="noopener noreffer ">bare</a> dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.</p>
+<p>A técnica de versionamento de <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory" target="_blank" rel="noopener noreffer ">dotfiles</a> consiste em criar um repositório Git do tipo <a href="https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/" target="_blank" rel="noopener noreffer ">bare</a> dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.</p>
 <p><strong>Vantagens</strong>:</p>
 <ul>
 <li>Não há necessidade de usar ferramentas externas</li>
@@ -131,29 +131,51 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 </ul>
 <h2 id="configuração-inicial">Configuração inicial</h2>
 <p>Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:</p>
+<ol>
+<li>Cria o repositório ~/.dotfiles</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Cria o repositório ~/.dotfiles </span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">dotfiles</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Define o alias `dotfiles`</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">alias</span> <span class="n">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Define que o Git não deve rastrear a $HOME inteira, mas somente arquivos adicionados explicitamente</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">config</span> <span class="o">--</span><span class="n">local</span> <span class="n">status</span><span class="o">.</span><span class="n">showUntrackedFiles</span> <span class="n">no</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="c1"># Adiciona o alias no `~/.bashrc`</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">echo</span> <span class="s2">&#34;alias dotfiles=&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;&#34;</span> <span class="o">&gt;&gt;</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">bashrc</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">dotfiles</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Depois de executar a configuração inicial, qualquer arquivo dentro da pasta <code>$HOME</code> pode ser versionado com as opções normais do comando <code>git</code>, substituindo-o pelo alias <code>dotfiles</code>, conforme mostrado abaixo:</p>
+</div><ol start="2">
+<li>Define o alias <code>dotfiles</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">alias</span> <span class="n">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Configura o Git para ignorar a $HOME inteira</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">config</span> <span class="o">--</span><span class="n">local</span> <span class="n">status</span><span class="o">.</span><span class="n">showUntrackedFiles</span> <span class="n">no</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Adiciona o alias no <code>~/.bashrc</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#34;alias dotfiles=&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;&#34; &gt;&gt; $HOME/.bashrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Depois de executar a configuração inicial, qualquer arquivo dentro da pasta <code>$HOME</code> pode ser versionado através do alias <code>dotfiles</code> com as opções normais do comando <code>git</code>, conforme mostrado abaixo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -164,34 +186,38 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">status</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">vimrc</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add vimrc&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">bashrc</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add bashrc&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">push</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">vimrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add vimrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add bashrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">push</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="configurando-repositório-remoto">Configurando repositório remoto</h2>
 <p>Para configurar o repositório remoto, primeiro crie um repositório no seu Gitlab ou GitHub e siga os passos a seguir, substituindo o <code>&lt;username&gt;</code> pelo seu usuário no remoto.</p>
+<ol>
+<li>Adicione o remoto</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Para Gitlab</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@gitlab.com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">dotfiles</span><span class="o">.</span><span class="n">git</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># Para GitHub</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@github.com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">dotfiles</span><span class="o">.</span><span class="n">git</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span> 
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">push</span> <span class="o">-</span><span class="n">uf</span> <span class="n">origin</span> <span class="n">main</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@gitlab.com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">dotfiles</span><span class="o">.</span><span class="n">git</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Envie os arquivos para o remoto</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dotfiles push -uf origin main
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="instalar-os-dotfiles-em-um-novo-sistema">Instalar os dotfiles em um novo sistema</h2>
@@ -201,7 +227,7 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">echo</span> <span class="s2">&#34;.dotfiles&#34;</span> <span class="o">&gt;&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">echo</span> <span class="s2">&#34;.dotfiles&#34;</span> <span class="o">&gt;&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Agora, clone seus dotfiles em um repositório <strong>bare</strong> em uma pasta oculta do seu $HOME:</p>
@@ -210,7 +236,7 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">bare</span> <span class="o">&lt;</span><span class="n">git</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">dotfiles</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">bare</span> <span class="o">&lt;</span><span class="n">git</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">dotfiles</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Defina o alias no escopo do shell atual:</p>
@@ -219,16 +245,16 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">alias</span> <span class="n">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">alias</span> <span class="n">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Faça o check-out do conteúdo real do repositório vazio para o seu $HOME:</p>
+</div><p>Faça o checkout do conteúdo real do repositório vazio para o seu $HOME:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">checkout</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">checkout</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Nota:</strong> O passo anterior pode falhar e retornar uma mensagem de erro:</p>
@@ -261,11 +287,11 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">.</span><span class="n">dotfiles</span><span class="o">-</span><span class="n">backup</span> <span class="o">&amp;&amp;</span> \
-</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">checkout</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s2">&#34;\s+\.&#34;</span> <span class="o">|</span> <span class="n">awk</span> <span class="p">{</span><span class="s1">&#39;print $1&#39;</span><span class="p">}</span> <span class="o">|</span> \
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">checkout</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&#34;\s+\.&#34;</span> <span class="o">|</span> <span class="n">awk</span> <span class="p">{</span><span class="s1">&#39;print $1&#39;</span><span class="p">}</span> <span class="o">|</span> \
 </span></span><span class="line"><span class="cl"><span class="n">xargs</span> <span class="o">-</span><span class="n">I</span><span class="p">{}</span> <span class="n">mv</span> <span class="p">{}</span> <span class="o">.</span><span class="n">dotfiles</span><span class="o">-</span><span class="n">backup</span><span class="o">/</span><span class="p">{}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Nota:</strong> Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o <code>dotfiles check-out</code>.</p>
+</div><p><strong>Nota:</strong> Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o <code>dotfiles checkout</code>.</p>
 <p>Agora defina o valor de <code>showUntrackedFiles</code> como <code>no</code> para este repositório:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -286,12 +312,12 @@ Não há necessidade de usar ferramentas externas Não há uso de links simbóli
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">status</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">vimrc</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add vimrc&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">bashrc</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add bashrc&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">dotfiles</span> <span class="n">push</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">vimrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add vimrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">add</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;Add bashrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dotfiles</span> <span class="n">push</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">

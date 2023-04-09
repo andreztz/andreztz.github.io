@@ -12,7 +12,7 @@
     <pubDate>Sun, 09 Apr 2023 01:24:22 -0300</pubDate>
     <author>André P. Santos</author>
     <guid>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</guid>
-    <description><![CDATA[Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+    <description><![CDATA[Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.
 Vantagens:
 Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:]]></description>
 </item>

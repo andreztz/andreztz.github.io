@@ -3,7 +3,7 @@
 
 # Use o Git para gerenciar dotfiles.
 
-A técnica de versionamento de [dotfiles](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory) consiste em criar um repositório Git do tipo [bare](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+A técnica de versionamento de [dotfiles](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory) consiste em criar um repositório Git do tipo [bare](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.
 
 
 **Vantagens**:
@@ -20,40 +20,51 @@ A técnica de versionamento de [dotfiles](https://en.wikipedia.org/wiki/Hidden_f
 Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:
 
 
+1. Cria o repositório ~/.dotfiles 
 ```python
-$ # Cria o repositório ~/.dotfiles 
-$ git init --bare $HOME/.dotfiles
-$ # Define o alias `dotfiles`
-$ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-$ # Define que o Git não deve rastrear a $HOME inteira, mas somente arquivos adicionados explicitamente
-$ dotfiles config --local status.showUntrackedFiles no
-$ # Adiciona o alias no `~/.bashrc`
-$ echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+git init --bare $HOME/.dotfiles
+``` 
+2. Define o alias `dotfiles`
+```python
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+```
+3. Configura o Git para ignorar a $HOME inteira 
+```python
+dotfiles config --local status.showUntrackedFiles no
 ```
 
-Depois de executar a configuração inicial, qualquer arquivo dentro da pasta `$HOME` pode ser versionado com as opções normais do comando `git`, substituindo-o pelo alias `dotfiles`, conforme mostrado abaixo:
+4. Adiciona o alias no `~/.bashrc`
+
+```
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+```
+
+Depois de executar a configuração inicial, qualquer arquivo dentro da pasta `$HOME` pode ser versionado através do alias `dotfiles` com as opções normais do comando `git`, conforme mostrado abaixo:
 
 ```python
-$ dotfiles status
-$ dotfiles add .vimrc
-$ dotfiles commit -m "Add vimrc"
-$ dotfiles add .bashrc
-$ dotfiles commit -m "Add bashrc"
-$ dotfiles push
+dotfiles status
+dotfiles add .vimrc
+dotfiles commit -m "Add vimrc"
+dotfiles add .bashrc
+dotfiles commit -m "Add bashrc"
+dotfiles push
 ```
 
 ## Configurando repositório remoto
 
 Para configurar o repositório remoto, primeiro crie um repositório no seu Gitlab ou GitHub e siga os passos a seguir, substituindo o `<username>` pelo seu usuário no remoto.
 
+1. Adicione o remoto
+
 ```python
-# Para Gitlab
-$ dotfiles remote add origin git@gitlab.com:<username>/dotfiles.git
-# Para GitHub
-$ dotfiles remote add origin git@github.com:<username>/dotfiles.git
-$ dotfiles remote -v 
-$ dotfiles branch -M main
-$ dotfiles push -uf origin main
+dotfiles remote add origin git@gitlab.com:<username>/dotfiles.git
+dotfiles remote -v 
+```
+
+2. Envie os arquivos para o remoto
+
+```
+dotfiles push -uf origin main
 ```
 
 
@@ -64,25 +75,25 @@ Primeiro, verifique se o alias foi adicionado ao seu `.bashrc` ou `.zshrc`. Cert
 
 
 ```python
-$ echo ".dotfiles" >> .gitignore
+echo ".dotfiles" >> .gitignore
 ```
 
 Agora, clone seus dotfiles em um repositório **bare** em uma pasta oculta do seu $HOME:
 
 ```python
-$ git clone --bare <git-repo-url> $HOME/.dotfiles
+git clone --bare <git-repo-url> $HOME/.dotfiles
 ```
 
 Defina o alias no escopo do shell atual:
 
 ```python
-$ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
-Faça o check-out do conteúdo real do repositório vazio para o seu $HOME:
+Faça o checkout do conteúdo real do repositório vazio para o seu $HOME:
 
 ```python
-$ dotfiles checkout
+dotfiles checkout
 ```
 
 **Nota:** O passo anterior pode falhar e retornar uma mensagem de erro:
@@ -99,11 +110,11 @@ Aborting
 
 ```python
 mkdir -p .dotfiles-backup && \
-dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+dotfiles checkout 2>&1 | grep -e "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .dotfiles-backup/{}
 ```
 
-**Nota:** Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o `dotfiles check-out`.
+**Nota:** Se você teve o problema mencionado anteriormente, após mover os arquivos, execute novamente o `dotfiles checkout`.
 
 
 Agora defina o valor de `showUntrackedFiles` como `no` para este repositório:
@@ -116,11 +127,11 @@ Pronto, a partir de agora você pode usar o alias definido anteriormente para ge
 
 
 ```python
-$ dotfiles status
-$ dotfiles add .vimrc
-$ dotfiles commit -m "Add vimrc"
-$ dotfiles add .bashrc
-$ dotfiles commit -m "Add bashrc"
-$ dotfiles push
+dotfiles status
+dotfiles add .vimrc
+dotfiles commit -m "Add vimrc"
+dotfiles add .bashrc
+dotfiles commit -m "Add bashrc"
+dotfiles push
 ```
 
