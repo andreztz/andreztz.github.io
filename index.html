@@ -97,16 +97,17 @@
         alt="/images/avatar.jpg"
         title="/images/avatar.jpg" width="440" height="440" /></a></div><h1 class="home-title">André P. Santos</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/andreztz" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://twitter.com/ztzandre" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="https://t.me/andreztz" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw" aria-hidden="true"></i></a><a href="https://www.strava.com/athletes/27260098" title="Strava" target="_blank" rel="noopener noreffer me"><i class="fab fa-strava fa-fw" aria-hidden="true"></i></a><a href="https://mastodon.social/@andreztz" title="Mastodon" target="_blank" rel="noopener noreffer me"><i class="fab fa-mastodon fa-fw" aria-hidden="true"></i></a><a href="mailto:andreztz@gmail.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/use_o_git_para_gerenciar_dotfiles/">Use o git para gerenciar dotfiles</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="04-09-2023">04-09-2023</time></span></div><div class="content">Use o Git para gerenciar dotfiles. A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, crie um alias para interagir com esse repositório de forma exclusiva.
+Vantagens:
+Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:</div><div class="post-footer">
+        <a href="/use_o_git_para_gerenciar_dotfiles/">Leia mais</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/desativar_avisos_no_pytest/">Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="03-17-2023">03-17-2023</time></span></div><div class="content">Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
 Entendendo o problema Vamos imaginar que estamos executando testes em uma aplicação Python utilizando o Pytest e nos deparamos com a seguinte saída:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ===================================== warnings summary ====================================== tests/test_translator.</div><div class="post-footer">
         <a href="/desativar_avisos_no_pytest/">Leia mais</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/neovim_spell_check/">Corretor ortográfico no Neovim</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>André P. Santos</a></span>&nbsp;<span class="post-publish">publicado em <time datetime="05-15-2022">05-15-2022</time></span></div><div class="content">Corretor ortográfico no neovim O editor de texto neovim usa o formato de arquivo .spl para armazenar palavras de uma determinada linguagem, essas são usadas para fazer a verificação ortográfica. O arquivo .spl é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
-O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados pelo verificador ortográfico VERO sigla que significa VERificador Ortografico do LibreOffice.</div><div class="post-footer">
-        <a href="/neovim_spell_check/">Leia mais</a></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -114,6 +115,10 @@ O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados p
                 </li><li class="page-item ">
                     <span class="page-link">
                         <a href="/page/2/">2</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
