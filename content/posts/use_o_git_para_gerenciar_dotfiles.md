@@ -67,25 +67,25 @@ Primeiro, verifique se o alias foi adicionado ao seu `.bashrc` ou `.zshrc`. Cert
 
 
 ```python
-$ echo ".dotfiles" >> .gitignore
+echo ".dotfiles" >> .gitignore
 ```
 
 Agora, clone seus dotfiles em um repositório **bare** em uma pasta oculta do seu $HOME:
 
 ```python
-$ git clone --bare <git-repo-url> $HOME/.dotfiles
+git clone --bare <git-repo-url> $HOME/.dotfiles
 ```
 
 Defina o alias no escopo do shell atual:
 
 ```python
-$ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 Faça o checkout do conteúdo real do repositório vazio para o seu $HOME:
 
 ```python
-$ dotfiles checkout
+dotfiles checkout
 ```
 
 **Nota:** O passo anterior pode falhar e retornar uma mensagem de erro:
@@ -102,7 +102,7 @@ Aborting
 
 ```python
 mkdir -p .dotfiles-backup && \
-dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+dotfiles checkout 2>&1 | grep -e "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .dotfiles-backup/{}
 ```
 
@@ -119,10 +119,10 @@ Pronto, a partir de agora você pode usar o alias definido anteriormente para ge
 
 
 ```python
-$ dotfiles status
-$ dotfiles add .vimrc
-$ dotfiles commit -m "Add vimrc"
-$ dotfiles add .bashrc
-$ dotfiles commit -m "Add bashrc"
-$ dotfiles push
+dotfiles status
+dotfiles add .vimrc
+dotfiles commit -m "Add vimrc"
+dotfiles add .bashrc
+dotfiles commit -m "Add bashrc"
+dotfiles push
 ```
