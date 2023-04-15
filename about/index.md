@@ -20,7 +20,7 @@ Como um entusiasta de tecnologia, venho utilizando Python e Linux desde o iníci
 
 <!-- https://ghchart.rshah.org/ -->
 
-[![André\'s GitHub chart](http://ghchart.rshah.org/andreztz)](https://github.com/andreztz)
+[![André\'s GitHub chart](https://ghchart.rshah.org/andreztz)](https://github.com/andreztz)
 
 
 
