@@ -1,8 +1,5 @@
 ## Sobre André P. Santos
 
+Bem-vindo ao meu espaço na web! Este é um local dedicado à documentação e ao armazenamento de notas, links e trechos de código para referências futuras.
 
-Bem vido ao meu espaço na web, este é uma ferramenta de documentação e bloco de rascunhos para notas, links e trechos de código para referencias futuras.
-
-Sou um entusiasta de tecnologia, python e linux tem me acompanhado desde o principio sendo as minhas principais ferramentas para exploração e validação de idéias. Atualmente estou estudando a linguagem C, e a ferramenta de automação e configuração ansible.
-
-
+Como um entusiasta de tecnologia, venho utilizando Python e Linux desde o início da minha jornada, sendo estas as minhas principais ferramentas para explorar e validar ideias. Atualmente, estou estudando a linguagem C e aprimorando minhas habilidades na ferramenta de automação e configuração, o Ansible.
