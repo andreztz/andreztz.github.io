@@ -4,8 +4,6 @@ date: 2022-04-05T03:49:21-03:00
 draft: false
 ---
 
-# Protegendo o acesso a interface web do openwrt
-
 O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário [LuCI](https://openwrt.org/docs/guide-user/luci/start). O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o  HTTPS. Por esse motivo  existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.
 
 

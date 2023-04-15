@@ -4,8 +4,6 @@ date: 2023-04-09T01:24:22-03:00
 draft: false
 ---
 
-# Use o Git para gerenciar dotfiles.
-
 A técnica de versionamento de [dotfiles](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory) consiste em criar um repositório Git do tipo [bare](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.
 
 

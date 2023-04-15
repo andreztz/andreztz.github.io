@@ -3,15 +3,13 @@ title: "Corretor ortográfico no Neovim"
 date: 2022-05-15T22:24:09-03:00
 draft: false
 ---
-# Corretor ortográfico no neovim 
-
 
 O editor de texto neovim usa o formato de arquivo `.spl` para armazenar palavras de uma determinada linguagem, essas são usadas para fazer a verificação ortográfica. O arquivo `.spl` é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
 
 O arquivo `.spl` pode ser criado a partir de arquivos myspell `.aff` e `.dic` usados pelo verificador ortográfico [VERO](https://pt-br.libreoffice.org/projetos/vero/#baixarvero) sigla que significa **VER**ificador **O**rtografico do LibreOffice.
 
 
-### [Gerar um arquivo spell](https://neovim.io/doc/user/spell.html#spell-mkspell) 
+## [Gerar um arquivo spell](https://neovim.io/doc/user/spell.html#spell-mkspell) 
 
 Para gerar o arquivo `.spl` português do Brasil siga os passos a seguir: 
 
@@ -55,7 +53,7 @@ Obs.: De acordo com a documentação, o neovim busca por spellfiles no [runtimep
 
 
 
-### Uso 
+## Uso 
 
 A medida que o corretor ortográfico detecta a palavra incorreta, essa é marcada com um sublinhado. Para corrigi-la, posicione o cursor sob a mesma, no modo Visual pressione `z + =`. Um menu irá mostrar as palavras sugeridas pelo corretor, então é só escolher a correta.  
 
@@ -83,7 +81,7 @@ No modo de inserção, com o cursor posicionado no fim da palavra com erro, pres
     :set nospell
     ```
 
-### Comandos do corretor ortográfico no modo visual
+## Comandos do corretor ortográfico no modo visual
 
 
 |Comando    |Ação 
@@ -97,7 +95,7 @@ No modo de inserção, com o cursor posicionado no fim da palavra com erro, pres
 |zuw        |desfaz a última palavra removida
 
 
-### Comandos do corretor ortográfico no modo inserção 
+## Comandos do corretor ortográfico no modo inserção 
 
 
 |Comando     |Ação 
@@ -108,14 +106,14 @@ No modo de inserção, com o cursor posicionado no fim da palavra com erro, pres
 
 
 
-### Ativar o corretor ortográfico baseado no tipo de arquivo
+## Ativar o corretor ortográfico baseado no tipo de arquivo
 
 ```vim
 vim.cmd [[ autocmd BufRead, BufNewFile *.md setlocal spell spelllang=pt_br]]
 ```
 
 
-### Ativar o corretor ortográfico sob demanda 
+## Ativar o corretor ortográfico sob demanda 
 
 
 ```vim 
@@ -124,7 +122,7 @@ inoremap <silent> <F3><C-O>:set spell!<CR>
 ```
 
 
-### Configuração global (opcional)
+## Configuração global (opcional)
 
 No arquivo `init.vim`
 
@@ -140,7 +138,7 @@ vim.o.spelllang="pt_br"
 ```
 
 
-### [Outras linguagens](http://ftp.vim.org/vim/runtime/spell/)
+## [Outras linguagens](http://ftp.vim.org/vim/runtime/spell/)
 
 No web site do vim.org existe um [diretório](http://ftp.vim.org/vim/runtime/spell/) com as linguagens usadas pelo vim. Então simplesmente escolha uma, baixe-a no diretório `~/.local/share/nvim/spell` e ative o corretor ortográfico. 
 
