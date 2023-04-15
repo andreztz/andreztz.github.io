@@ -1,14 +1,10 @@
 ---
-title: "Entendendo o PYTEST_ADDOPTS e como desabilitar warnings no pytest"
+title: "PYTEST_ADDOPTS e como desabilitar warnings no pytest"
 date: 2023-03-17T02:36:32-03:00
 draft: false
 ---
 
-
-
 Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a `PYTEST_ADDOPTS` para desabilita-los.
-
-
 
 ## Entendendo o problema
 
