@@ -19,7 +19,7 @@ $ grep -E --color=auto 'vmx|svm|0xc0f' /proc/cpuinfo
 ...
 ```
 
-Se esses comandos não retornarem nenhum resultado, é provável que o suporte à virtualização esteja desativado na configuração do BIOS/UEFI. Os processadores x86_64 AMD/Intel dos últimos 10 anos todos suportam a virtualização.
+Se esses comandos não retornarem nenhum resultado, é provável que o suporte à virtualização esteja desativado na configuração do BIOS/UEFI. A maioria dos processadores x86_64 AMD/Intel desenvolvidos a partir de 2000/2001 suportam virtualização.
 
 ### Instalando pacotes necessários
 
