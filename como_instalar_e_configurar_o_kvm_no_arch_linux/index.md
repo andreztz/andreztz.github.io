@@ -1,7 +1,7 @@
 # KVM (Kernel-Based Virtual Machine): uma ferramenta poderosa para virtualizar no Linux
 
 
-## KVM no Arch Linux
+## KVM (Kernel-Based Virtual Machine) no Arch Linux
 
 KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um hipervisor. O KVM faz parte do kernel Linux a partir da versão 2.6.20.
 
@@ -33,8 +33,10 @@ sudo pacman -S --needed qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils 
 
 A Libguestfs é uma coleção de ferramentas úteis para executar tarefas comuns em imagens de disco de VMs de forma segura, como acessar e editar arquivos, monitorar discos, clonar VMs, criar VMs e muito mais. Também vem com um shell interativo (guestfish e virt-rescue).
 
+O pacote libguestfs esta disponível no repositório extra do Arch Linux, por tanto esse deve estar habilitado.
+
 ```
-yay -S --noconfirm --needed libguestfs
+sudo pacman -S --noconfirm --needed libguestfs 
 ```
 
 ### Iniciando o serviço libvirt no boot
