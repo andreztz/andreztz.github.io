@@ -1,7 +1,9 @@
 ---
-title: "About"
+title: "Sobre - André P. Santos"
+images: ["/hack_the_planet_disks.jpg"]
+
+lightgallery: true
 ---
-## Sobre André P. Santos
 
 <h2 align="Center">  Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> </h2>
 

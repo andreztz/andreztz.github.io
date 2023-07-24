@@ -4,7 +4,7 @@ server:
 	hugo server -e production 
 
 dev:
-	hugo server --disableFastRender
+	hugo server --disableFastRender --buildDrafts
 
 build:
 	hugo
