@@ -10,12 +10,12 @@ KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma
 Para verificar se seu sistema suporta a virtualização, execute os seguintes comandos:
 
 ```
-$ LC_ALL=C lscpu | grep Virtualization
+LC_ALL=C lscpu | grep Virtualization
 Virtualization:                  VT-x
 ```
 
 ```
-$ grep -E --color=auto 'vmx|svm|0xc0f' /proc/cpuinfo
+grep -E --color=auto 'vmx|svm|0xc0f' /proc/cpuinfo
 ...
 ```
 
@@ -25,22 +25,22 @@ Se esses comandos não retornarem nenhum resultado, é provável que o suporte �
 
 O primeiro passo é instalar os pacotes necessários para executar o KVM:
 
-
-$ sudo pacman -S --needed qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables-nft
-
+```
+sudo pacman -S --needed qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables-nft
+```
 
 ### Libguestfs
 
 A Libguestfs é uma coleção de ferramentas úteis para executar tarefas comuns em imagens de disco de VMs de forma segura, como acessar e editar arquivos, monitorar discos, clonar VMs, criar VMs e muito mais. Também vem com um shell interativo (guestfish e virt-rescue).
 
 ```
-$ yay -S --noconfirm --needed libguestfs
+yay -S --noconfirm --needed libguestfs
 ```
 
 ### Iniciando o serviço libvirt no boot
 
 ```
-# systemctl enable libvirtd.service && systemctl start libvirtd.service
+sudo systemctl enable libvirtd.service && systemctl start libvirtd.service
 ```
 
 ### Gerenciando KVMs como usuário padrão
@@ -56,14 +56,14 @@ auth_unix_rw = "none"
 Em seguida, adicione o usuário ao grupo libvirt:
 
 ```
-$ sudo usermod -a -G libvirt $(whoami)
-$ newgrp libvirt
+sudo usermod -a -G libvirt $(whoami)
+newgrp libvirt
 ```
 
 ### Reiniciando o serviço libvirt
 
 ```
-$ sudo systemctl restart libvirtd.service
+sudo systemctl restart libvirtd.service
 ```
 
 ### Suporte para UEFI
@@ -71,7 +71,7 @@ $ sudo systemctl restart libvirtd.service
 Para habilitar o suporte ao UEFI, instale o pacote `ovmf` com o seguinte comando:
 
 ```
-$ sudo pacman -S ovmf
+sudo pacman -S ovmf
 ```
 
 ### Conclusão
