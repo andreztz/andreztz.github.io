@@ -3,7 +3,7 @@
 
 ## KVM (Kernel-Based Virtual Machine) no Arch Linux
 
-KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um hipervisor. O KVM faz parte do kernel Linux a partir da versão 2.6.20.
+KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um [hipervisor](https://pt.wikipedia.org/wiki/Hipervisor). O KVM faz parte do kernel Linux a partir da versão 2.6.20.
 
 ### Pré-instalação
 
