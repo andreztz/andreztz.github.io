@@ -47,15 +47,7 @@ sudo systemctl enable libvirtd.service && systemctl start libvirtd.service
 
 ### Gerenciando KVMs como usuário padrão
 
-Para gerenciar KVMs como usuário padrão, você precisa alterar as seguintes configurações no arquivo `/etc/libvirt/libvirtd.conf`:
-
-```
-unix_sock_group = "libvirt"
-unix_sock_rw_perms = "0770"
-auth_unix_rw = "none"
-```
-
-Em seguida, adicione o usuário ao grupo libvirt:
+Para gerenciar KVMs como usuário padrão, execute os seguintes comandos:
 
 ```
 sudo usermod -a -G libvirt $(whoami)
@@ -70,7 +62,7 @@ sudo systemctl restart libvirtd.service
 
 ### Suporte para UEFI
 
-Para habilitar o suporte ao UEFI, instale o pacote `ovmf` com o seguinte comando:
+Para habilitar o suporte ao UEFI, instale o pacote `ovmf` com o comando:
 
 ```
 sudo pacman -S ovmf
