@@ -1,6 +1,5 @@
-# About
+# Sobre - André P. Santos
 
-## Sobre André P. Santos
 
 <h2 align="Center">  Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> </h2>
 
