@@ -1,4 +1,4 @@
-# KVM: uma ferramenta poderosa para virtualizar no Arch Linux
+# KVM: uma ferramenta poderosa para virtualizar no Linux
 
 
 ## KVM (Kernel-Based Virtual Machine) no Arch Linux
