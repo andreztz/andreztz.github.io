@@ -7,9 +7,7 @@ lightgallery: true
 
 <h2 align="Center">  Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> </h2>
 
-Bem-vindo ao meu espaço na web! Este é um local dedicado à documentação e ao armazenamento de notas, links e trechos de código para referências futuras.
-
-Como um entusiasta de tecnologia, venho utilizando Python e Linux desde o início da minha jornada, sendo estas as minhas principais ferramentas para explorar e validar ideias. Atualmente, estou estudando a linguagem C e aprimorando minhas habilidades na ferramenta de automação e configuração Ansible.
+Este é um espaço dedicado à documentação e ao armazenamento de notas, links e trechos de código para referências futuras.
 
 <div align="center"><img src="https://media.giphy.com/media/udhngZK2IFTc4/giphy.gif" /></div>
 <br>
