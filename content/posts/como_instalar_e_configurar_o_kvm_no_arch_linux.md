@@ -1,5 +1,5 @@
 ---
-title: "KVM (Kernel-Based Virtual Machine): uma ferramenta poderosa para virtualizar no Linux"
+title: "KVM (Kernel-Based Virtual Machine)"
 date: 2023-07-24T00:22:42-03:00
 draft: false
 ---
