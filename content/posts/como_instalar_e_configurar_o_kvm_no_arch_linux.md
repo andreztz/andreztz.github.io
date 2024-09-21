@@ -1,12 +1,26 @@
 ---
-title: "KVM (Kernel-Based Virtual Machine)"
+title: "Máquinas virtuais no Arch Linux"
 date: 2023-07-24T00:22:42-03:00
 draft: false
 ---
 
-## KVM (Kernel-Based Virtual Machine) no Arch Linux
+## KVM (Kernel-Based Virtual Machine)
 
-KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um [hipervisor](https://pt.wikipedia.org/wiki/Hipervisor). O KVM faz parte do kernel Linux a partir da versão 2.6.20.
+KVM é uma infraestrutura de virtualização integrada ao Linux é faz uso das extensões de virtualização do processador (como Intel VT-x e AMD-V). O KVM é composto do modulo do kernel kvm.ko que fornece a infraestrutura principal de virtualização e modulos especificos para processadores kvm-intel.ko e kvm-amd.ko. 
+
+O KVM permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um [hipervisor](https://pt.wikipedia.org/wiki/Hipervisor). O KVM faz parte do kernel Linux a partir da versão 2.6.20.
+
+## QEMU
+
+O QEMU é um emulador e virtualizador de máquinas de código aberto. Ele permite a execução de sistemas operacionais e programas de diferentes plataformas (como ARM) em uma máquina host (como um PC x86) através de uma técnica chamada tradução dinâmica. Esta técnica traduz, em tempo real, o código de máquina de uma arquitetura para outra, possibilitando um desempenho eficiente em comparação com métodos mais lentos, como a interpretação de instruções.
+
+Quando utilizado como virtualizador, o QEMU pode empregar hipervisores como KVM ou Xen, utilizando extensões de CPU (Intel VT-x ou AMD-V) para permitir que várias máquinas virtuais rodem simultaneamente no mesmo hardware. Isso resulta em um desempenho quase nativo, já que o código do sistema convidado é executado diretamente na CPU do host.
+
+## Diferença entre Emulador e Virtualizador:
+
+- **Emulador**: Simula completamente o hardware de uma máquina diferente, permitindo a execução de sistemas operacionais e programas de uma arquitetura de CPU específica em outra. Este processo envolve tradução de instruções, o que geralmente resulta em desempenho mais lento.
+
+- **Virtualizador**: Permite a execução simultânea de múltiplos sistemas operacionais compatíveis com a arquitetura do host em um único hardware. Quando usado com KVM, o QEMU executa máquinas virtuais da mesma arquitetura da CPU do host, evitando a emulação e proporcionando desempenho próximo ao nativo.
 
 ### Pré-instalação
 
@@ -71,9 +85,8 @@ Para habilitar o suporte ao UEFI, instale o pacote `ovmf` com o comando:
 sudo pacman -S ovmf
 ```
 
-### Conclusão
 
-Este blog post forneceu um guia passo a passo sobre como instalar e configurar o KVM no Arch Linux.
+
 
 
 [O que é KVM?](https://www.redhat.com/pt-br/topics/virtualization/what-is-KVM)
