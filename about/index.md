@@ -3,7 +3,7 @@
 
 <h2 align="Center">  Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> </h2>
 
-Este é um espaço dedicado à documentação e ao armazenamento de notas, links e trechos de código para referências futuras.
+Este é um espaço dedicado à documentação, armazenamento de notas,trechos de código e links para referências futuras.
 
 <div align="center"><img src="https://media.giphy.com/media/udhngZK2IFTc4/giphy.gif" /></div>
 <br>
