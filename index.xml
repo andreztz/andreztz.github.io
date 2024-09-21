@@ -1,10 +1,103 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>André P. Santos</title><link>http://andreztz.github.io/</link><description>André P. Santos - Posts</description><generator>Hugo -- gohugo.io</generator><language>pt</language><managingEditor>andreztz@gmail.com (André P. Santos)</managingEditor><webMaster>andreztz@gmail.com (André P. Santos)</webMaster><lastBuildDate>Mon, 24 Jul 2023 00:22:42 -0300</lastBuildDate><atom:link href="http://andreztz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>KVM (Kernel-Based Virtual Machine): uma ferramenta poderosa para virtualizar no Linux</title><link>http://andreztz.github.io/como_instalar_e_configurar_o_kvm_no_arch_linux/</link><pubDate>Mon, 24 Jul 2023 00:22:42 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/como_instalar_e_configurar_o_kvm_no_arch_linux/</guid><description>KVM (Kernel-Based Virtual Machine) no Arch Linux KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um hipervisor. O KVM faz parte do kernel Linux a partir da versão 2.6.20.
-Pré-instalação Para verificar se seu sistema suporta a virtualização, execute os seguintes comandos:
-1 2 LC_ALL=C lscpu | grep Virtualization Virtualization: VT-x 1 2 grep -E --color=auto &amp;#39;vmx|svm|0xc0f&amp;#39; /proc/cpuinfo .</description></item><item><title>Como controlar uma instancia do MPV via socket usando o Python</title><link>http://andreztz.github.io/como_controlar_o_mpv_via_socket/</link><pubDate>Wed, 12 Apr 2023 07:50:29 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/como_controlar_o_mpv_via_socket/</guid><description>O MPV é um player de mídia livre e de código aberto que suporta uma ampla variedade de formatos de arquivo e codecs. Ele tem muitos recursos avançados e é altamente configurável, mas às vezes pode ser útil controlá-lo programaticamente.
-Felizmente, o MPV possui uma interface de soquete que permite que outros processos controlem sua execução. Isso significa que é possível enviar enviar comandos para o MPV usando Python ou qualquer outra linguagem que suporte soquete.</description></item><item><title>Use o git para gerenciar dotfiles</title><link>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</link><pubDate>Sun, 09 Apr 2023 01:24:22 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</guid><description>A técnica de versionamento de dotfiles consiste em criar um repositório Git do tipo bare dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.
-Vantagens:
-Não há necessidade de usar ferramentas externas Não há uso de links simbólicos Os arquivos são rastreados pelo Git É possível usar branches diferentes para computadores diferentes É possível replicar a configuração facilmente em uma nova instalação Configuração inicial Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:</description></item><item><title>PYTEST_ADDOPTS e como desabilitar warnings no pytest</title><link>http://andreztz.github.io/desativar_avisos_no_pytest/</link><pubDate>Fri, 17 Mar 2023 02:36:32 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/desativar_avisos_no_pytest/</guid><description>Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a PYTEST_ADDOPTS para desabilita-los.
-Entendendo o problema Vamos imaginar que estamos executando testes em uma aplicação Python utilizando o Pytest e nos deparamos com a seguinte saída:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ===================================== warnings summary ====================================== tests/test_translator.</description></item><item><title>Corretor ortográfico no Neovim</title><link>http://andreztz.github.io/neovim_spell_check/</link><pubDate>Sun, 15 May 2022 22:24:09 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/neovim_spell_check/</guid><description>O editor de texto neovim usa o formato de arquivo .spl para armazenar palavras de uma determinada linguagem, essas são usadas para fazer a verificação ortográfica. O arquivo .spl é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.
-O arquivo .spl pode ser criado a partir de arquivos myspell .aff e .dic usados pelo verificador ortográfico VERO sigla que significa VERificador Ortografico do LibreOffice.</description></item><item><title>Protegendo o acesso a interface web do Openwrt</title><link>http://andreztz.github.io/openwrt-interface-web-seguranca/</link><pubDate>Tue, 05 Apr 2022 03:49:21 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/openwrt-interface-web-seguranca/</guid><description>O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário LuCI. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o HTTPS. Por esse motivo existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.</description></item><item><title>Como configurar teclas de atalho no Openbox</title><link>http://andreztz.github.io/atalhos-teclado-openbox/</link><pubDate>Mon, 31 May 2021 02:30:21 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/atalhos-teclado-openbox/</guid><description><![CDATA[Teclas de atalho fornecem um método rápido e fácil para a executar comandos a partir de uma combinação de teclas predefinida. No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.
-Syntax 1 2 3 4 5 6 7 &lt;keyboard&gt; ... &lt;keybind key=&#34;KEY-COMBINATION...&#34;&gt; ...ACTIONS... &lt;/keybind&gt; ... &lt;/keyboard&gt; KEY-COMBINATION é a combinação de teclas que liga a uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &ldquo;-&rdquo;.]]></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>André P. Santos</title><link>http://andreztz.github.io/</link><description>André P. Santos - Posts</description><generator>Hugo -- gohugo.io</generator><language>pt</language><managingEditor>andreztz@gmail.com (André P. Santos)</managingEditor><webMaster>andreztz@gmail.com (André P. Santos)</webMaster><lastBuildDate>Mon, 24 Jul 2023 00:22:42 -0300</lastBuildDate><atom:link href="http://andreztz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>KVM (Kernel-Based Virtual Machine): uma ferramenta poderosa para virtualizar no Linux</title><link>http://andreztz.github.io/como_instalar_e_configurar_o_kvm_no_arch_linux/</link><pubDate>Mon, 24 Jul 2023 00:22:42 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/como_instalar_e_configurar_o_kvm_no_arch_linux/</guid><description><![CDATA[<h2 id="kvm-kernel-based-virtual-machine-no-arch-linux">KVM (Kernel-Based Virtual Machine) no Arch Linux</h2>
+<p>KVM é uma infraestrutura de virtualização integrada ao Linux. Permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um <a href="https://pt.wikipedia.org/wiki/Hipervisor" target="_blank" rel="noopener noreffer ">hipervisor</a>. O KVM faz parte do kernel Linux a partir da versão 2.6.20.</p>
+<h3 id="pré-instalação">Pré-instalação</h3>
+<p>Para verificar se seu sistema suporta a virtualização, execute os seguintes comandos:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">LC_ALL=C lscpu | grep Virtualization
+</span></span><span class="line"><span class="cl">Virtualization:                  VT-x
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grep -E --color=auto &#39;vmx|svm|0xc0f&#39; /proc/cpuinfo
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Se esses comandos não retornarem nenhum resultado, é provável que o suporte à virtualização esteja desativado na configuração do BIOS/UEFI. A maioria dos processadores x86_64 AMD/Intel desenvolvidos a partir de 2000/2001 suportam virtualização.</p>]]></description></item><item><title>Como controlar uma instancia do MPV via socket usando o Python</title><link>http://andreztz.github.io/como_controlar_o_mpv_via_socket/</link><pubDate>Wed, 12 Apr 2023 07:50:29 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/como_controlar_o_mpv_via_socket/</guid><description><![CDATA[<p>O <a href="https://mpv.io/" target="_blank" rel="noopener noreffer ">MPV</a> é um player de mídia livre e de código aberto que suporta uma ampla variedade de formatos de arquivo e codecs. Ele tem muitos recursos avançados e é altamente configurável, mas às vezes pode ser útil controlá-lo programaticamente.</p>
+<p>Felizmente, o MPV possui uma interface de soquete que permite que outros processos controlem sua execução. Isso significa que é possível enviar enviar comandos para o MPV usando Python ou qualquer outra linguagem que suporte soquete.</p>]]></description></item><item><title>Use o git para gerenciar dotfiles</title><link>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</link><pubDate>Sun, 09 Apr 2023 01:24:22 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</guid><description><![CDATA[<p>A técnica de versionamento de <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory" target="_blank" rel="noopener noreffer ">dotfiles</a> consiste em criar um repositório Git do tipo <a href="https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/" target="_blank" rel="noopener noreffer ">bare</a> dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.</p>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Não há necessidade de usar ferramentas externas</li>
+<li>Não há uso de links simbólicos</li>
+<li>Os arquivos são rastreados pelo Git</li>
+<li>É possível usar branches diferentes para computadores diferentes</li>
+<li>É possível replicar a configuração facilmente em uma nova instalação</li>
+</ul>
+<h2 id="configuração-inicial">Configuração inicial</h2>
+<p>Para iniciar a configuração do seu repositório bare, execute os seguintes comandos no terminal:</p>]]></description></item><item><title>PYTEST_ADDOPTS e como desabilitar warnings no pytest</title><link>http://andreztz.github.io/desativar_avisos_no_pytest/</link><pubDate>Fri, 17 Mar 2023 02:36:32 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/desativar_avisos_no_pytest/</guid><description><![CDATA[<p>Ao executar testes automatizados em Python, é comum receber avisos (warnings) durante a execução dos testes. Para lidar com esses avisos, o Pytest oferece diversas opções para desativá-los. Neste artigo vamos explorar como utilizar a <code>PYTEST_ADDOPTS</code> para desabilita-los.</p>
+<h2 id="entendendo-o-problema">Entendendo o problema</h2>
+<p>Vamos imaginar que estamos executando testes em uma aplicação <strong>Python</strong> utilizando o <strong>Pytest</strong> e nos deparamos com a seguinte saída:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">=====================================</span> warnings <span class="nv">summary</span> <span class="o">======================================</span>
+</span></span><span class="line"><span class="cl">tests/test_translator.py::test_translator_hello_world
+</span></span><span class="line"><span class="cl">tests/test_translator.py::test_api_manager
+</span></span><span class="line"><span class="cl">  /home/ztz/projects/ztranslator/.venv/lib/python3.10/site-packages/httpx/_config.py:156: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+</span></span><span class="line"><span class="cl">    <span class="nv">context</span> <span class="o">=</span> ssl.SSLContext<span class="o">(</span>ssl.PROTOCOL_TLS<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tests/test_translator.py::test_translator_hello_world
+</span></span><span class="line"><span class="cl">tests/test_translator.py::test_api_manager
+</span></span><span class="line"><span class="cl">  /home/ztz/projects/ztranslator/.venv/lib/python3.10/site-packages/httpx/_config.py:159: DeprecationWarning: ssl.OP_NO_SSL*/ssl.OP_NO_TLS* options are deprecated
+</span></span><span class="line"><span class="cl">    context.options <span class="p">|</span><span class="o">=</span> ssl.OP_NO_TLSv1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tests/test_translator.py::test_translator_hello_world
+</span></span><span class="line"><span class="cl">tests/test_translator.py::test_api_manager
+</span></span><span class="line"><span class="cl">  /home/ztz/projects/ztranslator/.venv/lib/python3.10/site-packages/httpx/_config.py:160: DeprecationWarning: ssl.OP_NO_SSL*/ssl.OP_NO_TLS* options are deprecated
+</span></span><span class="line"><span class="cl">    context.options <span class="p">|</span><span class="o">=</span> ssl.OP_NO_TLSv1_1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-- Docs: https://docs.pytest.org/en/stable/warnings.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Esses avisos podem ser gerados por diversos motivos, como o uso de funções obsoletas, comportamentos não recomendados, entre outros, e são úteis para que o desenvolvedor identifique possíveis problemas na sua aplicação ou nas bibliotecas utilizadas. No entanto, em alguns casos, eles podem não ser importantes para o teste em questão, sujando a tela e tirando o foco do resultado dos testes.</p>]]></description></item><item><title>Corretor ortográfico no Neovim</title><link>http://andreztz.github.io/neovim_spell_check/</link><pubDate>Sun, 15 May 2022 22:24:09 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/neovim_spell_check/</guid><description><![CDATA[<p>O editor de texto neovim usa o formato de arquivo <code>.spl</code> para armazenar palavras de uma determinada linguagem, essas são usadas para fazer a verificação ortográfica. O arquivo <code>.spl</code> é um arquivo binário, esse formato proporciona o rápido carregamento da lista de palavras ao mesmo tempo que a mantém pequena.</p>
+<p>O arquivo <code>.spl</code> pode ser criado a partir de arquivos myspell <code>.aff</code> e <code>.dic</code> usados pelo verificador ortográfico <a href="https://pt-br.libreoffice.org/projetos/vero/#baixarvero" target="_blank" rel="noopener noreffer ">VERO</a> sigla que significa <strong>VER</strong>ificador <strong>O</strong>rtografico do LibreOffice.</p>]]></description></item><item><title>Protegendo o acesso a interface web do Openwrt</title><link>http://andreztz.github.io/openwrt-interface-web-seguranca/</link><pubDate>Tue, 05 Apr 2022 03:49:21 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/openwrt-interface-web-seguranca/</guid><description>&lt;p>O Openwrt pode ser gerenciado no terminal via ssh, ou pela interface web do usuário &lt;a href="https://openwrt.org/docs/guide-user/luci/start" target="_blank" rel="noopener noreffer ">LuCI&lt;/a>. O uso da interface web facilita a administração do sistema, no entanto, por padrão a interface web não tem suporte a conexão segura usando o  HTTPS. Por esse motivo  existe o risco de um invasor capturar o tráfego de rede e obter as credenciais de autenticação, visto que a troca de mensagens entre cliente e servidor sem a camada de segurança do HTTPS (SSL/TLS) é feito em texto puro.&lt;/p></description></item><item><title>Como configurar teclas de atalho no Openbox</title><link>http://andreztz.github.io/atalhos-teclado-openbox/</link><pubDate>Mon, 31 May 2021 02:30:21 -0300</pubDate><author>André P. Santos</author><guid>http://andreztz.github.io/atalhos-teclado-openbox/</guid><description><![CDATA[<p>Teclas de atalho fornecem um método rápido e fácil para a executar comandos a partir de uma combinação de teclas predefinida.
+No openbox para definir uma tecla de atalho basta editar o arquivo ~/.config/openbox/rc.xml.</p>
+<h2 id="syntax">Syntax</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;keyboard&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&#34;KEY-COMBINATION...&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...ACTIONS...
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/keybind&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/keyboard&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>KEY-COMBINATION é a combinação de teclas que liga a uma ação. O formato para KEY-COMBINATION é: Modificador-Modificador-Tecla (ex.: C-S-T). Qualquer número de modificadores (0 ou mais) podem ser usados juntos e cada um é separado por um &ldquo;-&rdquo;.</p>]]></description></item></channel></rss>
