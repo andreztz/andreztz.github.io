@@ -60,8 +60,8 @@ def enviar_comando_mpv(command):
         # retorna as resposta decodificada para string UTF-8
         return response.decode()
 
-# carregar um arquivo de mídia, todos os comandos 
-# devem levar um `\n` para indicar o fim do comando
+# carregar um arquivo de mídia, todos os comandos devem 
+# terminar com o caractere `\n` para indicar o fim do comando
 comando = "loadfile caminho/do/arquivo\n"
 resposta = enviar_comando_mpv(comando)
 print(resposta)
