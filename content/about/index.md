@@ -18,9 +18,6 @@ Este é um espaço dedicado à documentação e ao armazenamento de notas, links
 <br />
 [![My GitHub](https://img.shields.io/badge/--website?label=My%20GitHub&logo=awesome-lists&style=social&logoColor=2257ea)](https://github.com/andreztz)
 
-
-<!-- https://ghchart.rshah.org/ -->
-
 [![André\'s GitHub chart](https://ghchart.rshah.org/andreztz)](https://github.com/andreztz)
 
 
