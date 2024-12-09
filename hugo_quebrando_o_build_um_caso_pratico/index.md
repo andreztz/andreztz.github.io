@@ -90,7 +90,7 @@ Optei pelo **downgrade do Hugo**, pois foi a solução mais rápida e prática p
    warning: hugo: ignoring package upgrade (0.135.0-1 => 0.139.3-1)
    ```
 
-   Esse aviso é a confirmação que o hugo esta fixado na versão 0.135.0 e não será atualizado.
+   Esse aviso é a confirmação que o hugo não será atualizado, pois está fixado na versão 0.135.0.
 
 
 ## Ajustando o Workflow de deploy no GitHub Actions
