@@ -3,9 +3,9 @@
 
 ## Hugo Quebrando o Build: Um Caso Prático
 
-Nos últimos meses, mantive meu sistema operacional **Arch Linux** atualizado diariamente. Como é baseado no modelo **rolling-release**, o Arch Linux oferece as versões mais recentes e estáveis dos pacotes de software. Embora isso permita acesso rápido a novas funcionalidades, também traz consigo alguns riscos.
+Manter o Arch Linux atualizado é quase um ritual para quem aprecia o dinamismo de um sistema **rolling-release**. A promessa de acesso às versões mais recentes dos pacotes é tentadora, mas esse modelo tráz consigo alguns desafios.
 
-Hoje, ao realizar uma simples alteração em uma imagem do meu blog, construído com o **Hugo**—um gerador de sites estáticos escrito em Go—encontrei um problema inesperado. O Hugo não conseguiu processar as mudanças, exibindo erros que interromperam o build.
+Hoje, ao realizar uma simples alteração em uma imagem do meu blog, construído com o **Hugo** - um gerador de sites estáticos escrito em Go - encontrei um problema inesperado. O Hugo não conseguiu processar as mudanças, exibindo erros que interromperam o build.
 
 **Mensagem de Erro:**
 
