@@ -599,3 +599,5 @@ languageName = "Brazilian Portuguese"
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
+    [params.analytics.yandexMetrica]
+      id = "101007932"
