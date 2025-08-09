@@ -1,4 +1,39 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Posts - André P. Santos</title><link>http://andreztz.github.io/posts/</link><description>Posts | André P. Santos</description><generator>Hugo -- gohugo.io</generator><language>pt</language><lastBuildDate>Mon, 24 Jul 2023 00:22:42 -0300</lastBuildDate><atom:link href="http://andreztz.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Máquinas virtuais no Arch Linux</title><link>http://andreztz.github.io/maquinas_virtuais_no_arch_linux/</link><pubDate>Mon, 24 Jul 2023 00:22:42 -0300</pubDate><author>xxxx</author><guid>http://andreztz.github.io/maquinas_virtuais_no_arch_linux/</guid><description><![CDATA[<h2 id="kvm-kernel-based-virtual-machine">KVM (Kernel-Based Virtual Machine)</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Posts - André P. Santos</title><link>http://andreztz.github.io/posts/</link><description>Posts | André P. Santos</description><generator>Hugo -- gohugo.io</generator><language>pt</language><lastBuildDate>Sat, 09 Aug 2025 18:46:47 -0300</lastBuildDate><atom:link href="http://andreztz.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Depurar_strings_com_caracteres_invisiveis</title><link>http://andreztz.github.io/depurar_strings_com_caracteres_invisiveis/</link><pubDate>Sat, 09 Aug 2025 18:46:47 -0300</pubDate><author>xxxx</author><guid>http://andreztz.github.io/depurar_strings_com_caracteres_invisiveis/</guid><description><![CDATA[<p>Recentemente, precisei criar um script bash o qual iterava sobre o barramento
+USB, listando os dispositivos conectados e comparando seus nomes com uma lista
+de dispositivos específicos que eu queria configurar.</p>
+<p>Primeiro identifiquei o nome dos dispositivos:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ for d in /sys/bus/usb/devices/*/product; do
+</span></span><span class="line"><span class="cl">  printf &#34;%s: &#34; &#34;$(cat &#34;$d&#34;)&#34;
+</span></span><span class="line"><span class="cl">  echo &#34;$d&#34;
+</span></span><span class="line"><span class="cl">done
+</span></span><span class="line"><span class="cl">USB OPTICAL MOUSE : /sys/bus/usb/devices/2-3/product
+</span></span><span class="line"><span class="cl">Gaming KB : /sys/bus/usb/devices/2-4/product
+</span></span><span class="line"><span class="cl">EHCI Host Controller: /sys/bus/usb/devices/usb1/product
+</span></span><span class="line"><span class="cl">xHCI Host Controller: /sys/bus/usb/devices/usb2/product
+</span></span><span class="line"><span class="cl">EHCI Host Controller: /sys/bus/usb/devices/usb3/product
+</span></span><span class="line"><span class="cl">xHCI Host Controller: /sys/bus/usb/devices/usb4/product
+</span></span><span class="line"><span class="cl">xHCI Host Controller: /sys/bus/usb/devices/usb5/product
+</span></span><span class="line"><span class="cl">xHCI Host Controller: /sys/bus/usb/devices/usb6/product
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A idéia parecia simples: verificar se o nome do dispositivo, por exemplo USB
+OPTICAL MOUSE, correspondia a um item da minha lista e, se sim, executar um comando.</p>]]></description></item><item><title>Máquinas virtuais no Arch Linux</title><link>http://andreztz.github.io/maquinas_virtuais_no_arch_linux/</link><pubDate>Mon, 24 Jul 2023 00:22:42 -0300</pubDate><author>xxxx</author><guid>http://andreztz.github.io/maquinas_virtuais_no_arch_linux/</guid><description><![CDATA[<h2 id="kvm-kernel-based-virtual-machine">KVM (Kernel-Based Virtual Machine)</h2>
 <p>KVM é uma infraestrutura de virtualização integrada ao Linux é faz uso das extensões de virtualização do processador (como Intel VT-x e AMD-V). O KVM é composto do modulo do kernel kvm.ko que fornece a infraestrutura principal de virtualização e modulos especificos para processadores kvm-intel.ko e kvm-amd.ko.</p>
 <p>O KVM permite que uma máquina host execute vários ambientes virtuais isolados, chamados de máquinas virtuais (VMs), transformando o Linux em um <a href="https://pt.wikipedia.org/wiki/Hipervisor" target="_blank" rel="noopener noreffer ">hipervisor</a>. O KVM faz parte do kernel Linux a partir da versão 2.6.20.</p>]]></description></item><item><title>Como controlar uma instancia do MPV via socket usando o Python</title><link>http://andreztz.github.io/como_controlar_o_mpv_via_socket/</link><pubDate>Wed, 12 Apr 2023 07:50:29 -0300</pubDate><author>xxxx</author><guid>http://andreztz.github.io/como_controlar_o_mpv_via_socket/</guid><description><![CDATA[<p>O <a href="https://mpv.io/" target="_blank" rel="noopener noreffer ">MPV</a> é um player de mídia livre e de código aberto que suporta uma ampla variedade de formatos de arquivo e codecs. Ele tem muitos recursos avançados e é altamente configurável, mas às vezes pode ser útil controlá-lo programaticamente.</p>
 <p>Felizmente, o MPV possui uma interface de soquete que permite que outros processos controlem sua execução. Isso significa que é possível enviar enviar comandos para o MPV usando Python ou qualquer outra linguagem que suporte soquete.</p>]]></description></item><item><title>Use o git para gerenciar dotfiles</title><link>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</link><pubDate>Sun, 09 Apr 2023 01:24:22 -0300</pubDate><author>xxxx</author><guid>http://andreztz.github.io/use_o_git_para_gerenciar_dotfiles/</guid><description><![CDATA[<p>A técnica de versionamento de <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory" target="_blank" rel="noopener noreffer ">dotfiles</a> consiste em criar um repositório Git do tipo <a href="https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/" target="_blank" rel="noopener noreffer ">bare</a> dentro de $HOME, que, ao contrário de um repositório Git padrão, não possui um diretório de trabalho associado. Sendo assim, é necessário definir explicitamente o que o repositório bare deve rastrear. Por fim, é necessário um alias para interagir com esse repositório de forma exclusiva.</p>
