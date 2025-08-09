@@ -60,9 +60,8 @@ diretira a sua representação em forma de string (ASCII) correspondentes da
 coluna do meio. No nosso exemplo, na sequência da coluna do meio o `20` 
 representa espaço (imprimível), temos três. O `0a` representa o caractere de 
 controle de quebra de linha `\n` (não imprimível). Note que existe um espaço 
-em branco antes do útimo caractere `\n`, esse embora imprimível, é invisível 
-ao usar o `echo`, sendo a causa do problema.
-
+`20`antes do útimo caractere `0a`, esse embora imprimível, é invisível 
+ao usar o comando `echo`, sendo a causa do problema.
 
 2. Usando o comando `cat`
 
