@@ -1,4 +1,4 @@
-# Depurar strings com caracteres invisiveis
+# Depurar strings com caracteres invisíveis
 
 
 Recentemente, precisei criar um script bash que iterava sobre o barramento 
@@ -54,8 +54,8 @@ O `hexdump` exibe os bytes em formato hexadecimal na coluna do meio e sua
 representação em string (ASCII) na coluna da direita. No exemplo, o `20` representa 
 um espaço (caractere imprimível) e o `0a` representa a quebra de linha (`\n`, um 
 caractere de controle e não imprimível). Repare que há um espaço (`20`) antes do 
-`0a`, o que, embora seja um caractere imprimível, é "invisível" ao usar `echo` 
-e foi a causa do problema.
+`0a`, o que, embora seja um caractere imprimível, no final da linha o torna 
+"invisível", e foi a causa do problema.
 
 2. Usando o comando `cat`
 
